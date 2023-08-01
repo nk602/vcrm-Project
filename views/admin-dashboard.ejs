@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta name="description" content="Spruha -  Admin Panel HTML Dashboard Template">
+	<meta name="author" content="Spruko Technologies Private Limited">
+	<meta name="keywords"
+		content="admin,dashboard,panel,bootstrap admin template,bootstrap dashboard,dashboard,themeforest admin dashboard,themeforest admin,themeforest dashboard,themeforest admin panel,themeforest admin template,themeforest admin dashboard,cool admin,it dashboard,admin design,dash templates,saas dashboard,dmin ui design">
+
+	<!-- Favicon -->
+	<link rel="icon" href="../assets/img/brand/favicon.ico" type="image/x-icon" />
+
+	<!-- Title -->
+	<title>Spruha - Bootstrap Premium HTML Dashboard Template</title>
+
+	<!-- Bootstrap css-->
+	<link id="style" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- Icons css-->
+	<link href="../assets/plugins/web-fonts/icons.css" rel="stylesheet" />
+	<link href="../assets/plugins/web-fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+	<link href="../assets/plugins/web-fonts/plugin.css" rel="stylesheet" />
+
+	<!-- Style css-->
+	<link href="../assets/css/style.css" rel="stylesheet">
+
+	<!-- INTERNAL COLOR PICKER css-->
+	<link href="../assets/plugins/pickr-master/themes/classic.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/pickr-master/themes/monolith.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/pickr-master/themes/nano.min.css" rel="stylesheet" />
+
+	<!-- Select2 css -->
+	<link href="../assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+
+	<!--Bootstrap-datepicker css-->
+	<link rel="stylesheet" href="../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.css">
+
+	<!-- Internal Datetimepicker-slider css -->
+	<link href="../assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
+
+	<!-- Internal Specturm-color picker css-->
+	<link href="../assets/plugins/spectrum-colorpicker/spectrum.css" rel="stylesheet">
+
+	<!-- Internal Ion.rangeslider css-->
+	<link href="../assets/plugins/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
+	<link href="../assets/plugins/ion-rangeslider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
+	<!--- Internal Treeview -->
+	<link href="../assets/plugins/treeview/treeview.css" rel="stylesheet" type="text/css" />
+	<!-- Internal Morrirs Chart css-->
+	<link href="../assets/plugins/morris.js/morris.css" rel="stylesheet">
+
+</head>
+
+<body class="ltr main-body leftmenu dash_admin light-theme">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../assets/img/loader.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- End Loader -->
+
+	<!-- Page -->
+	<div class="page">
+
+		<!-- Main Header-->
+		<div class="main-header side-header sticky">
+			<div class="main-container container-fluid">
+				<div class="main-header-left">
+					<a class="main-header-menu-icon" href="index.html"><img
+							src="https://www.verandalearning.com/web/application/themes/green_elemental/img/footer_veranda_logo.png"
+							class="header-brand-img desktop-logo" alt="logo"></a>
+
+				</div>
+				<div class="main-header-center dash_admin_menu text-center">
+
+					<ul>
+						<li><a href="business-dashboard.html"><i class="fe fe-compass"></i> Dashboard </a></li>
+						<li><a href="list-staff.html"><i class="fe fe-compass"></i> Staff </a></li>
+						<li><a href="list-campaigns.html"><i class="fe fe-compass"></i> Campaigns </a></li>
+						<li><a href="list-vendors.html"><i class="fe fe-compass"></i> Vendors </a></li>
+						<li><a href="enquiry.html"><i class="fe fe-compass"></i> Enquiry </a></li>
+						<li><a href="list-leads.html"><i class="fe fe-compass"></i> Leads </a></li>
+						<li><a href="quality-audit.html"><i class="fe fe-compass"></i> Quality & Audit</a></li>
+					</ul>
+				</div>
+				<!--div class="main-header-center">
+					<div class="responsive-logo">
+						<a href="index.html"><img src="../assets/img/brand/logo.png" class="mobile-logo" alt="logo"></a>
+						<a href="index.html"><img src="../assets/img/brand/logo-light.png" class="mobile-logo-dark"
+								alt="logo"></a>
+					</div>
+					<div class="input-group">
+						<div class="input-group-btn search-panel">
+							<select class="form-control select2">
+								<option label="All categories">
+								</option>
+							<option>Staff/Agent</option>
+<option>Sales Lead</option>
+<option>Subscriber</option>
+<option>Cases/Incident</option>
+<option>Lawyer</option>
+							</select>
+						</div>
+						<input type="search" class="form-control rounded-0" placeholder="Search for anything...">
+						<button class="btn search-btn"><i class="fe fe-search"></i></button>
+					</div>
+				</div-->
+				<div class="main-header-right">
+					<button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+					</button><!-- Navresponsive closed -->
+					<div
+						class="navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+							<div class="d-flex order-lg-2 ms-auto">
+								<!-- Search -->
+								<div class="dropdown header-search">
+									<a class="nav-link icon header-search">
+										<i class="fe fe-search header-icons"></i>
+									</a>
+									<div class="dropdown-menu">
+										<div class="main-form-search p-2">
+											<div class="input-group">
+												<div class="input-group-btn search-panel">
+													<select class="form-control select2">
+														<option label="All categories"> </option>
+														<option>Staff/Agent</option>
+														<option>Sales Lead</option>
+														<option>Subscriber</option>
+														<option>Cases/Incident</option>
+														<option>Lawyer</option>
+													</select>
+												</div>
+												<input type="search" class="form-control"
+													placeholder="Search for anything...">
+												<button class="btn search-btn"><svg xmlns="http://www.w3.org/2000/svg"
+														width="20" height="20" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="feather feather-search">
+														<circle cx="11" cy="11" r="8"></circle>
+														<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+													</svg></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Search -->
+								<!-- Theme-Layout -->
+								<div class="dropdown d-flex main-header-theme">
+									<a class="nav-link icon layout-setting">
+										<span class="dark-layout">
+											<i class="fe fe-sun header-icons"></i>
+										</span>
+										<span class="light-layout">
+											<i class="fe fe-moon header-icons"></i>
+										</span>
+									</a>
+								</div>
+								<!-- Theme-Layout -->
+
+								<!-- Full screen -->
+								<div class="dropdown ">
+									<a class="nav-link icon full-screen-link">
+										<i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
+										<i class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"></i>
+									</a>
+								</div>
+								<!-- Full screen -->
+								<!-- Notification -->
+								<div class="dropdown main-header-notification">
+									<a class="nav-link icon" href="">
+										<i class="fe fe-bell header-icons"></i>
+										<span class="badge bg-danger nav-link-badge">4</span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<p class="main-notification-text">You have 1 unread notification<span
+													class="badge bg-pill bg-primary ms-3">View all</span></p>
+										</div>
+										<div class="main-notification-list">
+											<div class="media new">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/5.jpg"></div>
+												<div class="media-body">
+													<p>Congratulate <strong>Olivia James</strong> for New template
+														start</p>
+													<span>Oct 15 12:32pm</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user"><img alt="avatar"
+														src="../assets/img/users/2.jpg">
+												</div>
+												<div class="media-body">
+													<p><strong>Joshua Gray</strong> New Message Received</p>
+													<span>Oct 13
+														02:56am</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/3.jpg"></div>
+												<div class="media-body">
+													<p><strong>Elizabeth Lewis</strong> added new schedule realease
+													</p><span>Oct
+														12 10:40pm</span>
+												</div>
+											</div>
+										</div>
+										<div class="dropdown-footer">
+											<a href="javascript:void(0)">View All Notifications</a>
+										</div>
+									</div>
+								</div>
+								<!-- Notification -->
+
+								<!-- Profile -->
+								<div class="dropdown main-profile-menu">
+									<a class="d-flex" href="javascript:void(0)">
+										<span class="main-img-user"><img alt="avatar"
+												src="../assets/img/users/5.jpg"></span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<h6 class="main-notification-title">Sonia Taylor</h6>
+											<p class="main-notification-text">Web Designer</p>
+										</div>
+										<a class="dropdown-item border-top" href="profile.html">
+											<i class="fe fe-user"></i> My Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-edit"></i> Edit Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Account Settings
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Support
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-compass"></i> Activity
+										</a>
+										<a class="dropdown-item" href="/admin/login">
+											<i class="fe fe-power"></i> Sign Out
+										</a>
+									</div>
+								</div>
+								<!-- Profile -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Main Header-->
+
+		<!-- Main Content-->
+		<div class="main-content side-content pt-0">
+
+			<div class="main-container container-fluid">
+				<div class="inner-body">
+
+					<!-- Page Header -->
+					<div class="page-header">
+						<div>
+							<h2 class="main-content-title tx-18 mg-b-5">CRM Admin
+							</h2>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="javascript:void(0)">Last Login: 10 July 23, 10:30
+										AM</a></li>
+							</ol>
+
+						</div>
+						<div class="col-sm-6">
+							<div class="justify-content-center">
+								<div class="row">
+									<div class="col-md-4">
+										<div class=" mg-b-30">
+											<div class="input-group">
+												<div class="input-group-text border-end-0">
+													<i class="fe fe-calendar lh--9 op-6"></i>
+												</div>
+												<input class="form-control" placeholder="Date Range" type="text"
+													id="datepicker-date">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="mg-b-30">
+											<div class="input-group">
+												<div class="input-group-text border-end-0">
+													<i class="fe fe-calendar lh--9 op-6"></i>
+												</div>
+												<input class="form-control" placeholder="Month Range" type="text"
+													id="datepicker-month">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class=" mg-b-30">
+											<div class="input-group">
+												<div class="input-group-text border-end-0">
+													<i class="fe fe-calendar lh--9 op-6"></i>
+												</div>
+												<input class="form-control" placeholder="Year Range" type="text"
+													id="datepicker-year">
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- End Page Header -->
+					<!--Row-->
+					<div class="row row-sm">
+						<div class="col-sm-12 col-lg-12 col-xl-12">
+
+
+
+							<!--Row-->
+							<div class="row row-sm">
+								<div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+									<div class="card custom-card">
+										<div class="card-body">
+											<div class="card-item">
+												<div class="card-item-icon card-icon">
+													<svg class="text-primary" xmlns="http://www.w3.org/2000/svg"
+														enable-background="new 0 0 24 24" height="24"
+														viewBox="0 0 24 24" width="24">
+														<g>
+															<rect height="14" opacity=".3" width="14" x="5" y="5" />
+															<g>
+																<rect fill="none" height="24" width="24" />
+																<g>
+																	<path
+																		d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M19,19H5V5h14V19z" />
+																	<rect height="5" width="2" x="7" y="12" />
+																	<rect height="10" width="2" x="15" y="7" />
+																	<rect height="3" width="2" x="11" y="14" />
+																	<rect height="2" width="2" x="11" y="10" />
+																</g>
+															</g>
+														</g>
+													</svg>
+												</div>
+												<div class="card-item-title mb-2">
+													<label class="main-content-label tx-13 font-weight-bold mb-1">Total
+														Partners</label>
+													<span class="d-block tx-12 mb-0 text-muted">Managers, Staff and all
+													</span>
+												</div>
+												<div class="card-item-body">
+													<div class="card-item-stat">
+														<h4 style=" font-weight: normal;">5</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+									<div class="card custom-card">
+										<div class="card-body">
+											<div class="card-item">
+												<div class="card-item-icon card-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" height="24"
+														viewBox="0 0 24 24" width="24">
+														<path d="M0 0h24v24H0V0z" fill="none" />
+														<path
+															d="M12 4c-4.41 0-8 3.59-8 8 0 1.82.62 3.49 1.64 4.83 1.43-1.74 4.9-2.33 6.36-2.33s4.93.59 6.36 2.33C19.38 15.49 20 13.82 20 12c0-4.41-3.59-8-8-8zm0 9c-1.94 0-3.5-1.56-3.5-3.5S10.06 6 12 6s3.5 1.56 3.5 3.5S13.94 13 12 13z"
+															opacity=".3" />
+														<path
+															d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z" />
+													</svg>
+												</div>
+												<div class="card-item-title mb-2">
+													<label class="main-content-label tx-13 font-weight-bold mb-1">Total
+														Programs</label>
+													<span class="d-block tx-12 mb-0 text-muted">Vehicles Only With
+														LOTS</span>
+												</div>
+												<div class="card-item-body">
+													<div class="card-item-stat">
+														<h4 style=" font-weight: normal;">6</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-12 col-lg-12 col-xl-2">
+									<div class="card custom-card">
+										<div class="card-body">
+											<div class="card-item">
+												<div class="card-item-icon card-icon">
+													<svg class="text-primary" xmlns="http://www.w3.org/2000/svg"
+														height="24" viewBox="0 0 24 24" width="24">
+														<path d="M0 0h24v24H0V0z" fill="none" />
+														<path
+															d="M12 4c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm1.23 13.33V19H10.9v-1.69c-1.5-.31-2.77-1.28-2.86-2.97h1.71c.09.92.72 1.64 2.32 1.64 1.71 0 2.1-.86 2.1-1.39 0-.73-.39-1.41-2.34-1.87-2.17-.53-3.66-1.42-3.66-3.21 0-1.51 1.22-2.48 2.72-2.81V5h2.34v1.71c1.63.39 2.44 1.63 2.49 2.97h-1.71c-.04-.97-.56-1.64-1.94-1.64-1.31 0-2.1.59-2.1 1.43 0 .73.57 1.22 2.34 1.67 1.77.46 3.66 1.22 3.66 3.42-.01 1.6-1.21 2.48-2.74 2.77z"
+															opacity=".3" />
+														<path
+															d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z" />
+													</svg>
+												</div>
+												<div class="card-item-title  mb-2">
+													<label class="main-content-label tx-13 font-weight-bold mb-1">
+														Total Leads</label>
+													<span class="d-block tx-12 mb-0 text-muted">Contracted for
+														LOTS</span>
+												</div>
+												<div class="card-item-body">
+													<div class="card-item-stat">
+														<h4 style=" font-weight: normal;">700</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+									<div class="card custom-card">
+										<div class="card-body">
+											<div class="card-item">
+												<div class="card-item-icon card-icon">
+													<svg class="text-primary" xmlns="http://www.w3.org/2000/svg"
+														enable-background="new 0 0 24 24" height="24"
+														viewBox="0 0 24 24" width="24">
+														<g>
+															<rect height="14" opacity=".3" width="14" x="5" y="5" />
+															<g>
+																<rect fill="none" height="24" width="24" />
+																<g>
+																	<path
+																		d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M19,19H5V5h14V19z" />
+																	<rect height="5" width="2" x="7" y="12" />
+																	<rect height="10" width="2" x="15" y="7" />
+																	<rect height="3" width="2" x="11" y="14" />
+																	<rect height="2" width="2" x="11" y="10" />
+																</g>
+															</g>
+														</g>
+													</svg>
+												</div>
+												<div class="card-item-title mb-2">
+													<label class="main-content-label tx-13 font-weight-bold mb-1">Total
+														Campaigns</label>
+													<span class="d-block tx-12 mb-0 text-muted">Under Lots
+														subscription</span>
+												</div>
+												<div class="card-item-body">
+													<div class="card-item-stat">
+														<h4 style=" font-weight: normal;">10</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+									<div class="card custom-card">
+										<div class="card-body">
+											<div class="card-item">
+												<div class="card-item-icon card-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" height="24"
+														viewBox="0 0 24 24" width="24">
+														<path d="M0 0h24v24H0V0z" fill="none" />
+														<path
+															d="M12 4c-4.41 0-8 3.59-8 8 0 1.82.62 3.49 1.64 4.83 1.43-1.74 4.9-2.33 6.36-2.33s4.93.59 6.36 2.33C19.38 15.49 20 13.82 20 12c0-4.41-3.59-8-8-8zm0 9c-1.94 0-3.5-1.56-3.5-3.5S10.06 6 12 6s3.5 1.56 3.5 3.5S13.94 13 12 13z"
+															opacity=".3" />
+														<path
+															d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z" />
+													</svg>
+												</div>
+												<div class="card-item-title mb-2">
+													<label class="main-content-label tx-13 font-weight-bold mb-1">Total
+														Agents</label>
+													<span class="d-block tx-12 mb-0 text-muted">Under settlement</span>
+												</div>
+												<div class="card-item-body">
+													<div class="card-item-stat">
+														<h4 style=" font-weight: normal;">120</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-12 col-lg-12 col-xl-2">
+									<div class="card custom-card">
+										<div class="card-body">
+											<div class="card-item">
+												<div class="card-item-icon card-icon">
+													<svg class="text-primary" xmlns="http://www.w3.org/2000/svg"
+														height="24" viewBox="0 0 24 24" width="24">
+														<path d="M0 0h24v24H0V0z" fill="none" />
+														<path
+															d="M12 4c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm1.23 13.33V19H10.9v-1.69c-1.5-.31-2.77-1.28-2.86-2.97h1.71c.09.92.72 1.64 2.32 1.64 1.71 0 2.1-.86 2.1-1.39 0-.73-.39-1.41-2.34-1.87-2.17-.53-3.66-1.42-3.66-3.21 0-1.51 1.22-2.48 2.72-2.81V5h2.34v1.71c1.63.39 2.44 1.63 2.49 2.97h-1.71c-.04-.97-.56-1.64-1.94-1.64-1.31 0-2.1.59-2.1 1.43 0 .73.57 1.22 2.34 1.67 1.77.46 3.66 1.22 3.66 3.42-.01 1.6-1.21 2.48-2.74 2.77z"
+															opacity=".3" />
+														<path
+															d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z" />
+													</svg>
+												</div>
+												<div class="card-item-title  mb-2">
+													<label class="main-content-label tx-13 font-weight-bold mb-1">Total
+														Manager</label>
+													<span class="d-block tx-12 mb-0 text-muted">Settled by
+														Lawyered</span>
+												</div>
+												<div class="card-item-body">
+													<div class="card-item-stat">
+														<h4 style=" font-weight: normal;">20</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<!--End row-->
+							<!-- row -->
+							<div class="row row-sm">
+								<div class="col-md-12">
+
+									<div class="card custom-card">
+										<div class="card-body">
+											<div class="main-content-label mg-b-5">
+												Report Hierarchy
+											</div>
+											<p class="text-muted card-sub-title">It is Very Easy to Customize and it
+												uses in website apllication.</p>
+											<div class="row">
+												<!-- col -->
+
+												<div class="col-lg-4">
+													<ul id="tree1">
+														<li><a href="#">Partners ( Vendors)</a>
+															<ul>
+																<li>360 Ads</li>
+																<li>PPCYogi </li>
+																<li>KypeKit</li>
+															</ul>
+														</li>
+														<li><a href="#">Programs (7)</a>
+															<ul>
+
+																<li>Gyan Vihar</li>
+																<li>LPU</li>
+																<li>GimOnline</li>
+																<li>IIM</li>
+
+															</ul>
+														</li>
+														<li><a href="#">Campaigns (5) </a>
+															<ul>
+																<li>MBA in Marketing</li>
+																<li>Phd in Subject</li>
+																<li> B.Com</li>
+																<li> MBA Finance </li>
+															</ul>
+														</li>
+														<li><a href="#">Accounts</a>
+															<ul>
+																<li>Company Maintenance</li>
+																<li>Employees
+																	<ul>
+																		<li>Reports
+																			<ul>
+																				<li>Report1</li>
+																				<li>Report2</li>
+																				<li>Report3</li>
+																			</ul>
+																		</li>
+																		<li>Employee Maint.
+																			<ul>
+																				<li>Reports
+																					<ul>
+																						<li>Report1</li>
+																						<li>Report2</li>
+																						<li>Report3</li>
+																					</ul>
+																				</li>
+																				<li>Employee Maint.<ul>
+																						<li>Reports
+																							<ul>
+																								<li>Report1</li>
+																								<li>Report2</li>
+																								<li>Report3</li>
+																							</ul>
+																						</li>
+																						<li>Employee Maint.</li>
+																					</ul>
+																				</li>
+																			</ul>
+																		</li>
+																	</ul>
+																</li>
+																<li>Human Resources</li>
+															</ul>
+														</li>
+														<li><a href="#">Admissions</a>
+															<ul>
+																<li>Company Maintenance</li>
+																<li>Employees
+																	<ul>
+																		<li>Reports
+																			<ul>
+																				<li>Report1</li>
+																				<li>Report2</li>
+																				<li>Report3</li>
+																			</ul>
+																		</li>
+																		<li>Employee Maint.
+																			<ul>
+																				<li>Reports
+																					<ul>
+																						<li>Report1</li>
+																						<li>Report2</li>
+																						<li>Report3</li>
+																					</ul>
+																				</li>
+																				<li>Employee Maint.<ul>
+																						<li>Reports
+																							<ul>
+																								<li>Report1</li>
+																								<li>Report2</li>
+																								<li>Report3</li>
+																							</ul>
+																						</li>
+																						<li>Employee Maint.</li>
+																					</ul>
+																				</li>
+																			</ul>
+																		</li>
+																	</ul>
+																</li>
+																<li>Human Resources</li>
+															</ul>
+														</li>
+														<li><a href="#">Purchase</a>
+															<ul>
+																<li>Company Maintenance</li>
+																<li>Employees
+																	<ul>
+																		<li>Reports
+																			<ul>
+																				<li>Report1</li>
+																				<li>Report2</li>
+																				<li>Report3</li>
+																			</ul>
+																		</li>
+																		<li>Employee Maint.
+																			<ul>
+																				<li>Reports
+																					<ul>
+																						<li>Report1</li>
+																						<li>Report2</li>
+																						<li>Report3</li>
+																					</ul>
+																				</li>
+																				<li>Employee Maint.<ul>
+																						<li>Reports
+																							<ul>
+																								<li>Report1</li>
+																								<li>Report2</li>
+																								<li>Report3</li>
+																							</ul>
+																						</li>
+																						<li>Employee Maint.</li>
+																					</ul>
+																				</li>
+																			</ul>
+																		</li>
+																	</ul>
+																</li>
+																<li>Human Resources</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<!-- /col -->
+
+												<!-- col -->
+												<div class="col-lg-4 mt-4 mt-lg-0">
+													<ul id="tree2">
+														<li><a href="#">Team (120) </a>
+															<ul>
+																<li>Ajay ( Team Lead)
+																	<ul>
+																		<li>Rita ( Agent) </li>
+																		<li>Sumit ( Agent) </li>
+																		<li>Sumran ( Agent) </li>
+																		<li>Anil ( Agent) </li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+														<li><a href="#">Team (120) </a>
+															<ul>
+																<li>Ajay ( Team Lead)
+																	<ul>
+																		<li>Rita ( Agent) </li>
+																		<li>Sumit ( Agent) </li>
+																		<li>Sumran ( Agent) </li>
+																		<li>Anil ( Agent) </li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+														<li><a href="#">Team (120) </a>
+															<ul>
+																<li>Ajay ( Team Lead)
+																	<ul>
+																		<li>Rita ( Agent) </li>
+																		<li>Sumit ( Agent) </li>
+																		<li>Sumran ( Agent) </li>
+																		<li>Anil ( Agent) </li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+														<li><a href="#">Team (120) </a>
+															<ul>
+																<li>Ajay ( Team Lead)
+																	<ul>
+																		<li>Rita ( Agent) </li>
+																		<li>Sumit ( Agent) </li>
+																		<li>Sumran ( Agent) </li>
+																		<li>Anil ( Agent) </li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+														<li><a href="#">Team (120) </a>
+															<ul>
+																<li>Ajay ( Team Lead)
+																	<ul>
+																		<li>Rita ( Agent) </li>
+																		<li>Sumit ( Agent) </li>
+																		<li>Sumran ( Agent) </li>
+																		<li>Anil ( Agent) </li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+														<li><a href="#">Team (120) </a>
+															<ul>
+																<li>Ajay ( Team Lead)
+																	<ul>
+																		<li>Rita ( Agent) </li>
+																		<li>Sumit ( Agent) </li>
+																		<li>Sumran ( Agent) </li>
+																		<li>Anil ( Agent) </li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<!-- /col -->
+
+												<!-- col -->
+												<div class="col-lg-4 mt-4 mt-lg-0">
+													<ul id="tree3">
+														<li><a href="#">Team Leaders (4)</a>
+															<ul>
+
+																<li>Ajay ( TL)</li>
+																<li> Vijay ( TL)</li>
+																<li>Sanjay ( TL)</li>
+																<li>Jay ( TL)</li>
+
+															</ul>
+														</li>
+														<li><a href="#">Team Leaders (4)</a>
+															<ul>
+
+																<li>Ajay ( TL)</li>
+																<li> Vijay ( TL)</li>
+																<li>Sanjay ( TL)</li>
+																<li>Jay ( TL)</li>
+
+															</ul>
+														</li>
+														<li><a href="#">Team Leaders (4)</a>
+															<ul>
+
+																<li>Ajay ( TL)</li>
+																<li> Vijay ( TL)</li>
+																<li>Sanjay ( TL)</li>
+																<li>Jay ( TL)</li>
+
+															</ul>
+														</li>
+														<li><a href="#">Team Leaders (4)</a>
+															<ul>
+
+																<li>Ajay ( TL)</li>
+																<li> Vijay ( TL)</li>
+																<li>Sanjay ( TL)</li>
+																<li>Jay ( TL)</li>
+
+															</ul>
+														</li>
+														<li><a href="#">Team Leaders (4)</a>
+															<ul>
+
+																<li>Ajay ( TL)</li>
+																<li> Vijay ( TL)</li>
+																<li>Sanjay ( TL)</li>
+																<li>Jay ( TL)</li>
+
+															</ul>
+														</li>
+														<li><a href="#">Team Leaders (4)</a>
+															<ul>
+
+																<li>Ajay ( TL)</li>
+																<li> Vijay ( TL)</li>
+																<li>Sanjay ( TL)</li>
+																<li>Jay ( TL)</li>
+
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<!-- /col -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div><!-- col end -->
+
+
+
+						<!-- /row -->
+					</div><!-- Row end -->
+
+					<!-- Row -->
+					<div class="row row-sm" style="display:none">
+						<div class="col-lg-6 col-md-12">
+							<div class="card custom-card">
+								<div class="card-body">
+									<div>
+										<h6 class="main-content-label mb-1">Area Chart1</h6>
+										<p class="text-muted  card-sub-title">Below is the basic area chart example.</p>
+									</div>
+									<div class="morris-wrapper-demo" id="morrisArea1"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12">
+							<div class="card custom-card">
+								<div class="card-body">
+									<div>
+										<h6 class="main-content-label mb-1">Area Chart2</h6>
+										<p class="text-muted  card-sub-title">Below is the basic area chart example.</p>
+									</div>
+									<div class="morris-wrapper-demo" id="morrisArea2"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Row -->
+
+					<!-- Row -->
+					<div class="row row-sm" style="display:none">
+						<div class="col-lg-6 col-md-12">
+							<div class="card custom-card">
+								<div class="card-body">
+									<div>
+										<h6 class="main-content-label mb-1">Line Chart1</h6>
+										<p class="text-muted  card-sub-title">Below is the basic line chart example.</p>
+									</div>
+									<div class="morris-wrapper-demo" id="morrisLine1"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12">
+							<div class="card custom-card">
+								<div class="card-body">
+									<div>
+										<h6 class="main-content-label mb-1">Line Chart2</h6>
+										<p class="text-muted  card-sub-title">Below is the basic line chart example.</p>
+									</div>
+									<div class="morris-wrapper-demo" id="morrisLine2"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Row -->
+
+					<!-- Row -->
+					<div class="row row-sm">
+						<div class="col-lg-6 col-md-12" style="display:none">
+							<div class="card custom-card">
+								<div class="card-body">
+									<div>
+										<h6 class="main-content-label mb-1">Bar Chart1</h6>
+										<p class="text-muted  card-sub-title">Below is the basic bar chart example.</p>
+									</div>
+									<div class="morris-wrapper-demo" id="morrisBar1"></div>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="col-lg-4 col-md-12">
+							<div class="card custom-card">
+								<div class="card-body">
+									<div>
+										<h6 class="main-content-label mb-1">Donut Chart1</h6>
+										<p class="text-muted  card-sub-title">Below is the basic donut chart example.
+										</p>
+									</div>
+									<div class="morris-wrapper-demo" id="donutexample"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12">
+							<div class="card custom-card">
+								<div class="card-body">
+									<div>
+										<h6 class="main-content-label mb-1">Bar Chart2</h6>
+										<p class="text-muted  card-sub-title">Below is the basic bar chart example.</p>
+									</div>
+									<div class="morris-wrapper-demo" id="morrisBar2"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-12">
+							<div class="card custom-card">
+								<div class="card-body">
+									<div>
+										<h6 class="main-content-label mb-1">Donut Chart2</h6>
+										<p class="text-muted  card-sub-title">Below is the basic donut chart example.
+										</p>
+									</div>
+									<div class="morris-wrapper-demo" id="morrisDonut2"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Row -->
+
+					<!-- Row -->
+					<div class="row row-sm" style="display:none">
+						<div class="col-lg-6 col-md-12">
+							<div class="card custom-card">
+								<div class="card-body">
+									<div>
+										<h6 class="main-content-label mb-1">Stacked Bar Chart1</h6>
+										<p class="text-muted  card-sub-title">Below is the basic bar chart example with
+											option <i>stacked</i> set to <i>true</i>.</p>
+									</div>
+									<div class="morris-wrapper-demo" id="morrisBar3"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12">
+							<div class="card custom-card">
+								<div class="card-body">
+									<div>
+										<h6 class="main-content-label mb-1">Stacked Bar Chart2</h6>
+										<p class="text-muted  card-sub-title">Below is the basic bar chart example with
+											option <i>stacked</i> set to <i>true</i>.</p>
+									</div>
+									<div class="morris-wrapper-demo" id="morrisBar4"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Row -->
+
+
+				</div>
+			</div>
+		</div>
+		<!-- End Main Content-->
+
+		<!-- Main Footer-->
+		<div class="main-footer text-center">
+			<div class="container">
+				<div class="row row-sm">
+					<div class="col-md-12">
+						<span>Copyright © 2022 <a href="#">Spruha</a>. Designed by <a
+								href="https://www.spruko.com/">Spruko</a> All rights reserved.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End Footer-->
+
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-right sidebar-animate">
+			<div class="sidebar-icon">
+				<a href="#" class="text-end float-end text-dark fs-20" data-bs-toggle="sidebar-right"
+					data-bs-target=".sidebar-right"><i class="fe fe-x"></i></a>
+			</div>
+			<div class="sidebar-body">
+				<h5>Todo</h5>
+				<div class="d-flex p-3">
+					<label class="ckbox"><input checked type="checkbox"><span>Hangout With friends</span></label>
+					<span class="ms-auto">
+						<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Edit"></i>
+						<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Delete"></i>
+					</span>
+				</div>
+				<div class="d-flex p-3 border-top">
+					<label class="ckbox"><input type="checkbox"><span>Prepare for presentation</span></label>
+					<span class="ms-auto">
+						<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Edit"></i>
+						<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Delete"></i>
+					</span>
+				</div>
+				<div class="d-flex p-3 border-top">
+					<label class="ckbox"><input type="checkbox"><span>Prepare for presentation</span></label>
+					<span class="ms-auto">
+						<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Edit"></i>
+						<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Delete"></i>
+					</span>
+				</div>
+				<div class="d-flex p-3 border-top">
+					<label class="ckbox"><input checked type="checkbox"><span>System Updated</span></label>
+					<span class="ms-auto">
+						<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Edit"></i>
+						<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Delete"></i>
+					</span>
+				</div>
+				<div class="d-flex p-3 border-top">
+					<label class="ckbox"><input type="checkbox"><span>Do something more</span></label>
+					<span class="ms-auto">
+						<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Edit"></i>
+						<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Delete"></i>
+					</span>
+				</div>
+				<div class="d-flex p-3 border-top">
+					<label class="ckbox"><input type="checkbox"><span>System Updated</span></label>
+					<span class="ms-auto">
+						<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Edit"></i>
+						<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Delete"></i>
+					</span>
+				</div>
+				<div class="d-flex p-3 border-top">
+					<label class="ckbox"><input type="checkbox"><span>Find an Idea</span></label>
+					<span class="ms-auto">
+						<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Edit"></i>
+						<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Delete"></i>
+					</span>
+				</div>
+				<div class="d-flex p-3 border-top mb-0">
+					<label class="ckbox"><input type="checkbox"><span>Project review</span></label>
+					<span class="ms-auto">
+						<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Edit"></i>
+						<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title=""
+							data-bs-placement="top" data-bs-original-title="Delete"></i>
+					</span>
+				</div>
+				<h5>Overview</h5>
+				<div class="p-4">
+					<div class="main-traffic-detail-item">
+						<div>
+							<span>Founder &amp; CEO</span> <span>24</span>
+						</div>
+						<div class="progress">
+							<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20"
+								class="progress-bar progress-bar-xs wd-20p" role="progressbar"></div>
+						</div><!-- progress -->
+					</div>
+					<div class="main-traffic-detail-item">
+						<div>
+							<span>UX Designer</span> <span>1</span>
+						</div>
+						<div class="progress">
+							<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15"
+								class="progress-bar progress-bar-xs bg-secondary wd-15p" role="progressbar"></div>
+						</div><!-- progress -->
+					</div>
+					<div class="main-traffic-detail-item">
+						<div>
+							<span>Recruitment</span> <span>87</span>
+						</div>
+						<div class="progress">
+							<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="45"
+								class="progress-bar progress-bar-xs bg-success wd-45p" role="progressbar"></div>
+						</div><!-- progress -->
+					</div>
+					<div class="main-traffic-detail-item">
+						<div>
+							<span>Software Engineer</span> <span>32</span>
+						</div>
+						<div class="progress">
+							<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"
+								class="progress-bar progress-bar-xs bg-info wd-25p" role="progressbar"></div>
+						</div><!-- progress -->
+					</div>
+					<div class="main-traffic-detail-item">
+						<div>
+							<span>Project Manager</span> <span>32</span>
+						</div>
+						<div class="progress">
+							<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"
+								class="progress-bar progress-bar-xs bg-danger wd-25p" role="progressbar"></div>
+						</div><!-- progress -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->
+
+	</div>
+	<!-- End Page -->
+
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+	<!-- Jquery js-->
+	<script src="../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap js-->
+	<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+	<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Internal Jquery-Ui js-->
+	<script src="../assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+	<!-- Internal Jquery.maskedinput js-->
+	<script src="../assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+	<!-- Internal Specturm-colorpicker js-->
+	<script src="../assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+
+	<!-- Internal Ion-rangeslider js-->
+	<script src="../assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+	<!-- Select2 js-->
+	<script src="../assets/plugins/select2/js/select2.min.js"></script>
+	<script src="../assets/js/select2.js"></script>
+	<!-- Internal Morris Chart js-->
+	<script src="../assets/plugins/raphael/raphael.min.js"></script>
+	<script src="../assets/plugins/morris.js/morris.min.js"></script>
+	<script src="../assets/js/chart.morris.js"></script>
+
+	<!-- Internal Form-elements js-->
+	<script src="../assets/js/form-elements.js"></script>
+
+	<!-- Perfect-scrollbar js -->
+	<script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+	<!-- Sidemenu js -->
+	<script src="../assets/plugins/sidemenu/sidemenu.js" id="leftmenu"></script>
+
+	<!--Bootstrap-datepicker js-->
+	<script src="../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+	<!-- Internal jquery-simple-datetimepicker js -->
+	<script src="../assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+
+	<!-- COLOR PICKER JS -->
+	<script src="../assets/plugins/pickr-master/pickr.es5.min.js"></script>
+	<script src="../assets/js/picker.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../assets/plugins/sidebar/sidebar.js"></script>
+
+	<!-- Select2 js-->
+	<script src="../assets/plugins/select2/js/select2.min.js"></script>
+	<script src="../assets/js/select2.js"></script>
+
+	<!--- Internal Treeview js -->
+	<script src="../assets/plugins/treeview/treeview.js"></script>
+	<!-- Color Theme js -->
+	<script src="../assets/js/themeColors.js"></script>
+
+	<!-- Sticky js -->
+	<script src="../assets/js/sticky.js"></script>
+
+	<!-- Custom js -->
+	<script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>

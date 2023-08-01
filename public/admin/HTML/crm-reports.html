@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta name="description" content="Lawyered Beta ERP Design">
+	<meta name="author" content="Lawyered Beta ERP Design">
+	<meta name="keywords" content="Lawyered Beta ERP Design">
+		<!-- Favicon -->
+		<link rel="icon" href="../assets/img/brand/favicon.ico" type="image/x-icon"/>
+
+		<!-- Title -->
+		<title>Lawyered Beta ERP Design</title>
+
+		<!-- Bootstrap css-->
+		<link  id="style" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+		<!-- Icons css-->
+		<link href="../assets/plugins/web-fonts/icons.css" rel="stylesheet"/>
+		<link href="../assets/plugins/web-fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+		<link href="../assets/plugins/web-fonts/plugin.css" rel="stylesheet"/>
+
+		<!-- Style css-->
+		<link href="../assets/css/style.css" rel="stylesheet">
+
+		<!-- Select2 css -->
+		<link href="../assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+
+		<!-- Datepicker css -->
+		<link rel="stylesheet" href="../assets/plugins/model-datepicker/css/datepicker.css">
+
+		
+	</head>
+
+	<body class="ltr main-body leftmenu">
+
+		<!-- Loader -->
+		<div id="global-loader">
+			<img src="../assets/img/loader.svg" class="loader-img" alt="Loader">
+		</div>
+		<!-- End Loader -->
+
+		<!-- Page -->
+		<div class="page">
+
+		<!-- Main Header-->
+		<div class="main-header side-header sticky">
+			<div class="main-container container-fluid">
+				<div class="main-header-left">
+					<a class="main-header-menu-icon" href="javascript:void(0)" id="mainSidebarToggle"><span></span></a>
+					<div class="hor-logo">
+						<a class="main-logo" href="index.html">
+							<img src="../assets/img/brand/logo.png" class="header-brand-img desktop-logo" alt="logo">
+							<img src="../assets/img/brand/logo-light.png" class="header-brand-img desktop-logo-dark"
+								alt="logo">
+						</a>
+					</div>
+				</div>
+				<div class="main-header-center">
+					<div class="responsive-logo">
+						<a href="index.html"><img src="../assets/img/brand/logo.png" class="mobile-logo" alt="logo"></a>
+						<a href="index.html"><img src="../assets/img/brand/logo-light.png" class="mobile-logo-dark"
+								alt="logo"></a>
+					</div>
+					<div class="input-group">
+						<div class="input-group-btn search-panel">
+							<select class="form-control select2">
+								<option label="All categories">
+								</option>
+								<option value="IT Projects">
+									IT Projects
+								</option>
+								<option value="Business Case">
+									Business Case
+								</option>
+								<option value="Microsoft Project">
+									Microsoft Project
+								</option>
+								<option value="Risk Management">
+									Risk Management
+								</option>
+								<option value="Team Building">
+									Team Building
+								</option>
+							</select>
+						</div>
+						<input type="search" class="form-control rounded-0" placeholder="Search for anything...">
+						<button class="btn search-btn"><i class="fe fe-search"></i></button>
+					</div>
+				</div>
+				<div class="main-header-right">
+					<button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+					</button><!-- Navresponsive closed -->
+					<div
+						class="navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+							<div class="d-flex order-lg-2 ms-auto">
+								<!-- Search -->
+								<div class="dropdown header-search">
+									<a class="nav-link icon header-search">
+										<i class="fe fe-search header-icons"></i>
+									</a>
+									<div class="dropdown-menu">
+										<div class="main-form-search p-2">
+											<div class="input-group">
+												<div class="input-group-btn search-panel">
+													<select class="form-control select2">
+														<option label="All categories">
+														</option>
+														<option value="IT Projects">
+															IT Projects
+														</option>
+														<option value="Business Case">
+															Business Case
+														</option>
+														<option value="Microsoft Project">
+															Microsoft Project
+														</option>
+														<option value="Risk Management">
+															Risk Management
+														</option>
+														<option value="Team Building">
+															Team Building
+														</option>
+													</select>
+												</div>
+												<input type="search" class="form-control"
+													placeholder="Search for anything...">
+												<button class="btn search-btn"><svg xmlns="http://www.w3.org/2000/svg"
+														width="20" height="20" <i class="fe fe-eye"></i>Box="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="feather feather-search">
+														<circle cx="11" cy="11" r="8"></circle>
+														<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+													</svg></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Search -->
+								<!-- Theme-Layout -->
+								<div class="dropdown d-flex main-header-theme">
+									<a class="nav-link icon layout-setting">
+										<span class="dark-layout">
+											<i class="fe fe-sun header-icons"></i>
+										</span>
+										<span class="light-layout">
+											<i class="fe fe-moon header-icons"></i>
+										</span>
+									</a>
+								</div>
+								<!-- Theme-Layout -->
+							
+								<!-- Full screen -->
+								<div class="dropdown ">
+									<a class="nav-link icon full-screen-link">
+										<i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
+										<i class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"></i>
+									</a>
+								</div>
+								<!-- Full screen -->
+								<!-- Notification -->
+								<div class="dropdown main-header-notification">
+									<a class="nav-link icon" href="">
+										<i class="fe fe-bell header-icons"></i>
+										<span class="badge bg-danger nav-link-badge">4</span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<p class="main-notification-text">You have 1 unread notification<span
+													class="badge bg-pill bg-primary ms-3"><i class="fe fe-eye"></i> all</span></p>
+										</div>
+										<div class="main-notification-list">
+											<div class="media new">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/5.jpg"></div>
+												<div class="media-body">
+													<p>Congratulate <strong>Olivia James</strong> for New template
+														start</p>
+													<span>Oct 15 12:32pm</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user"><img alt="avatar"
+														src="../assets/img/users/2.jpg">
+												</div>
+												<div class="media-body">
+													<p><strong>Joshua Gray</strong> New Message Received</p>
+													<span>Oct 13
+														02:56am</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/3.jpg"></div>
+												<div class="media-body">
+													<p><strong>Elizabeth Lewis</strong> <i class="fe fe-plus"></i>ed new schedule realease
+													</p><span>Oct
+														12 10:40pm</span>
+												</div>
+											</div>
+										</div>
+										<div class="dropdown-footer">
+											<a href="javascript:void(0)"><i class="fe fe-eye"></i> All Notifications</a>
+										</div>
+									</div>
+								</div>
+								<!-- Notification -->
+								<!-- Messages -->
+								<div class="main-header-notification">
+									<a class="nav-link icon" href="chat.html">
+										<i class="fe fe-message-square header-icons"></i>
+										<span class="badge bg-success nav-link-badge">6</span>
+									</a>
+								</div>
+								<!-- Messages -->
+								<!-- Profile -->
+								<div class="dropdown main-profile-menu">
+									<a class="d-flex" href="javascript:void(0)">
+										<span class="main-img-user"><img alt="avatar"
+												src="../assets/img/users/1.jpg"></span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<h6 class="main-notification-title">Sonia Taylor</h6>
+											<p class="main-notification-text">Web Designer</p>
+										</div>
+										<a class="dropdown-item border-top" href="profile.html">
+											<i class="fe fe-user"></i> My Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-<i class="fe fe-edit"></i>"></i> <i class="fe fe-edit"></i> Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Account Settings
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Support
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-compass"></i> Activity
+										</a>
+										<a class="dropdown-item" href="signin.html">
+											<i class="fe fe-power"></i> Sign Out
+										</a>
+									</div>
+								</div>
+								<!-- Profile -->
+								<!-- Sidebar -->
+								<div class="dropdown  header-settings">
+									<a href="javascript:void(0)" class="nav-link icon" data-bs-toggle="sidebar-right"
+										data-bs-target=".sidebar-right">
+										<i class="fe fe-align-right header-icons"></i>
+									</a>
+								</div>
+								<!-- Sidebar -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Main Header-->
+
+		<!-- Sidemenu -->
+		<!-- Sidemenu -->
+		<div class="sticky">
+			<div class="main-menu main-sidebar main-sidebar-sticky side-menu">
+				<div class="main-sidebar-header main-container-1 active">
+					<div class="sidemenu-logo">
+						<a class="main-logo" href="index.html">
+							<img src="../assets/img/brand/logo-light.png" class="header-brand-img desktop-logo" alt="logo">
+							<img src="../assets/img/brand/icon-light.png" class="header-brand-img icon-logo" alt="logo">
+							<img src="../assets/img/brand/logo.png" class="header-brand-img desktop-logo theme-logo" alt="logo">
+							<img src="../assets/img/brand/icon.png" class="header-brand-img icon-logo theme-logo" alt="logo">
+						</a>
+					</div>
+					<div class="main-sidebar-body main-body-1">
+						<div class="slide-left disabled" id="slide-left"><i class="fe fe-chevron-left"></i></div>
+						<ul class="menu-nav nav">
+							<li class="nav-header"><span class="nav-label">Dashboard</span></li>
+							<li class="nav-item">
+								<a class="nav-link" href="business-dashboard.html">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-home sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Business Dashboard</span>
+								</a>
+							</li>
+						
+							
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">HRMS</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">HRMS</a></li>
+								<li class="nav-sub-item"> <a class="nav-sub-link" href="list-employee.html">Manage Employee</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="employee-attendance.html">Attendance Logs </a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="employee-reports.html">Employee Report</a></li>
+									</ul>
+							</li>
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">SALE CRM</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">CRM</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="sales-lead.html">New Leads </a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="crm-reports.html">Reports </a></li>
+									</ul>
+							</li>
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">SUBSCRIBER</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">SUBSCRIBER</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="all-subscribers.html">All Subscribers </a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="subscribers-reports.html">Subscribers List </a></li>
+									</ul>
+							</li>
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">PARTNERS</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">PARTNERS</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="list-partners.html">Manage Partners</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="partners-reports.html">Partners Report</a></li>
+									</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">LAWYERS</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">LAWYERS</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="list-lawyers.html">Manage Lawyers</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="lawyers-reports.html">Lawyers Report</a></li>
+									</ul>
+							</li>
+							
+							
+							
+							
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">ACCOUNTS</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">ACCOUNTS</a></li>
+								<li class="nav-sub-item"> <a class="nav-sub-link" href="invoice-leads.html">Invoiced Leads</a></li>
+								<li class="nav-sub-item"> <a class="nav-sub-link" href="invoice-reports.html">Invoiced Reports</a></li>
+									</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">CASES CRM</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">CASES CRM</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="cases-lead.html">Cases Leads </a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="cases-reports.html">Cases Reports </a></li>
+									</ul>
+							</li>
+							
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">MORE ACTIONS</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">MORE ACTIONS</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="#">LandingPage </a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Task</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Payments</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Invoices</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Broadcasting</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Events</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Notifications</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Subscriptions</a></li>
+									</ul>
+							</li>
+							
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">MARKETPLACE</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">MARKETPLACE</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Lawyers </a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Users</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Feeds</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Wallet</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Earnings</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Levels</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="#">Masters</a></li>
+									</ul>
+							</li>
+						
+						</ul>
+						<div class="slide-right" id="slide-right"><i class="fe fe-chevron-right"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidemenu -->
+		<!-- End Sidemenu -->
+
+			<!-- Main Content-->
+			<div class="main-content side-content pt-0">
+
+				<div class="main-container container-fluid">
+					<div class="inner-body">
+
+						<!-- Page Header -->
+						<div class="page-header">
+							<div>
+								<h2 class="main-content-title tx-24 mg-b-5">Lead Reports</h2>
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="#">CRM </a></li>
+									<li class="breadcrumb-item active" aria-current="page">Lead Reports</li>
+								</ol>
+							</div>
+							<div class="d-flex">
+								<div class="justify-content-center">
+									<button type="button" class="btn btn-white btn-icon-text my-2 me-2">
+									  <i class="fe fe-download me-2"></i> Import
+									</button>
+								
+									<button type="button" class="btn btn-primary my-2 btn-icon-text  me-2">
+									  <i class="fe fe-download-cloud me-2"></i> Download Report
+									</button>
+									<a href="#" type="button" class="btn btn-primary my-2 btn-icon-text" data-bs-target="#add-lead" data-bs-toggle="modal"> <i class="fe fe-plus me-2" ></i> Add New Lead</a>
+								</div>
+							</div>
+						</div>
+						<!-- End Page Header -->
+
+					<div class="row">
+					    	<div class="col-lg-12">
+								<div class="card custom-card">
+									<div class="card-body py-3">
+									    <div class="row">
+					    <div class="col-sm-6">
+					        <input type="search" class="form-control form-control" placeholder="Search..." aria-controls="example1">
+					    </div>
+					     <div class="col-sm-2">
+					        	<select class="form-control select2">
+													<option label="Choose one">Source</option>
+												</select>
+					    </div>
+					      <div class="col-sm-2">
+					        	<select class="form-control select2">
+													<option label="Choose one">Assign To</option>
+													<option value="Firefox">Active</option>
+												</select>
+					    </div>
+					    <div class="col-sm-2">
+					        	<select class="form-control select2">
+													<option label="Choose one">Status</option>
+													<option value="Firefox"></option>
+												</select>
+					    </div>
+					</div>	</div></div>
+	</div>	</div>
+						<!-- Row -->
+						<div class="row row-sm">
+							<div class="col-lg-12">
+								<div class="card custom-card">
+									<div class="card-body">
+									<div class="text-wrap">
+												<div class="panel panel-primary tabs-style-3 p-0 tabs-style-3-0">
+													
+														<div class="tab-content ">
+															
+																	<div class="tab-pane active" id="tab18">
+															<div class="table-responsive">
+											<table  class="table table-striped table-bordered text-nowrap mb-0" >
+												<thead>
+													<tr>
+													    <th><label class="ckbox"><input type="checkbox" value="5"><span></span></label></th>
+														<th>ID</th>
+														<th>Photo</th>
+														<th>Contact</th>
+														<th>Company</th>
+														<th>Assigned</th>
+														<th>Followup</th>
+															<th>Quotation</th>
+														<th>Invoice</th>
+														<th>Actions</th>
+													
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+													    <td><label class="ckbox"><input type="checkbox" value="5"><span></span></label></td>
+														<td><p class="mb-0">Source : IVR Call<br>
+LLD-00000001
+</td>
+														<td><img alt="avatar" class="rounded-circle me-3" src="../assets/img/users/5.jpg" style="width:60px"></td>
+														<td>
+														<p class="mb-0">Sushil Singh Sharma<br>
+M: 8786467890<br>
+E: NA<br>
+Truck Owner
+ </p>
+														</td>
+														<td>
+														    <p class="mb-0">
+														        Solanki Transport<br>
+manager.solanki@gmail.com<br>
+Ph: 0120 889989<br>
+M: 8378278299<br>
+GST : 07AAGFF21O6N1Z1<br>
+H 140, Suit B04, BSI Business Park,<br>
+Sector 63, Noida, Uttar Pradesh 201301
+														        </p>
+														    
+														    </td>
+														    	<td>
+														    	    	       	    	      	      	    
+<p><span class="plus_btn_" data-bs-target="#modaldemo-employee-form" data-bs-toggle="modal" style="float:left"></span><span class="ms-2 mt-2" style="float:left">Re-Assign</span></p><br>
+														    
+														       
+														    <p class="mb-0">
+														    Rajiv Kumar<br>
+Sales Manager<br>
+E: rajiv@lawyered.in <br>
+M: +91878675789<br>
+D: 22 May 2023
+														    </p>
+														</td>
+														<td>
+														    <p class="mb-0">10 Comment<br>
+02 Meeting<br>
+01 Proposal </p>
+<p><span class="plus_btn_" data-bs-target="#modaldemo-followup-form" data-bs-toggle="modal"></span></p>
+														</td>
+															<td>
+														    <p class="mb-0">
+														    Total No of Truck : 100<br>
+Subscription : LOTS Premium<br>
+Rate Per Truck : 100<br>
+Total Amount : 10000<br>
+Discount (%) : 5<br>
+Start Date : 01/05/2023<br>
+End Date : 01/05/2024<br>
+Grace Period : 1 Year 
+														    </p>
+														</td>
+														<td>
+														    <p class="mb-0">
+														    Invoice No : LWLT0001 <br>
+Amount : 99000<br>
+GST : 10000<br>
+Total : 118000<br>
+Date : 27 May 2023<br>
+<span class="badge bg-pill bg-success-light">Payment Received : 29 May 2023</span>
+														    </p>
+														</td>
+														<td>
+														     <a href="lead-detail.html" class="btn ripple btn-warning btn-xs w-100 mb-1 mt-1"  >Details</a><br>
+															<a href="" class="btn ripple btn-success btn-xs w-100 mb-1" >Edit Lead</a><br>
+														<a href="invoice.html" class="btn ripple btn-dark btn-xs w-100 mb-1"  >Invoice</a>	<br>
+														<a href="" class="btn ripple btn-primary btn-xs w-100 " data-bs-target="#modaldemo-subscription" data-bs-toggle="modal" >Subscription</a>
+														</td>
+														
+													</tr>
+													
+												</tbody>
+											</table>
+										</div>
+																</div>
+														</div>
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Row -->
+					</div>
+				</div>
+			</div>
+			<!-- End Main Content-->
+
+			<!-- Main Footer-->
+			<div class="main-footer text-center">
+				<div class="container">
+					<div class="row row-sm">
+						<div class="col-md-12">
+							<span>Copyright © 2022 <a href="#">Lawyered</a>. Designed by <a href="https://www.spruko.com/">Spruko</a> All rights reserved.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Footer-->
+
+			
+
+		</div>
+		<!-- End Page -->
+			<!-- Large Modal -->
+			<div class="modal" id="add-lead">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Add Lead</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+							<div class="row">
+										
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">Source: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >Facebook</option>
+													<option >Instagram</option>
+														<option >News & Press</option>
+															<option >Website</option>
+																<option >Apps</option>
+																	<option >Calling</option>
+																		<option >Other </option>
+												</select>	</div>
+											</div><!-- col-4 -->
+												<div class="col-lg-4">
+												    <div class="form-group">
+												<p class="mg-b-5">Type: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >Business Lead 	</option>
+													<option>LOTS Lead</option>
+												</select></div>
+											</div><!-- col-4 -->
+											
+												<div class="col-lg-4">
+												    <div class="form-group">
+												<p class="mg-b-5">Sub Type: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >Partnership </option>
+													<option>API & Contracting</option>
+													<option>Others</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+												<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">+ LOTS FOR: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >TRUCK</option>
+													<option>CAR</option>
+													<option>CAB</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">No of Trucks: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >1</option>
+													<option >	1-5</option>
+														<option >5-10</option>
+															<option >10-20</option>
+																<option >20-30</option>
+																	<option >30-50</option>
+																		<option >50+ </option>
+												</select>	</div>
+											</div><!-- col-4 -->
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Company Alias</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Name</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Email Id</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Phone No.</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">	Contact Person: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+												<option >Driver</option>
+<option >Owner</option>
+<option >Owner+Driver</option>
+<option >Fleet Manager</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+									
+											<div class="col-lg-12"><button class="btn ripple btn-primary" type="button">Save</button></div>	
+							</div>
+					
+					</div>
+					
+				</div>
+			</div>
+			<!--End Large Modal -->
+
+		</div>
+		<!-- End Page -->
+		
+		<!-- Large Modal -->
+			<div class="modal" id="modaldemo-id">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">ID</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						    <div class="row">
+						        <div class="col-sm-8">
+						             <img src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif" style="width:100%;">
+						        </div>
+						        <div class="col-sm-4">
+						            	<h6>ID : Law001</h6>
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+						    </div>
+						    
+							
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<div class="modal" id="modaldemo-pan">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">PAN</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						     <div class="row">
+						        <div class="col-sm-8">
+						            <img src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif" style="width:100%;">
+						        </div>
+						        <div class="col-sm-4">
+						            	<h6>Pan No. : CLDPK8793</h6>
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+						    </div>
+						     
+						    
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-cheque">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Cheque</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						     <div class="row">
+						        <div class="col-sm-8">
+						            <img src="https://newadmin.webkype.com/assets/img/pngs/cheque-img.jpg" style="width:100%;">
+						        </div>
+						        <div class="col-sm-4">
+						            	<h6>Cheque No. : 0123456789</h6>
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+						    </div>
+						   
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-address">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Address</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						     <div class="row">
+						        <div class="col-sm-8">
+						<p>3-15/10/403 Newark, Street no 5, Next To Pizza Hut,  Bangalore,  Karnataka, 560003, India.</p>
+						<p class="mb-0">soniataylor344@example.com</p>
+							<p>+91 08023310451</p>
+								</div>
+								 <div class="col-sm-4">
+						            	
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+								
+								</div>
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-employee-form">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Assign</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+					<form>
+					   <div class="row row-sm">
+														
+															<div class="col-sm-4  form-group">
+																<label class="form-label">Select Department</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+														
+																</select>
+															</div>
+															<div class="col-sm-4  form-group">
+																<label class="form-label">Select Designation</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															
+																</select>
+															</div>
+																<div class="col-sm-4  form-group">
+																<label class="form-label">Select Employee </label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															
+																</select>
+															</div>
+														</div>
+					</form>
+								</div>
+									<div class="modal-footer">
+							<button class="btn ripple btn-primary" type="button">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+			
+			
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-followup-form">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Followup</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+					<form>
+					    	
+					   <div class="row row-sm">
+					       <div class="col-sm-12 form-group">
+					           <div class="row">
+											<div class="col-lg-2">
+												<label class="rdiobox update_box"><input checked name="rdio" type="radio"> <span>Update</span></label>
+											</div>
+											<div class="col-lg-2">
+												<label class="rdiobox meeting_box"><input  name="rdio" type="radio"> <span>Meeting</span></label>
+											</div>
+											<div class="col-lg-2">
+												<label class="rdiobox quotation_box"><input  name="rdio" type="radio"> <span>Quotation</span></label>
+											</div>
+										</div>
+					           </div></div>
+					       <div class="row row-sm update_wrap">
+					       <div class="col-sm-12 form-group">
+					           <label class="form-label">Comment</label>
+					          <textarea type="text" class="form-control" placeholder="Enter"></textarea>
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Attachment</label>
+					           <input type="file" class="form-control">
+					       </div>
+														
+															<div class="col-sm-4 form-group">
+																<label class="form-label">Status</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+														<option>Followup</option>
+														<option>Quotation</option> 
+														<option>Projection</option>
+														<option>Invoiced</option> 
+														<option>Sale</option>
+																</select>
+															</div>
+															<div class="col-sm-4 form-group">
+																<label class="form-label">Priority</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															<option>High</option>
+																</select>
+															</div>
+																
+														</div>
+														
+													 	<div class="col-sm-12 mt-2 mb-2"><hr></div>
+													 <div class="row row-sm meeting_wrap" >
+					        <div class="col-sm-4 form-group">
+					           <label class="form-label">Date</label>
+					           <input type="date" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Time</label>
+					           <input type="time" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Mode</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					           <div class="col-sm-4 form-group">
+					           <label class="form-label">Venue</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-8 form-group">
+					           <label class="form-label">Comment</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Attachment</label>
+					           <input type="file" class="form-control">
+					       </div>
+														
+															<div class="col-sm-4 form-group">
+																<label class="form-label">Status</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+														<option>Followup</option>
+														<option>Quotation</option> 
+														<option>Projection</option>
+														<option>Invoiced</option> 
+														<option>Sale</option>
+																</select>
+															</div>
+															<div class="col-sm-4 form-group">
+																<label class="form-label">Priority</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															<option>High</option>
+																</select>
+															</div>
+																
+														</div>
+												<div class="col-sm-12 mt-2 mb-2"><hr></div>
+											 	
+													 <div class="row row-sm quotation_wrap">
+					        <div class="col-sm-4 form-group">
+					           <label class="form-label">Total No of Truck</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Subscription</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Rate Per Truck</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					           <div class="col-sm-4 form-group">
+					           <label class="form-label">Total Amount</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Discount (%)</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Start Date</label>
+					           <input type="date" class="form-control">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">End Date </label>
+					           <input type="date" class="form-control">
+					       </div>
+					       
+					        <div class="col-sm-4 form-group">
+					           <label class="form-label">Grace Period </label>
+					           <input type="text" class="form-control">
+					       </div>
+								
+														</div>			
+														
+														
+					</form>
+								</div>
+									<div class="modal-footer">
+							<button class="btn ripple btn-primary" type="button">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+			
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-subscription">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Subscription</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+				<div class="media mt-0">
+										<div class="media-body ms-2 d-flex">
+										    <div class="me-3 pt-4"><img src="../assets/img/lots-logo.png" style="width:200px"></div>
+											<div>
+												<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Total No of Truck : 100</p>
+												<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Subscription  : LOTS Premium</p>
+													<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Rate Per Truck : 100</p>
+                                            	<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Total Amount : 10000 </p>
+                                            	<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Discount (%) : 5 </p>
+                                            		<p class="mb-0 tx-13 text-dark"> <i class="fe fe-chevrons-right me-1"></i>Start Date : 01/05/2023</p>
+													<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>End Date : 01/05/2024</p>
+                                            	<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Grace Period : 1 Year </p>
+                                            	<a href="" class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light">Accepted</a>
+                                            	<a href="" class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light">Cancel</a>
+                                            	<a href="" class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light">Revise</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+
+			<!-- Back-to-top -->
+		<a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+		<!-- Jquery js-->
+		<script src="../assets/plugins/jquery/jquery.min.js"></script>
+
+		<!-- Bootstrap js-->
+		<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+		<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Perfect-scrollbar js -->
+		<script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+		<!-- Sidemenu js -->
+		<script src="../assets/plugins/sidemenu/sidemenu.js" id="leftmenu"></script>
+
+		<!-- Sidebar js -->
+		<script src="../assets/plugins/sidebar/sidebar.js"></script>
+
+		<!-- Select2 js-->
+		<script src="../assets/plugins/select2/js/select2.min.js"></script>
+		<script src="../assets/js/select2.js"></script>
+
+		<!-- Internal Datepicker js -->
+		<script src="../assets/plugins/model-datepicker/js/datepicker.js"></script>
+		<script src="../assets/plugins/model-datepicker/js/main.js"></script>
+
+		<!-- Color Theme js -->
+		<script src="../assets/js/themeColors.js"></script>
+
+		<!-- Sticky js -->
+		<script src="../assets/js/sticky.js"></script>
+
+		<!-- Modal js-->
+		<script src="../assets/js/modal.js"></script>
+
+		<!-- Custom js -->
+		<script src="../assets/js/custom.js"></script>
+	
+		
+	</body>
+</html>

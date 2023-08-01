@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+		<meta name="description" content="Spruha -  Admin Panel HTML Dashboard Template">
+		<meta name="author" content="Spruko Technologies Private Limited">
+		<meta name="keywords" content="admin,dashboard,panel,bootstrap admin template,bootstrap dashboard,dashboard,themeforest admin dashboard,themeforest admin,themeforest dashboard,themeforest admin panel,themeforest admin template,themeforest admin dashboard,cool admin,it dashboard,admin design,dash templates,saas dashboard,dmin ui design">
+
+		<!-- Favicon -->
+		<link rel="icon" href="../assets/img/brand/favicon.ico" type="image/x-icon"/>
+
+		<!-- Title -->
+		<title>Spruha - Bootstrap Premium HTML Dashboard Template</title>
+
+		<!-- Bootstrap css-->
+		<link  id="style" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+		<!-- Icons css-->
+		<link href="../assets/plugins/web-fonts/icons.css" rel="stylesheet"/>
+		<link href="../assets/plugins/web-fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+		<link href="../assets/plugins/web-fonts/plugin.css" rel="stylesheet"/>
+
+		<!-- Style css-->
+		<link href="../assets/css/style.css" rel="stylesheet">
+
+		<!-- Select2 css -->
+		<link href="../assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+
+		<!-- Internal Daterangepicker css-->
+		<link href="../assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+		<!-- InternalFileupload css-->
+		<link href="../assets/plugins/fileuploads/css/fileupload.css" rel="stylesheet" type="text/css"/>
+
+		<!-- InternalFancy uploader css-->
+		<link href="../assets/plugins/fancyuploder/fancy_fileupload.css" rel="stylesheet" />
+
+		<!-- Internal TelephoneInput css-->
+		<link rel="stylesheet" href="../assets/plugins/telephoneinput/telephoneinput.css">
+			<!--Bootstrap-datepicker css-->
+		<link rel="stylesheet" href="../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.css">
+
+		<!-- Internal Datetimepicker-slider css -->
+		<link href="../assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
+
+		<!-- Internal Specturm-color picker css-->
+		<link href="../assets/plugins/spectrum-colorpicker/spectrum.css" rel="stylesheet">
+
+		<!-- Internal Ion.rangeslider css-->
+		<link href="../assets/plugins/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
+		<link href="../assets/plugins/ion-rangeslider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
+	</head>
+
+	<body class="ltr main-body leftmenu dash_admin light-theme">
+
+		<!-- Loader -->
+		<div id="global-loader">
+			<img src="../assets/img/loader.svg" class="loader-img" alt="Loader">
+		</div>
+		<!-- End Loader -->
+
+		<!-- Page -->
+		<div class="page">
+
+		<!-- Main Header-->
+		<div class="main-header side-header sticky">
+			<div class="main-container container-fluid">
+			<div class="main-header-left">
+					<a class="main-header-menu-icon" href="index.html"><img src="https://www.verandalearning.com/web/application/themes/green_elemental/img/footer_veranda_logo.png" class="header-brand-img desktop-logo" alt="logo"></a>
+				
+				</div>
+				<div class="main-header-center dash_admin_menu text-center">
+					
+					<ul>
+					   <li><a href="business-dashboard.html"><i class="fe fe-compass"></i> Dashboard </a></li>
+					   <li><a href="list-staff.html"><i class="fe fe-compass"></i> Manage Staff </a></li>
+					   <li><a href="list-campaigns.html"><i class="fe fe-compass"></i> Manage Campaigns </a></li>
+					   <li><a href="list-vendors.html"><i class="fe fe-compass"></i> Vendors </a></li>
+					   <li><a href="list-leads.html"><i class="fe fe-compass"></i> Manage Leads </a></li>
+					    <li><a href="#"><i class="fe fe-compass"></i> Quality & Audit</a></li>
+					</ul>
+				</div>
+				<!--div class="main-header-center">
+					<div class="responsive-logo">
+						<a href="index.html"><img src="../assets/img/brand/logo.png" class="mobile-logo" alt="logo"></a>
+						<a href="index.html"><img src="../assets/img/brand/logo-light.png" class="mobile-logo-dark"
+								alt="logo"></a>
+					</div>
+					<div class="input-group">
+						<div class="input-group-btn search-panel">
+							<select class="form-control select2">
+								<option label="All categories">
+								</option>
+							<option>Staff/Agent</option>
+<option>Sales Lead</option>
+<option>Subscriber</option>
+<option>Cases/Incident</option>
+<option>Lawyer</option>
+							</select>
+						</div>
+						<input type="search" class="form-control rounded-0" placeholder="Search for anything...">
+						<button class="btn search-btn"><i class="fe fe-search"></i></button>
+					</div>
+				</div-->
+				<div class="main-header-right">
+					<button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+					</button><!-- Navresponsive closed -->
+					<div
+						class="navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+							<div class="d-flex order-lg-2 ms-auto">
+								<!-- Search -->
+								<div class="dropdown header-search">
+									<a class="nav-link icon header-search">
+										<i class="fe fe-search header-icons"></i>
+									</a>
+									<div class="dropdown-menu">
+										<div class="main-form-search p-2">
+											<div class="input-group">
+												<div class="input-group-btn search-panel">
+													<select class="form-control select2">
+														<option label="All categories">	</option>
+															<option>Staff/Agent</option>
+<option>Sales Lead</option>
+<option>Subscriber</option>
+<option>Cases/Incident</option>
+<option>Lawyer</option>
+													</select>
+												</div>
+												<input type="search" class="form-control"
+													placeholder="Search for anything...">
+												<button class="btn search-btn"><svg xmlns="http://www.w3.org/2000/svg"
+														width="20" height="20" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="feather feather-search">
+														<circle cx="11" cy="11" r="8"></circle>
+														<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+													</svg></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Search -->
+								<!-- Theme-Layout -->
+								<div class="dropdown d-flex main-header-theme">
+									<a class="nav-link icon layout-setting">
+										<span class="dark-layout">
+											<i class="fe fe-sun header-icons"></i>
+										</span>
+										<span class="light-layout">
+											<i class="fe fe-moon header-icons"></i>
+										</span>
+									</a>
+								</div>
+								<!-- Theme-Layout -->
+							
+								<!-- Full screen -->
+								<div class="dropdown ">
+									<a class="nav-link icon full-screen-link">
+										<i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
+										<i class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"></i>
+									</a>
+								</div>
+								<!-- Full screen -->
+								<!-- Notification -->
+								<div class="dropdown main-header-notification">
+									<a class="nav-link icon" href="">
+										<i class="fe fe-bell header-icons"></i>
+										<span class="badge bg-danger nav-link-badge">4</span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<p class="main-notification-text">You have 1 unread notification<span
+													class="badge bg-pill bg-primary ms-3">View all</span></p>
+										</div>
+										<div class="main-notification-list">
+											<div class="media new">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/5.jpg"></div>
+												<div class="media-body">
+													<p>Congratulate <strong>Olivia James</strong> for New template
+														start</p>
+													<span>Oct 15 12:32pm</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user"><img alt="avatar"
+														src="../assets/img/users/2.jpg">
+												</div>
+												<div class="media-body">
+													<p><strong>Joshua Gray</strong> New Message Received</p>
+													<span>Oct 13
+														02:56am</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/3.jpg"></div>
+												<div class="media-body">
+													<p><strong>Elizabeth Lewis</strong> added new schedule realease
+													</p><span>Oct
+														12 10:40pm</span>
+												</div>
+											</div>
+										</div>
+										<div class="dropdown-footer">
+											<a href="javascript:void(0)">View All Notifications</a>
+										</div>
+									</div>
+								</div>
+								<!-- Notification -->
+								
+								<!-- Profile -->
+								<div class="dropdown main-profile-menu">
+									<a class="d-flex" href="javascript:void(0)">
+										<span class="main-img-user"><img alt="avatar"
+												src="../assets/img/users/5.jpg"></span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<h6 class="main-notification-title">Sonia Taylor</h6>
+											<p class="main-notification-text">Web Designer</p>
+										</div>
+										<a class="dropdown-item border-top" href="profile.html">
+											<i class="fe fe-user"></i> My Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-edit"></i> Edit Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Account Settings
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Support
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-compass"></i> Activity
+										</a>
+										<a class="dropdown-item" href="signin.html">
+											<i class="fe fe-power"></i> Sign Out
+										</a>
+									</div>
+								</div>
+								<!-- Profile -->
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Main Header-->
+
+			<!-- Main Content-->
+			<div class="main-content side-content pt-0">
+
+				<div class="main-container container-fluid">
+					<div class="inner-body">
+
+						<!-- Page Header -->
+						<div class="page-header">
+							<div>
+								<h2 class="main-content-title tx-24 mg-b-5">Add Campaign</h2>
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="#">Internal Campaigns </a></li>
+								</ol>
+							</div>
+							
+						</div>
+						<!-- End Page Header -->
+						
+						
+							<!-- Row -->
+						<div class="row row-sm">
+						    
+						    <div class="col-xl-4 col-lg-4 col-md-4">
+								<div class="card custom-card">
+									<div class="card-body">
+										<div>
+											<h6 class="main-content-label mb-4">CAMPAIGN PHOTO</h6>
+										</div>
+										<form action="form-validation.html" data-parsley-validate="">
+											<div class="">
+												<div class="row row-sm">
+													<div class="col-sm-12 col-md-12">
+												<input type="file" class="dropify" data-default-file="../assets/img/media/1.jpg" data-height="200"  />
+											</div>
+												
+												</div>
+												</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						    
+							<div class="col-xl-8 col-lg-8 col-md-8">
+								<div class="card custom-card">
+									<div class="card-body">
+										<div>
+											<h6 class="main-content-label mb-3">CAMPAIGN INFO</h6>
+										</div>
+										<form action="form-validation.html" data-parsley-validate="">
+											<div class="">
+												<div class="row row-sm">
+													<div class="col-lg-12 form-group">
+														<label class="form-label">Campaign Name : <span class="tx-danger">*</span></label>
+														<input class="form-control" name="firstname" placeholder="Enter Campaign" required="" type="text">
+													</div>
+													<div class="col-lg-12 form-group">
+															<label class="form-label">Campaign Type</label>
+																<select class="form-control select select2">
+																    	<option>Select</option>
+																	<option>Fresh</option>
+																	<option>Churned /Filter Data</option>
+																	<option>Cold Data</option>
+																</select>
+													</div>
+													<div class="col-lg-12 ">
+															<label class="form-label">Campaign Product </label>
+																<select class="form-control select select2">
+																    	<option>Select</option>
+																	<option>MBA in Marketing</option>
+																
+																</select>
+													</div>
+													
+													
+												</div>
+												
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+						<!-- End Row -->
+						
+							<!-- Row -->
+						<div class="row row-sm">
+						    
+						   
+						    
+							<div class="col-xl-12 col-lg-12 col-md-12">
+								<div class="card custom-card">
+									<div class="card-body">
+										<div>
+											<h6 class="main-content-label mb-3">Add TEAM</h6>
+										</div>
+										<form action="form-validation.html" data-parsley-validate="">
+											<div class="">
+												<div class="row row-sm">
+													
+													<div class="col-lg-6 form-group">
+															<label class="form-label">Department</label>
+																<select class="form-control select select2">
+																    	<option>Select</option>
+																	<option>Sales</option>
+																</select>
+													</div>
+														<div class="col-lg-6 form-group">
+															<label class="form-label">Designation</label>
+																<select class="form-control select select2">
+																    	<option>Select</option>
+																	<option>Lead Team</option>
+																</select>
+													</div>
+													<div class="col-lg-12 form-group">
+															<label class="form-label">Add Team Leader </label>
+																<select class="form-control select select2" multiple>
+																    	<option>Select</option>
+																<option>	Sumit Kumar</option>
+	<option> Ajay Kumar</option>
+	<option> Vijay Kumar</option>
+	<option>Amit Kumar</option>
+																
+																</select>
+													</div>
+													<div class="col-lg-12 form-group">
+															<label class="form-label">Select Team Agent  </label>
+																<select class="form-control select select2" multiple>
+																    	<option>Select</option>
+																<option>	Sumit Kumar</option>
+	<option> Ajay Kumar</option>
+	<option> Vijay Kumar</option>
+	<option>Amit Kumar</option>
+																
+																</select>
+													</div>
+													
+													
+												</div>
+												
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						
+						
+						
+						
+						
+						</div>
+						<!-- End Row -->
+
+
+					<div class="row row-sm">
+					    <div class="col-12 mb-3">
+					 <a href="list-campaigns.html" class="btn btn-primary" type="submit">Add Campaign</a> <a href="#" class="btn btn-primary" type="submit">Save to Transfer</a>
+						</div>
+					</div>
+				
+				
+					</div>
+				</div>
+			</div>
+			<!-- End Main Content-->
+
+			<!-- Main Footer-->
+			<div class="main-footer text-center">
+				<div class="container">
+					<div class="row row-sm">
+						<div class="col-md-12">
+							<span>Copyright © 2022 <a href="#">Spruha</a>. Designed by <a href="https://www.spruko.com/">Spruko</a> All rights reserved.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Footer-->
+
+			<!-- Sidebar -->
+			<div class="sidebar sidebar-right sidebar-animate">
+				<div class="sidebar-icon">
+					<a href="#" class="text-end float-end text-dark fs-20" data-bs-toggle="sidebar-right" data-bs-target=".sidebar-right"><i class="fe fe-x"></i></a>
+				</div>
+				<div class="sidebar-body">
+					<h5>Todo</h5>
+					<div class="d-flex p-3">
+						<label class="ckbox"><input checked  type="checkbox"><span>Hangout With friends</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input type="checkbox"><span>Prepare for presentation</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input type="checkbox"><span>Prepare for presentation</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input checked type="checkbox"><span>System Updated</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input type="checkbox"><span>Do something more</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input  type="checkbox"><span>System Updated</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input  type="checkbox"><span>Find an Idea</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top mb-0">
+						<label class="ckbox"><input  type="checkbox"><span>Project review</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<h5>Overview</h5>
+					<div class="p-4">
+						<div class="main-traffic-detail-item">
+							<div>
+								<span>Founder &amp; CEO</span> <span>24</span>
+							</div>
+							<div class="progress">
+								<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="progress-bar progress-bar-xs wd-20p" role="progressbar"></div>
+							</div><!-- progress -->
+						</div>
+						<div class="main-traffic-detail-item">
+							<div>
+								<span>UX Designer</span> <span>1</span>
+							</div>
+							<div class="progress">
+								<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="progress-bar progress-bar-xs bg-secondary wd-15p" role="progressbar"></div>
+							</div><!-- progress -->
+						</div>
+						<div class="main-traffic-detail-item">
+							<div>
+								<span>Recruitment</span> <span>87</span>
+							</div>
+							<div class="progress">
+								<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="45" class="progress-bar progress-bar-xs bg-success wd-45p" role="progressbar"></div>
+							</div><!-- progress -->
+						</div>
+						<div class="main-traffic-detail-item">
+							<div>
+								<span>Software Engineer</span> <span>32</span>
+							</div>
+							<div class="progress">
+								<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar progress-bar-xs bg-info wd-25p" role="progressbar"></div>
+							</div><!-- progress -->
+						</div>
+						<div class="main-traffic-detail-item">
+							<div>
+								<span>Project Manager</span> <span>32</span>
+							</div>
+							<div class="progress">
+								<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar progress-bar-xs bg-danger wd-25p" role="progressbar"></div>
+							</div><!-- progress -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Sidebar -->
+
+		</div>
+		<!-- End Page -->
+
+
+		<!-- Jquery js-->
+		<script src="../assets/plugins/jquery/jquery.min.js"></script>
+
+		<!-- Bootstrap js-->
+		<script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Jquery-Ui js-->
+		<script src="../assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+		<!-- Internal Daternagepicker js-->
+		<script src="../assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+		<script src="../assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+		<!-- Internal Fileuploads js-->
+		<script src="../assets/plugins/fileuploads/js/fileupload.js"></script>
+        <script src="../assets/plugins/fileuploads/js/file-upload.js"></script>
+
+		<!-- InternalFancy uploader js-->
+		<script src="../assets/plugins/fancyuploder/jquery.ui.widget.js"></script>
+        <script src="../assets/plugins/fancyuploder/jquery.fileupload.js"></script>
+        <script src="../assets/plugins/fancyuploder/jquery.iframe-transport.js"></script>
+        <script src="../assets/plugins/fancyuploder/jquery.fancy-fileupload.js"></script>
+        <script src="../assets/plugins/fancyuploder/fancy-uploader.js"></script>
+
+		<!-- Internal Form-elements js-->
+		<script src="../assets/js/advanced-form-elements.js"></script>
+
+		<!-- Internal TelephoneInput js-->
+		<script src="../assets/plugins/telephoneinput/telephoneinput.js"></script>
+		<script src="../assets/plugins/telephoneinput/inttelephoneinput.js"></script>
+
+		<!-- Perfect-scrollbar js -->
+		<script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+		<!-- Sidemenu js -->
+		<script src="../assets/plugins/sidemenu/sidemenu.js" id="leftmenu"></script>
+		<!--Bootstrap-datepicker js-->
+		<script src="../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+		<!-- Internal jquery-simple-datetimepicker js -->
+		<script src="../assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+
+	<!-- COLOR PICKER JS -->
+		<script src="../assets/plugins/pickr-master/pickr.es5.min.js"></script>
+		<script src="../assets/js/picker.js"></script>
+		<!-- Sidebar js -->
+		<script src="../assets/plugins/sidebar/sidebar.js"></script>
+
+		<!-- Select2 js-->
+		<script src="../assets/plugins/select2/js/select2.min.js"></script>
+		<script src="../assets/js/select2.js"></script>
+
+		<!-- Color Theme js -->
+		<script src="../assets/js/themeColors.js"></script>
+
+		<!-- Sticky js -->
+		<script src="../assets/js/sticky.js"></script>
+
+		<!-- Custom js -->
+		<script src="../assets/js/custom.js"></script>
+		
+		
+		
+		<!-- Bootstrap js-->
+		<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+		<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Internal Jquery-Ui js-->
+		<script src="../assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+		<!-- Internal Jquery.maskedinput js-->
+		<script src="../assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+		<!-- Internal Specturm-colorpicker js-->
+		<script src="../assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+
+		<!-- Internal Ion-rangeslider js-->
+		<script src="../assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+	
+		<!-- Internal Form-elements js-->
+		<script src="../assets/js/form-elements.js"></script>
+
+	</body>
+</html>

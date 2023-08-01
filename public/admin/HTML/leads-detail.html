@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta name="description" content="Verandahighered Beta ERP Design">
+	<meta name="author" content="Verandahighered Beta ERP Design">
+	<meta name="keywords" content="Verandahighered Beta ERP Design">
+		<!-- Favicon -->
+		<link rel="icon" href="../assets/img/brand/favicon.ico" type="image/x-icon"/>
+
+		<!-- Title -->
+		<title>Verandahighered Beta ERP Design</title>
+
+		<!-- Bootstrap css-->
+		<link  id="style" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+		<!-- Icons css-->
+		<link href="../assets/plugins/web-fonts/icons.css" rel="stylesheet"/>
+		<link href="../assets/plugins/web-fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+		<link href="../assets/plugins/web-fonts/plugin.css" rel="stylesheet"/>
+
+		<!-- Style css-->
+		<link href="../assets/css/style.css" rel="stylesheet">
+
+		<!-- Select2 css -->
+		<link href="../assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+
+		<!-- Internal Gallery css-->
+		<link href="../assets/plugins/gallery/gallery.css" rel="stylesheet">
+			<!-- Internal Daterangepicker css-->
+		<link href="../assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+		<!-- InternalFileupload css-->
+		<link href="../assets/plugins/fileuploads/css/fileupload.css" rel="stylesheet" type="text/css"/>
+
+		<!-- InternalFancy uploader css-->
+		<link href="../assets/plugins/fancyuploder/fancy_fileupload.css" rel="stylesheet" />
+
+	</head>
+
+	<body class="ltr main-body leftmenu dash_admin light-theme">
+
+		<!-- Loader -->
+		<div id="global-loader">
+			<img src="../assets/img/loader.svg" class="loader-img" alt="Loader">
+		</div>
+		<!-- End Loader -->
+
+		<!-- Page -->
+		<div class="page">
+
+	<!-- Main Header-->
+		<div class="main-header side-header sticky">
+			<div class="main-container container-fluid">
+			<div class="main-header-left">
+					<a class="main-header-menu-icon" href="index.html"><img src="https://www.verandalearning.com/web/application/themes/green_elemental/img/footer_veranda_logo.png" class="header-brand-img desktop-logo" alt="logo"></a>
+				
+				</div>
+				<div class="main-header-center dash_admin_menu text-center">
+					
+					<ul>
+					   <li><a href="business-dashboard.html"><i class="fe fe-compass"></i> Dashboard </a></li>
+					   <li><a href="list-staff.html"><i class="fe fe-compass"></i> Manage Staff </a></li>
+					   <li><a href="list-campaigns.html"><i class="fe fe-compass"></i> Manage Campaigns </a></li>
+					   <li><a href="list-vendors.html"><i class="fe fe-compass"></i> Vendors </a></li>
+					   <li><a href="list-leads.html"><i class="fe fe-compass"></i> Manage Leads </a></li>
+					    <li><a href="#"><i class="fe fe-compass"></i> Quality & Audit</a></li>
+					</ul>
+				</div>
+				<!--div class="main-header-center">
+					<div class="responsive-logo">
+						<a href="index.html"><img src="../assets/img/brand/logo.png" class="mobile-logo" alt="logo"></a>
+						<a href="index.html"><img src="../assets/img/brand/logo-light.png" class="mobile-logo-dark"
+								alt="logo"></a>
+					</div>
+					<div class="input-group">
+						<div class="input-group-btn search-panel">
+							<select class="form-control select2">
+								<option label="All categories">
+								</option>
+							<option>Staff/Agent</option>
+<option>Sales Lead</option>
+<option>Subscriber</option>
+<option>Cases/Incident</option>
+<option>Lawyer</option>
+							</select>
+						</div>
+						<input type="search" class="form-control rounded-0" placeholder="Search for anything...">
+						<button class="btn search-btn"><i class="fe fe-search"></i></button>
+					</div>
+				</div-->
+				<div class="main-header-right">
+					<button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+					</button><!-- Navresponsive closed -->
+					<div
+						class="navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+							<div class="d-flex order-lg-2 ms-auto">
+								<!-- Search -->
+								<div class="dropdown header-search">
+									<a class="nav-link icon header-search">
+										<i class="fe fe-search header-icons"></i>
+									</a>
+									<div class="dropdown-menu">
+										<div class="main-form-search p-2">
+											<div class="input-group">
+												<div class="input-group-btn search-panel">
+													<select class="form-control select2">
+														<option label="All categories">	</option>
+															<option>Staff/Agent</option>
+<option>Sales Lead</option>
+<option>Subscriber</option>
+<option>Cases/Incident</option>
+<option>Lawyer</option>
+													</select>
+												</div>
+												<input type="search" class="form-control"
+													placeholder="Search for anything...">
+												<button class="btn search-btn"><svg xmlns="http://www.w3.org/2000/svg"
+														width="20" height="20" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="feather feather-search">
+														<circle cx="11" cy="11" r="8"></circle>
+														<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+													</svg></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Search -->
+								<!-- Theme-Layout -->
+								<div class="dropdown d-flex main-header-theme">
+									<a class="nav-link icon layout-setting">
+										<span class="dark-layout">
+											<i class="fe fe-sun header-icons"></i>
+										</span>
+										<span class="light-layout">
+											<i class="fe fe-moon header-icons"></i>
+										</span>
+									</a>
+								</div>
+								<!-- Theme-Layout -->
+							
+								<!-- Full screen -->
+								<div class="dropdown ">
+									<a class="nav-link icon full-screen-link">
+										<i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
+										<i class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"></i>
+									</a>
+								</div>
+								<!-- Full screen -->
+								<!-- Notification -->
+								<div class="dropdown main-header-notification">
+									<a class="nav-link icon" href="">
+										<i class="fe fe-bell header-icons"></i>
+										<span class="badge bg-danger nav-link-badge">4</span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<p class="main-notification-text">You have 1 unread notification<span
+													class="badge bg-pill bg-primary ms-3">View all</span></p>
+										</div>
+										<div class="main-notification-list">
+											<div class="media new">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/5.jpg"></div>
+												<div class="media-body">
+													<p>Congratulate <strong>Olivia James</strong> for New template
+														start</p>
+													<span>Oct 15 12:32pm</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user"><img alt="avatar"
+														src="../assets/img/users/2.jpg">
+												</div>
+												<div class="media-body">
+													<p><strong>Joshua Gray</strong> New Message Received</p>
+													<span>Oct 13
+														02:56am</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/3.jpg"></div>
+												<div class="media-body">
+													<p><strong>Elizabeth Lewis</strong> added new schedule realease
+													</p><span>Oct
+														12 10:40pm</span>
+												</div>
+											</div>
+										</div>
+										<div class="dropdown-footer">
+											<a href="javascript:void(0)">View All Notifications</a>
+										</div>
+									</div>
+								</div>
+								<!-- Notification -->
+								
+								<!-- Profile -->
+								<div class="dropdown main-profile-menu">
+									<a class="d-flex" href="javascript:void(0)">
+										<span class="main-img-user"><img alt="avatar"
+												src="../assets/img/users/5.jpg"></span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<h6 class="main-notification-title">Sonia Taylor</h6>
+											<p class="main-notification-text">Web Designer</p>
+										</div>
+										<a class="dropdown-item border-top" href="profile.html">
+											<i class="fe fe-user"></i> My Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-edit"></i> Edit Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Account Settings
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Support
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-compass"></i> Activity
+										</a>
+										<a class="dropdown-item" href="signin.html">
+											<i class="fe fe-power"></i> Sign Out
+										</a>
+									</div>
+								</div>
+								<!-- Profile -->
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Main Header-->
+	
+			<!-- Main Content-->
+			<div class="main-content side-content pt-0">
+
+				<div class="main-container container-fluid">
+					<div class="inner-body">
+
+					<div class="row row-sm mt-3">
+							<div class="col-lg-9 col-md-9">
+								<div class="card custom-card main-content-body-profile">
+									<div class="card-body pb-0">
+										<div class="profile-tab tab-menu-heading">
+											<nav class="nav main-nav-line p-3 tabs-menu profile-nav-line bg-gray-100">
+												<a class="nav-link active" data-bs-toggle="tab" href="#about">Lead Followup</a>
+												<a class="nav-link" data-bs-toggle="tab" href="#case-details">Lead Details</a>
+													<a class="nav-link" data-bs-toggle="tab" href="#lawyer">Call Logs </a>
+												<a class="nav-link" data-bs-toggle="tab" href="#converted_tb">Converted  </a>
+											</nav>
+												<span class="calling__time"><img src="../assets/img/Phone_problems_01_gif.gif" style="width:70px"> 00 00 00 </span>
+										</div>
+									</div>
+							
+									<div class="tab-content">
+										<div class="main-content-body tab-pane p-3 border-top-0 active" id="about">
+										
+														<div class="row row-sm">
+						    <div class="col-xl-12">
+							<div class="card custom-card border mb-3">
+															<div class="card-header pb-2">
+																<h6 class="mb-0"> Lead Followup History <button class="btn ripple btn-info btn-rounded pull-right btn-rounded-sm mb-1 me-2" data-bs-target="#modaldemo-note-form" data-bs-toggle="modal">Add Note</button></h6>
+															</div>
+															<div class="card-body">
+															   <div class="col-12">
+																<ul class="notification mb-0">
+						
+							<li>
+								<div class="notification-time">
+									<p class="mb-0 ">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-icon">
+									<a href="javascript:void(0);"></a>
+								</div>
+								<div class="notification-time-date mb-2 d-block d-md-none">
+									
+									<p class="mb-0">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-body">
+									<div class="media mt-0">
+										<div class="main-avatar avatar-md online bg-none">
+											<img alt="avatar" class="rounded-6" src="../assets/img/lawyer-img.png">
+										</div>
+										<div class="media-body ms-2 d-flex">
+											<div class="">
+											     <p class="tx-14 text-dark mb-0 tx-semibold">Agent Name added an Action:  </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called By : Gajendra Singh</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called To: Rajiv Kumar</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Start Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	<span class="badge bg-pill bg-success-light">Call Disposition : Call Back </span> </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back. : Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back No :  N/A</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Agent Comment :  Client need more clarity about institute</p>
+											  
+											</div>
+												<div class="notify-time"><p class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light">Level 2</p></div>
+												
+										</div>
+									</div>
+								</div>
+							</li>
+						
+								<li>
+								<div class="notification-time">
+									<p class="mb-0 ">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-icon">
+									<a href="javascript:void(0);"></a>
+								</div>
+								<div class="notification-time-date mb-2 d-block d-md-none">
+									
+									<p class="mb-0">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-body">
+									<div class="media mt-0">
+										<div class="main-avatar avatar-md online bg-none">
+											<img alt="avatar" class="rounded-6" src="../assets/img/lawyer-img.png">
+										</div>
+										<div class="media-body ms-2 d-flex">
+											<div class="">
+											     <p class="tx-14 text-dark mb-0 tx-semibold">Agent Name added an Action:  </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called By : Gajendra Singh</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called To: Rajiv Kumar</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Start Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	<span class="badge bg-pill bg-success-light">Call Disposition : Call Back </span> </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back. : Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back No :  N/A</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Agent Comment :  Client need more clarity about institute</p>
+											  
+											</div>
+												<div class="notify-time"><p class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light">Level 2</p></div>
+												
+										</div>
+									</div>
+								</div>
+							</li>
+								<li>
+								<div class="notification-time">
+									<p class="mb-0 ">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-icon">
+									<a href="javascript:void(0);"></a>
+								</div>
+								<div class="notification-time-date mb-2 d-block d-md-none">
+									
+									<p class="mb-0">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-body">
+									<div class="media mt-0">
+										<div class="main-avatar avatar-md online bg-none">
+											<img alt="avatar" class="rounded-6" src="../assets/img/lawyer-img.png">
+										</div>
+										<div class="media-body ms-2 d-flex">
+											<div class="">
+											     <p class="tx-14 text-dark mb-0 tx-semibold">Agent Name added an Action:  </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called By : Gajendra Singh</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called To: Rajiv Kumar</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Start Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	<span class="badge bg-pill bg-success-light">Call Disposition : Call Back </span> </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back. : Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back No :  N/A</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Agent Comment :  Client need more clarity about institute</p>
+											  
+											</div>
+												<div class="notify-time"><p class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light">Level 2</p></div>
+												
+										</div>
+									</div>
+								</div>
+							</li>
+								<li>
+								<div class="notification-time">
+									<p class="mb-0 ">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-icon">
+									<a href="javascript:void(0);"></a>
+								</div>
+								<div class="notification-time-date mb-2 d-block d-md-none">
+									
+									<p class="mb-0">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-body">
+									<div class="media mt-0">
+										<div class="main-avatar avatar-md online bg-none">
+											<img alt="avatar" class="rounded-6" src="../assets/img/lawyer-img.png">
+										</div>
+										<div class="media-body ms-2 d-flex">
+											<div class="">
+											     <p class="tx-14 text-dark mb-0 tx-semibold">Agent Name added an Action:  </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called By : Gajendra Singh</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called To: Rajiv Kumar</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Start Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	<span class="badge bg-pill bg-success-light">Call Disposition : Call Back </span> </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back. : Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back No :  N/A</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Agent Comment :  Client need more clarity about institute</p>
+											  
+											</div>
+												<div class="notify-time"><p class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light">Level 2</p></div>
+												
+										</div>
+									</div>
+								</div>
+							</li>
+								<li>
+								<div class="notification-time">
+									<p class="mb-0 ">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-icon">
+									<a href="javascript:void(0);"></a>
+								</div>
+								<div class="notification-time-date mb-2 d-block d-md-none">
+									
+									<p class="mb-0">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-body">
+									<div class="media mt-0">
+										<div class="main-avatar avatar-md online bg-none">
+											<img alt="avatar" class="rounded-6" src="../assets/img/lawyer-img.png">
+										</div>
+										<div class="media-body ms-2 d-flex">
+											<div class="">
+											     <p class="tx-14 text-dark mb-0 tx-semibold">Agent Name added an Action:  </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called By : Gajendra Singh</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called To: Rajiv Kumar</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Start Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	<span class="badge bg-pill bg-success-light">Call Disposition : Call Back </span> </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back. : Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back No :  N/A</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Agent Comment :  Client need more clarity about institute</p>
+											  
+											</div>
+												<div class="notify-time"><p class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light">Level 2</p></div>
+												
+										</div>
+									</div>
+								</div>
+							</li>
+								<li>
+								<div class="notification-time">
+									<p class="mb-0 ">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-icon">
+									<a href="javascript:void(0);"></a>
+								</div>
+								<div class="notification-time-date mb-2 d-block d-md-none">
+									
+									<p class="mb-0">10 May 2023 <br> 12:00 PM</p>
+								</div>
+								<div class="notification-body">
+									<div class="media mt-0">
+										<div class="main-avatar avatar-md online bg-none">
+											<img alt="avatar" class="rounded-6" src="../assets/img/lawyer-img.png">
+										</div>
+										<div class="media-body ms-2 d-flex">
+											<div class="">
+											     <p class="tx-14 text-dark mb-0 tx-semibold">Agent Name added an Action:  </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called By : Gajendra Singh</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Called To: Rajiv Kumar</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Start Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	<span class="badge bg-pill bg-success-light">Call Disposition : Call Back </span> </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back. : Call End Date / Time</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Call Back No :  N/A</p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>	Agent Comment :  Client need more clarity about institute</p>
+											  
+											</div>
+												<div class="notify-time"><p class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light">Level 2</p></div>
+												
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+															</div>
+															</div>
+														</div>
+							</div>
+							
+							 
+						</div>
+						
+										</div>
+										
+										
+											<div class="main-content-body tab-pane p-3 border-top-0" id="case-details">
+											<div class="row row-sm">
+						    <div class="col-xl-12">
+							<div class="card custom-card border mb-3">
+														
+															<div class="card-body">
+															   <div class="col-12">
+															<div class="row">
+							     <div class="col-sm-4 form-group">
+					           <label class="form-label">ID</label>
+					           <input type="text" class="form-control" value="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Source</label>
+					           <input type="text" class="form-control" value="Enter">
+					       </div>
+					        <div class="col-sm-4 form-group">
+					           <label class="form-label">First Name</label>
+					           <input type="text" class="form-control" value="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label"> Last Name </label>
+					           <input type="text" class="form-control" value="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Email ID </label>
+					           <input type="text" class="form-control" value="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Phone No</label>
+					           <input type="text" class="form-control" value="Enter">
+					       </div>
+									
+												<div class="col-lg-3">
+												    <div class="form-group">
+												<p class="mg-b-5">State </p>
+												<select class="form-control select2">
+													<option>Select</option>
+												<option> Uttar Pradesh</option>
+												</select></div>
+											</div><!-- col-4 -->
+												<div class="col-lg-3">
+												    <div class="form-group">
+												<p class="mg-b-5">City</p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option selected>Noida</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+												<div class="col-lg-3">
+												    <div class="form-group">
+												<p class="mg-b-5">Highest Qualification </p>
+												<select class="form-control select2">
+													<option >Select</option>
+														<option>MBA</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+											
+											<div class="col-sm-3 form-group">
+					           <label class="form-label">Work Exp</label>
+					           <input type="text" class="form-control" value="Enter">
+					       </div>
+											
+											
+												<div class="col-lg-3">
+												    <div class="form-group">
+												<p class="mg-b-5">Designation </p>
+												<select class="form-control select2">
+													<option>Select</option>
+													<option>CEO</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+											
+											 <div class="col-sm-3 form-group">
+					           <label class="form-label">CTC</label>
+					           <input type="text" class="form-control" value="Enter">
+					       </div>
+					       	<div class="col-lg-3">
+												    <div class="form-group">
+												<p class="mg-b-5">Industry </p>
+												<select class="form-control select2">
+													<option>Select</option>
+													<option>IT</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+					       
+					       
+					       	 <div class="col-sm-3 form-group">
+					           <label class="form-label"> Course Name</label>
+					           <input type="text" class="form-control" value="Vijay Road">
+					       </div>
+					       <div class="col-lg-3">
+												    <div class="form-group">
+												<p class="mg-b-5">Select Disposition  </p>
+												<select class="form-control select2">
+													<option>Select</option>
+													<option>Interested</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+					         <div class="col-lg-3">
+												    <div class="form-group">
+												<p class="mg-b-5">Sub Disposition  </p>
+												<select class="form-control select2">
+													<option>Select</option>
+													<option>Call back</option>
+												</select>	</div>
+											
+											</div><!-- col-4 -->
+												 <div class="col-sm-6 form-group">
+					           <label class="form-label"> Remarks</label>
+					           <input type="text" class="form-control" value="">
+					       </div>
+					       <div class="col-lg-2"><button class="btn ripple btn-primary w-100" type="button">Save </button></div>
+					       	
+							</div>
+															</div>
+															</div>
+														</div>
+							</div>
+							
+							 
+						</div>
+										</div>
+										
+											<div class="main-content-body tab-pane border-top-0 p-3 cases_wrapper" id="lawyer">
+										 	<div class="row row-sm">
+						    <div class="col-xl-12">
+							<div class="card custom-card border mb-3">
+														
+															<div class="card-body">
+															   
+																<div class="table-responsive">
+											<table class="table  text-nowrap mb-0">
+												<thead class="table-success">
+													<tr>
+													    <th><label class="ckbox"><input type="checkbox" value="5"><span></span></label></th>
+												<th>	Phone No</th>
+<th>Call Start Date / Time</th>
+<th>Call End Date / Time</th>
+<th>Call Type </th>
+<th>Call Again  </th>
+<th>Campaign Name</th>
+<th>Course Name</th>  
+<th>Agent Name</th>
+<th>Last Disposition</th>
+<th>Comment / Remark</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+													    <td><label class="ckbox"><input type="checkbox" value="5"><span></span></label></td>
+													   <td>+91 9999999999</td>
+													<td>2023-05-30 10:30AM</td>
+														<td>2023-05-30 11:00AM</td>
+														<td>Outgoing</td>
+														<td>No</td>
+														<td>Fresh_Mix_Camp</td>
+														<td>MBA</td>
+														<td>Rohit Singh</td>
+														<td>Call Back</td>
+														<td>Client need more clarity about institute</td>
+														
+													</tr>
+													<tr>
+													    <td><label class="ckbox"><input type="checkbox" value="5"><span></span></label></td>
+													   <td>+91 9999999999</td>
+													<td>2023-05-30 10:30PM</td>
+														<td>2023-05-30 11:00PM</td>
+														<td>Outgoing</td>
+														<td>No</td>
+														<td>Fresh_Mix_Camp</td>
+														<td>MBA</td>
+														<td>Rohit Singh</td>
+														<td>Call Back</td>
+														<td>Client need more clarity about institute</td>
+														
+													</tr>
+													
+												</tbody>
+											</table>
+										</div>
+														
+															</div>
+														</div>
+							</div>
+							
+							 
+						</div>
+													
+										</div>
+								
+								
+									<div class="main-content-body tab-pane p-3 border-top-0 " id="converted_tb">
+										
+														<div class="row row-sm">
+						    <div class="col-xl-12">
+							<div class="card custom-card border mb-3">
+														
+															<div class="card-body">
+															   <div class="col-12">
+																<ul class="notification mb-0 ms-0">
+						
+							<li>
+								
+								<div class="notification-body">
+									<div class="media mt-0">
+										<div class="main-avatar avatar-md online bg-none">
+											<img alt="avatar" class="rounded-6" src="../assets/img/lawyer-img.png">
+										</div>
+										<div class="media-body ms-2 d-flex">
+											<div class="">
+											   <p class="tx-14 text-dark mb-0 tx-semibold"> Called By : Gajendra Singh </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Called To: Rajiv Kumar </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Convert Date / Time </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Course Subscribed :  </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Disposition : Converted </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Payment Received : 15 June 2023.  </p>
+<p class="mb-0 tx-13 text-dark"><i class="fe fe-chevrons-right me-1"></i>Agent Comment : Client need more clarity about institute </p>
+											    
+											  
+											</div>
+												
+										</div>
+									</div>
+								</div>
+							</li>
+						
+						</ul>
+															</div>
+															</div>
+														</div>
+							</div>
+							
+							 
+						</div>
+						
+										</div>
+								
+									</div>
+								</div>
+							</div>
+					
+						<div class="col-sm-3 col-lg-3">
+							<div class="card custom-card card-dashboard-calendar grey-bg">
+								<label class="main-content-label mb-2 pt-1 text-white">Calling Panel</label>
+							<div class="col-xl-12">
+								<p class="mb-0 tx-14 text-white"><i class="fe fe-chevrons-right me-1"></i>Call Type : Outgoing</p>
+	<p class="mb-0 tx-14 text-white"><i class="fe fe-chevrons-right me-1"></i>Customer ID :59079</p>
+	<p class="mb-0 tx-14 text-white"><i class="fe fe-chevrons-right me-1"></i>Campaign : Churn_HRM_Camp</p>
+<p class="mb-0 tx-14 text-white"><i class="fe fe-chevrons-right me-1"></i>Process : Edureka  </p>
+	<p class="mb-0 tx-14 text-white"><i class="fe fe-chevrons-right me-1"></i>Route : N/A</p>
+	<p class="mb-0 tx-14 text-white"><i class="fe fe-chevrons-right me-1"></i>DID No. : 3343</p>
+		<p class="mb-0 tx-14 text-white"><i class="fe fe-chevrons-right me-1"></i>Callback Type : Telecaller Callback  </p>
+			<p class="mb-0 tx-14 text-white"><i class="fe fe-chevrons-right me-1"></i>Branch :
+			<select style="padding: 0;background: none; color: #fff;box-shadow: none;font-size: 14px;border:0">
+			    <option>Select</option>
+			</select> </p>
+				<p class="mb-0 tx-14 text-white"><i class="fe fe-chevrons-right me-1"></i>Context :
+			<select style="padding: 0;background: none; color: #fff;box-shadow: none;font-size: 14px; border:0">
+			    <option>Edureka</option>
+			</select> </p>
+			</div>
+			
+				
+							</div>
+							<div class="col-xl-12">
+										    <ul class="caller_icons">
+										        <li>
+										            <a href="" class="call_iocn active"><i class="fe fe-phone-outgoing"></i>
+										           <span> Dial</span>
+										            </a>
+										        </li>
+										        <li>
+										            <a href="" class="call_iocn_off"><i class="fe fe-phone-off"></i>
+										           <span> Hangup</span>
+										            </a>
+										        </li>
+										          <li>
+										            <a href="" class="call_mic_off"><i class="fe fe-mic-off"></i>
+										           <span> Mute</span>
+										            </a>
+										        </li>
+										         <li>
+										            <a href="" class="call_user_plus"><i class="fe fe-user-plus"></i>
+										           <span> Confer..</span>
+										            </a>
+										        </li>
+										        <li>
+										            <a href="" class="call_trns-iocn"><i class="fe fe-phone-forwarded"></i>
+										           <span> Transfer</span>
+										            </a>
+										        </li>
+										         <li>
+										            <a href="" class="call_new-iocn"><i class="fe fe-plus-square"></i>
+										           <span> New</span>
+										            </a>
+										        </li>
+										        
+										    </ul>
+										</div>
+										<div class="col-xl-12">
+										    	<div class="card custom-card card-dashboard-calendar ">
+										    <div class="form-group">
+												<select class="form-control select2">
+													<option>Select Break</option>
+														<option>Bio Break</option>
+
+	<option>Edu Tea Break</option>
+
+	<option>Lunch Break</option>
+	<option>
+Offline Work </option>
+
+	<option>Training Work </option>
+												</select>	</div>
+												<button class="btn ripple btn-primary" type="button">Save </button>
+												</div>
+										</div>
+							</div>
+						</div>
+						<!-- End Row -->
+
+			
+
+					</div>
+				</div>
+			</div>
+			<!-- End Main Content-->
+
+			<!-- Main Footer-->
+			<div class="main-footer text-center">
+				<div class="container">
+					<div class="row row-sm">
+					<div class="col-md-12">
+						<span>Copyright © 2023 <a href="javascript:void(0)">Verandahighered</a>. </span>
+					</div>
+					</div>
+				</div>
+			</div>
+			<!--End Footer-->
+
+			<!-- Sidebar -->
+			<div class="sidebar sidebar-right sidebar-animate">
+				<div class="sidebar-icon">
+					<a href="#" class="text-end float-end text-dark fs-20" data-bs-toggle="sidebar-right" data-bs-target=".sidebar-right"><i class="fe fe-x"></i></a>
+				</div>
+				<div class="sidebar-body">
+					<h5>Todo</h5>
+					<div class="d-flex p-3">
+						<label class="ckbox"><input checked  type="checkbox"><span>Hangout With friends</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input type="checkbox"><span>Prepare for presentation</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input type="checkbox"><span>Prepare for presentation</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input checked type="checkbox"><span>System Updated</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input type="checkbox"><span>Do something more</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input  type="checkbox"><span>System Updated</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top">
+						<label class="ckbox"><input  type="checkbox"><span>Find an Idea</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<div class="d-flex p-3 border-top mb-0">
+						<label class="ckbox"><input  type="checkbox"><span>Project review</span></label>
+						<span class="ms-auto">
+							<i class="fe fe-edit-2 text-primary me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Edit"></i>
+							<i class="fe fe-trash-2 text-danger me-2" data-bs-toggle="tooltip" title="" data-bs-placement="top" data-bs-original-title="Delete"></i>
+						</span>
+					</div>
+					<h5>Overview</h5>
+					<div class="p-3">
+						<div class="main-traffic-detail-item">
+							<div>
+								<span>Founder &amp; CEO</span> <span>24</span>
+							</div>
+							<div class="progress">
+								<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="progress-bar progress-bar-xs wd-20p" role="progressbar"></div>
+							</div><!-- progress -->
+						</div>
+						<div class="main-traffic-detail-item">
+							<div>
+								<span>UX Designer</span> <span>1</span>
+							</div>
+							<div class="progress">
+								<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="progress-bar progress-bar-xs bg-secondary wd-15p" role="progressbar"></div>
+							</div><!-- progress -->
+						</div>
+						<div class="main-traffic-detail-item">
+							<div>
+								<span>Recruitment</span> <span>87</span>
+							</div>
+							<div class="progress">
+								<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="45" class="progress-bar progress-bar-xs bg-success wd-45p" role="progressbar"></div>
+							</div><!-- progress -->
+						</div>
+						<div class="main-traffic-detail-item">
+							<div>
+								<span>Software Engineer</span> <span>32</span>
+							</div>
+							<div class="progress">
+								<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar progress-bar-xs bg-info wd-25p" role="progressbar"></div>
+							</div><!-- progress -->
+						</div>
+						<div class="main-traffic-detail-item">
+							<div>
+								<span>Project Manager</span> <span>32</span>
+							</div>
+							<div class="progress">
+								<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar progress-bar-xs bg-danger wd-25p" role="progressbar"></div>
+							</div><!-- progress -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Sidebar -->
+			
+				<!-- Large Modal -->
+			<div class="modal" id="make-lead">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Add Incident</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+							<div class="row">
+										
+										
+											
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Truck No</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">Case Type </p>
+												<select class="form-control select2">
+													<option>Select</option>
+													 	<option>Overload Challan </option>
+													 		<option>Accident </option>
+													 			<option>Theft </option>
+													 			<option>RTO Dispute</option> 
+													 			<option>Police Check </option>
+													 			<option>Others</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">Incident Location</p>
+												<select class="form-control select2">
+													<option>Select</option>
+													 <option>State </option>
+													 <option>City </option>
+													 <option>Area </option>
+													 <option>Landmark </option>
+													 <option>Road Name </option>
+													 <option>Address </option>
+													 <option>Pin </option>
+												</select>	</div>
+											</div><!-- col-4 -->
+											
+											
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Driver</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-12">
+											    <div class="form-group">
+													<p class="mg-b-5">Comment</p>
+													<textarea type="text" class="form-control" name="example-text-input" placeholder="Enter"></textarea>
+												</div>
+											</div>
+											
+									
+											<div class="col-lg-12"><button class="btn ripple btn-primary" type="button">Save</button></div>	
+							</div>
+					
+					</div>
+					
+				</div>
+			</div>
+			<!--End Large Modal -->
+
+		</div>
+		<!-- End Page -->
+				<!-- Large Modal -->
+			<div class="modal" id="add-lead">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Add Lead</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+							<div class="row">
+										
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">Source: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >Facebook</option>
+													<option >Instagram</option>
+														<option >News & Press</option>
+															<option >Website</option>
+																<option >Apps</option>
+																	<option >Calling</option>
+																		<option >Other </option>
+												</select>	</div>
+											</div><!-- col-4 -->
+												<div class="col-lg-4">
+												    <div class="form-group">
+												<p class="mg-b-5">Type: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >Business Lead 	</option>
+													<option>LOTS Lead</option>
+												</select></div>
+											</div><!-- col-4 -->
+												<div class="col-lg-4">
+												    <div class="form-group">
+												<p class="mg-b-5">Customer Type: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >B2C</option>
+													<option>B2B2B</option>
+													<option>B2B2G</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+												<div class="col-lg-4">
+												    <div class="form-group">
+												<p class="mg-b-5">Type: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >B2C</option>
+													<option>B2B2B</option>
+													<option>B2B2G</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+												<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">+ LOTS FOR: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >TRUCK</option>
+													<option>CAR</option>
+													<option>CAB</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">No of Trucks: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >1</option>
+													<option >	1-5</option>
+														<option >5-10</option>
+															<option >10-20</option>
+																<option >20-30</option>
+																	<option >30-50</option>
+																		<option >50+ </option>
+												</select>	</div>
+											</div><!-- col-4 -->
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Company Alias</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Name</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Email Id</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Phone No.</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">	I am: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >Truck Owner</option>
+													<option>Fleet Manager</option>
+													<option> Car Owner</option>
+													<option> Car User</option>
+														<option> Car Driver</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+									
+											<div class="col-lg-12"><button class="btn ripple btn-primary" type="button">Save</button></div>	
+							</div>
+					
+					</div>
+					
+				</div>
+			</div>
+			<!--End Large Modal -->
+
+		</div>
+		<!-- End Page -->
+		
+		
+			<!-- Large Modal -->
+			<div class="modal" id="add-bill">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Bill To</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+							<div class="row">
+											
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Company Name</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Contact Email</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Contact Phone</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-12">
+											    <div class="form-group">
+													<p class="mg-b-5">Company Address</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+													<div class="col-lg-6">
+											    <div class="form-group">
+													<p class="mg-b-5">Company Website</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-6">
+												    
+											    <div class="form-group">
+											        <p class="mg-b-5">Upload GST No.</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+											    </div>
+											    </div>
+											    	<div class="col-lg-12"><button class="btn ripple btn-primary" type="button">Save</button></div>
+											
+							</div>
+					
+					</div>
+					
+				</div>
+			</div>
+			<!--End Large Modal -->
+
+		</div>
+		<!-- End Page -->
+		
+			<!-- Large Modal -->
+			<div class="modal" id="add-owner-details">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Add Owner Details</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+							<div class="row">
+										
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">	Same as: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >Fleet Manager</option>
+													<option>New Contact</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+											
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Name</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Email Id</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Phone No.</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">	I am: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >Truck Owner</option>
+													<option>Fleet Manager</option>
+													<option> Car Owner</option>
+													<option> Car User</option>
+														<option> Car Driver</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+									
+											<div class="col-lg-12"><button class="btn ripple btn-primary" type="button">Save</button></div>
+							</div>
+					
+					</div>
+					
+				</div>
+			</div>
+			<!--End Large Modal -->
+
+		</div>
+		<!-- End Page -->
+			<!-- Large Modal -->
+			<div class="modal" id="add-accounts">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Add Accounts</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+							<div class="row">
+										
+											<div class="col-lg-4">
+												     <div class="form-group">
+												<p class="mg-b-5">	Same as: </p>
+												<select class="form-control select2">
+													<option >Select</option>
+													<option >Fleet Manager</option>
+													<option >Owner</option>
+													<option>New Contact</option>
+												</select>	</div>
+											</div><!-- col-4 -->
+											
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Name</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Email Id</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Phone No.</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+										
+									
+											<div class="col-lg-12"><button class="btn ripple btn-primary" type="button">Save</button></div>
+							</div>
+					
+					</div>
+					
+				</div>
+			</div>
+			<!--End Large Modal -->
+
+		</div>
+		<!-- End Page -->
+		
+			<!--End Large Modal -->
+				<div class="modal" id="modaldemo-followup-form">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Followup</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+					<form>
+					    	
+					   <div class="row row-sm">
+					       <div class="col-sm-12 form-group">
+					           <div class="row">
+											<div class="col-lg-2">
+												<label class="rdiobox"><input name="rdio" type="radio"> <span>Update</span></label>
+											</div>
+											<div class="col-lg-2">
+												<label class="rdiobox"><input checked name="rdio" type="radio"> <span>Meeting</span></label>
+											</div>
+											<div class="col-lg-2">
+												<label class="rdiobox"><input  name="rdio" type="radio"> <span>Quotation</span></label>
+											</div>
+										</div>
+					           </div>
+					       
+					       <div class="col-sm-12 form-group">
+					           <label class="form-label">Comment</label>
+					          <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Attachment</label>
+					           <input type="file" class="form-control">
+					       </div>
+														
+															<div class="col-sm-4 form-group">
+																<label class="form-label">Status</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+														<option>Followup</option>
+														<option>Quotation</option> 
+														<option>Projection</option>
+														<option>Invoiced</option> 
+														<option>Sale</option>
+																</select>
+															</div>
+															<div class="col-sm-4 form-group">
+																<label class="form-label">Priority</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															<option>High</option>
+																</select>
+															</div>
+																
+														</div>
+														<div class="col-sm-12"><hr></div>
+														<div class="row row-sm">
+					      
+					        <div class="col-sm-4 form-group">
+					           <label class="form-label">Date</label>
+					           <input type="date" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Time</label>
+					           <input type="time" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Mode</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					           <div class="col-sm-4 form-group">
+					           <label class="form-label">Venue</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-8 form-group">
+					           <label class="form-label">Comment</label>
+					           <input type="text" class="form-control" placeholder="Enter">
+					       </div>
+					       <div class="col-sm-4 form-group">
+					           <label class="form-label">Attachment</label>
+					           <input type="file" class="form-control">
+					       </div>
+														
+															<div class="col-sm-4 form-group">
+																<label class="form-label">Status</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+														<option>Followup</option>
+														<option>Quotation</option> 
+														<option>Projection</option>
+														<option>Invoiced</option> 
+														<option>Sale</option>
+																</select>
+															</div>
+															<div class="col-sm-4 form-group">
+																<label class="form-label">Priority</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															<option>High</option>
+																</select>
+															</div>
+																
+														</div>
+					</form>
+								</div>
+									<div class="modal-footer">
+							<button class="btn ripple btn-primary" type="button">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-note-form">
+				<div class="modal-dialog modal-md" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Note</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+					<form>
+					    	
+					   <div class="row row-sm">
+					       <div class="col-sm-12 form-group">
+																<label class="form-label">Select Disposition</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															<option>Followup</option>
+															<option>Call Back</option>
+															<option>Not Interested</option>
+															<option>Missed Call</option>
+																</select>
+															</div>
+					       <div class="col-sm-12 form-group">
+					           <label class="form-label">Comment</label>
+					          <textarea type="text" class="form-control" placeholder="Enter"></textarea>
+					       </div>
+					       <div class="col-sm-12 form-group">
+					           <label class="form-label">Attachment</label>
+					           <input type="file" class="form-control">
+					       </div>	</div>
+								
+					</form>
+								</div>
+									<div class="modal-footer">
+							<button class="btn ripple btn-primary" type="button">Save </button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+			
+			
+			<!-- Large Modal -->
+			<div class="modal" id="add-qoute">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Add Qoute</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+							<div class="row">
+										
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Company</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											
+											<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Total Trucks</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+												<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Per Truck Cost</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											
+												<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Start Date</p>
+													<input type="date" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+										<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">End Date</p>
+													<input type="date" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+										<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Grace Period</p>
+													<input type="text" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+										<div class="col-lg-4">
+											    <div class="form-group">
+													<p class="mg-b-5">Expire Date</p>
+													<input type="date" class="form-control" name="example-text-input" placeholder="Enter">
+												</div>
+											</div>
+											<div class="col-lg-12"><button class="btn ripple btn-primary" type="button">Save</button></div>
+							</div>
+					
+					</div>
+					
+				</div>
+			</div>
+			<!--End Large Modal -->
+
+		</div>
+		<!-- End Page -->
+
+		<!-- Back-to-top -->
+		<a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+		<!-- Jquery js-->
+		<script src="../assets/plugins/jquery/jquery.min.js"></script>
+
+		<!-- Bootstrap js-->
+		<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+		<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+			<!-- Jquery-Ui js-->
+		<script src="../assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+		<!-- Internal Daternagepicker js-->
+		<script src="../assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+		<script src="../assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+		<!-- Perfect-scrollbar js -->
+		<script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+			<!-- Internal Fileuploads js-->
+		<script src="../assets/plugins/fileuploads/js/fileupload.js"></script>
+        <script src="../assets/plugins/fileuploads/js/file-upload.js"></script>
+
+		<!-- InternalFancy uploader js-->
+		<script src="../assets/plugins/fancyuploder/jquery.ui.widget.js"></script>
+        <script src="../assets/plugins/fancyuploder/jquery.fileupload.js"></script>
+        <script src="../assets/plugins/fancyuploder/jquery.iframe-transport.js"></script>
+        <script src="../assets/plugins/fancyuploder/jquery.fancy-fileupload.js"></script>
+        <script src="../assets/plugins/fancyuploder/fancy-uploader.js"></script>
+
+		<!-- Internal Form-elements js-->
+		<script src="../assets/js/advanced-form-elements.js"></script>
+
+		<!-- Internal Gallery js-->
+		<script src="../assets/plugins/gallery/picturefill.js"></script>
+        <script src="../assets/plugins/gallery/lightgallery.js"></script>
+		<script src="../assets/plugins/gallery/lightgallery-1.js"></script>
+        <script src="../assets/plugins/gallery/lg-pager.js"></script>
+        <script src="../assets/plugins/gallery/lg-autoplay.js"></script>
+        <script src="../assets/plugins/gallery/lg-fullscreen.js"></script>
+        <script src="../assets/plugins/gallery/lg-zoom.js"></script>
+        <script src="../assets/plugins/gallery/lg-hash.js"></script>
+        <script src="../assets/plugins/gallery/lg-share.js"></script>
+
+		<!-- Sidemenu js -->
+		<script src="../assets/plugins/sidemenu/sidemenu.js" id="leftmenu"></script>
+
+		<!-- Sidebar js -->
+		<script src="../assets/plugins/sidebar/sidebar.js"></script>
+
+		<!-- Select2 js-->
+		<script src="../assets/plugins/select2/js/select2.min.js"></script>
+		<script src="../assets/js/select2.js"></script>
+
+		<!-- Color Theme js -->
+		<script src="../assets/js/themeColors.js"></script>
+
+		<!-- Sticky js -->
+		<script src="../assets/js/sticky.js"></script>
+
+		<!-- Custom js -->
+		<script src="../assets/js/custom.js"></script>
+			<!-- Bootstrap js-->
+		<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+		<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Internal Jquery-Ui js-->
+		<script src="../assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+		<!-- Internal Jquery.maskedinput js-->
+		<script src="../assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+		<!-- Internal Specturm-colorpicker js-->
+		<script src="../assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+
+		<!-- Internal Ion-rangeslider js-->
+		<script src="../assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+	
+		<!-- Internal Form-elements js-->
+		<script src="../assets/js/form-elements.js"></script>
+
+	</body>
+</html>
