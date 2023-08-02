@@ -5,7 +5,7 @@ const adminController = require("../../controllers/adminController");
 //     res.send("Admin apis is running")
 // })
 Router.get("/", adminController.get_admin_login);
-Router.post("/login", adminController.admin_login);
-Router.get("/logout", adminController.adminLogout);
+Router.post("/dashboard", adminController.admin_login);
+Router.get("/login", adminController.adminLogout);
 
 module.exports = Router;

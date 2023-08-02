@@ -26,9 +26,6 @@
 </head>
 
 <body class="ltr main-body leftmenu error-1">
-    <% if (message) { %>
-        <div class="alert">admin login successfully</div>
-    <% } %>
     <!-- Loader -->
     <div id="global-loader">
         <img src="../assets/img/loader.svg" class="loader-img" alt="Loader" />
@@ -66,7 +63,7 @@
                                         <img src="../assets/img/brand/logo-light.png"
                                             class="d-lg-none header-brand-img text-start float-start mb-4" alt="logo" />
                                         <div class="clearfix"></div>
-                                        <form action="/admin/login" method="POST">
+                                        <form action="/admin/dashboard" method="POST">
                                             <h5 class="text-start mb-2">Signin to Your Account</h5>
                                             <p class="mb-4 text-muted tx-13 ms-0 text-start">
                                                 Signin to create, discover and connect with the global

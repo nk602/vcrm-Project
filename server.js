@@ -3,10 +3,12 @@ const bodyParser = require('body-parser');
 const session = require('express-session');  // session middleware
 const passport = require('passport');  // authentication
 const connectEnsureLogin = require('connect-ensure-login');// authorization
+const cookieParser = require('cookie-parser');
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const app = express();
 // Configure Sessions Middleware
+app.use(cookieParser());
 app.use(session({
   secret: 'r8q,+&1LM3)CD*zAGpx1xm{NeQhc;#',
   resave: false,
@@ -20,11 +22,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Passport Local Strategy
-passport.use(prisma.admin.createStrategy());
+// passport.use(prisma.admin.createStrategy());
 
-// To use with sessions
-passport.serializeUser(prisma.admin.serializeUser());
-passport.deserializeUser(prisma.admin.deserializeUser());
+// // To use with sessions
+// passport.serializeUser(prisma.admin.serializeUser());
+// passport.deserializeUser(prisma.admin.deserializeUser());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));

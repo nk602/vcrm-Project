@@ -6,6 +6,7 @@ module.exports.get_admin_login = async (req, res) => {
 };
 module.exports.admin_login = async (req, res) => {
   const { email, password } = req.body;
+  const token = req.cookies.token;
   console.log("email", req.body);
   try {
     const admin_login = await prisma.admin.findUnique({
@@ -17,7 +18,7 @@ module.exports.admin_login = async (req, res) => {
     const passwordMatch = await bcrypt.compare(password, admin_login.password);
 
     // if(!passwordMatch){
-    //     return res.render('adminLogin',{message:"Invalid password"})
+    //     return res.send({message:"Invalid password"})
     // }
     // res.send("admin");
     res.render("admin-dashboard");
@@ -27,5 +28,7 @@ module.exports.admin_login = async (req, res) => {
   }
 };
 module.exports.adminLogout = async (req, res) => {
-  res.redirect("/admin/login");
+  // console.log("logout successfully");
+  // res.clearCookie('token');
+  res.render("adminLogin");
 };

@@ -1,0 +1,486 @@
+<%- include('includes/meta-head') %>
+<body class="ltr main-body leftmenu dash_admin light-theme">
+
+	<%- include('includes/header-loader') %>
+
+	<!-- Page -->
+	<div class="page">
+
+		<!-- Main Header-->
+		<%- include('includes/header') %>
+		<!-- End Main Header-->
+
+		<!-- Main Content-->
+		<div class="main-content side-content pt-0">
+
+			<div class="main-container container-fluid">
+				<div class="inner-body">
+
+					<!-- Page Header -->
+					<div class="page-header">
+						<div>
+							<h2 class="main-content-title tx-24 mg-b-5">Staff List</h2>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#">HRMS </a></li>
+								<li class="breadcrumb-item active" aria-current="page">Staff List </li>
+							</ol>
+						</div>
+						<div class="d-flex">
+							<div class="justify-content-center">
+								<a href="/admin/dashboard/register-employee" type="button" class="btn btn-primary my-2 btn-icon-text"> <i
+										class="fe fe-plus me-2"></i> Add Staff</a>
+							</div>
+						</div>
+					</div>
+					<!-- End Page Header -->
+
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="card custom-card">
+								<div class="card-body py-3">
+									<div class="row">
+										<div class="col-sm-6">
+											<input type="search" class="form-control form-control"
+												placeholder="Search..." aria-controls="example1">
+										</div>
+										<div class="col-sm-2">
+											<select class="form-control select2">
+												<option label="Choose one">Gender</option>
+												<option value="Firefox">Male</option>
+												<option value="Chrome">Female</option>
+											</select>
+										</div>
+
+										<div class="col-sm-2">
+											<select class="form-control select2">
+												<option label="Choose one">Department</option>
+												<option value="Firefox"></option>
+											</select>
+										</div>
+
+										<div class="col-sm-2">
+											<select class="form-control select2">
+												<option label="Choose one">Designation</option>
+												<option value="Firefox"></option>
+											</select>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Row -->
+					<div class="row row-sm">
+						<div class="col-lg-12">
+							<div class="card custom-card">
+								<div class="card-body">
+
+									<div class="table-responsive">
+										<table class="table table-striped table-bordered text-nowrap mb-0">
+											<thead>
+												<tr>
+													<th><label class="ckbox"><input type="checkbox"
+																value="5"><span></span></label></th>
+													<th>ID</th>
+													<th>Photo</th>
+													<th>Contact</th>
+													<th>Department</th>
+													<th>Lead Target(Monthly)</th>
+													<th>KYC</th>
+													<th>Actions</th>
+
+												</tr>
+											</thead>
+											<tbody>
+												<% employees.forEach(function(employee) { %>
+												<tr>
+													<td><label class="ckbox"><input type="checkbox"
+																value="5"><span></span></label></td>
+													<td>
+														EMP-<%= employee.id %><br>
+														DOJ-<%=employee.dateOfJoin %>
+														<!--span class="plus_btn_" data-bs-target="#modaldemo-employee-form" data-bs-toggle="modal"></span-->
+													</td>
+													<td><img alt="avatar" class="rounded-circle me-3"
+															src="../assets/img/users/5.jpg" style="width:60px"></td>
+													<td>
+														<p class="mb-0"><%= employee.firstName %> <%= employee.lastName %><br>
+															M: <%= employee.mobileNumber %><br>
+															E: <%= employee.email%></p>
+													</td>
+													<td>
+														<p class="mb-0">Consulting<br>
+															Sr. Associate
+														</p>
+													</td>
+													<td>
+														<p class="mb-0"> Projected Target : 300<br>
+															Actual Target : 15</p>
+													</td>
+													<td>
+														<p class="mb-0">Aadhaar: <a href="" class="mb-1" title="View"
+																data-bs-target="#modaldemo-id" data-bs-toggle="modal"><i
+																	class="fe fe-eye"></i></a><br>
+															C.Cheque: <a href="" class=" mb-1" title="View"
+																data-bs-target="#modaldemo-cheque"
+																data-bs-toggle="modal"><i class="fe fe-eye"></i></a><br>
+															Add Proof: <a href="" class=" mb-1" title="View"
+																data-bs-target="#modaldemo-address"
+																data-bs-toggle="modal"><i class="fe fe-eye"></i></a></p>
+													</td>
+													<td>
+														<div class="main-toggle-group-demo">
+															<div class="main-toggle main-toggle-success on">
+																<span></span>
+															</div>
+														</div>
+														<a href="staff-profile.html"
+															class="btn ripple  btn-primary btn-xs w-100 mb-1 mt-1">View</a><br>
+														<a href="staff-attendance.html"
+															class="btn ripple btn-warning btn-xs w-100 mb-1">
+															Attendance</a><br>
+														<a href="/admin/dashboard/update-employee"
+															class="btn ripple btn-info btn-xs w-100">Edit Profile</a>
+
+													</td>
+
+												</tr>
+												<% }); %>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Row -->
+
+
+				</div>
+			</div>
+		</div>
+		<!-- End Main Content-->
+
+		<!-- Main Footer-->
+		<%- include('includes/footer') %>
+		<!--End Footer-->
+
+
+	</div>
+	<!-- End Page -->
+
+
+	<!-- Large Modal -->
+	<div class="modal" id="modaldemo-id">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content modal-content-demo">
+				<div class="modal-header">
+					<h6 class="modal-title">Aadhaar</h6><button aria-label="Close" class="btn-close"
+						data-bs-dismiss="modal" type="button"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-8">
+							<img src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif" style="width:100%;">
+						</div>
+						<div class="col-sm-4">
+							<h6>Aadhaar : 234567837480</h6>
+							<div class="form-group">
+								<select class="form-control select2">
+									<option>Status</option>
+									<option>Approved</option>
+									<option>Disapproved</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--End Large Modal -->
+	<div class="modal" id="modaldemo-pan">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content modal-content-demo">
+				<div class="modal-header">
+					<h6 class="modal-title">PAN</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal"
+						type="button"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-8">
+							<img src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif" style="width:100%;">
+						</div>
+						<div class="col-sm-4">
+							<h6>Pan No. : CLDPK8793</h6>
+							<div class="form-group">
+								<select class="form-control select2">
+									<option>Status</option>
+									<option>Approved</option>
+									<option>Disapproved</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--End Large Modal -->
+	<!--End Large Modal -->
+	<div class="modal" id="modaldemo-cheque">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content modal-content-demo">
+				<div class="modal-header">
+					<h6 class="modal-title">Cheque</h6><button aria-label="Close" class="btn-close"
+						data-bs-dismiss="modal" type="button"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-8">
+							<img src="https://newadmin.webkype.com/assets/img/pngs/cheque-img.jpg" style="width:100%;">
+						</div>
+						<div class="col-sm-4">
+							<h6>Cheque No. : 0123456789</h6>
+							<div class="form-group">
+								<select class="form-control select2">
+									<option>Status</option>
+									<option>Approved</option>
+									<option>Disapproved</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--End Large Modal -->
+	<!--End Large Modal -->
+	<div class="modal" id="modaldemo-address">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content modal-content-demo">
+				<div class="modal-header">
+					<h6 class="modal-title">Address</h6><button aria-label="Close" class="btn-close"
+						data-bs-dismiss="modal" type="button"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-8">
+							<p>3-15/10/403 Newark, Street no 5, Next To Pizza Hut, Bangalore, Karnataka, 560003, India.
+							</p>
+							<p class="mb-0">soniataylor344@example.com</p>
+							<p>+91 08023310451</p>
+						</div>
+						<div class="col-sm-4">
+
+							<div class="form-group">
+								<select class="form-control select2">
+									<option>Status</option>
+									<option>Approved</option>
+									<option>Disapproved</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--End Large Modal -->
+	<!--End Large Modal -->
+	<div class="modal" id="modaldemo-employee-form">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content modal-content-demo">
+				<div class="modal-header">
+					<h6 class="modal-title">Employee Form</h6><button aria-label="Close" class="btn-close"
+						data-bs-dismiss="modal" type="button"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row row-sm">
+							<div class="col-sm-4 form-group">
+								<label class="form-label">Company</label>
+								<select class="form-control select select2">
+									<option>Select</option>
+
+								</select>
+							</div>
+							<div class="col-sm-4  form-group">
+								<label class="form-label">Department</label>
+								<select class="form-control select select2">
+									<option>Select</option>
+									<option>Sales</option>
+									<option>Marketing</option>
+									<option>Accounts</option>
+									<option>Procurements</option>
+									<option>Contracting</option>
+									<option>Transport</option>
+									<option>Legal</option>
+								</select>
+							</div>
+							<div class="col-sm-4  form-group">
+								<label class="form-label">Designation</label>
+								<select class="form-control select select2">
+									<option>Select</option>
+									<option>Executive</option>
+									<option>Manager</option>
+									<option>Intern</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4 form-group">
+								<label class="form-label">Date of Joining: <span class="tx-danger">*</span></label>
+								<div class="input-group">
+									<div class="input-group-text border-end-0">
+										<i class="fe fe-calendar lh--9 op-6"></i>
+									</div>
+									<input class="form-control fc-datepicker" placeholder="MM/DD/YYYY" type="text">
+								</div>
+							</div>
+							<div class="col-sm-4  form-group">
+								<label class="form-label">Reporting Boss-A</label>
+								<select class="form-control select select2">
+									<option>Select</option>
+
+								</select>
+							</div>
+
+							<div class="col-sm-4  form-group">
+								<label class="form-label">Reporting Boss-B</label>
+								<select class="form-control select select2">
+									<option>Select</option>
+
+								</select>
+							</div>
+							<div class="col-sm-12 form-group mb-0">
+								<div class="row">
+									<div class="col-sm-12"> <label class="form-label">Assign Permission</label></div>
+									<div class="col-sm-12">
+										<div class="parsley-checkbox row" id="cbWrapper">
+											<div class="col-xl-3">
+												<label class="ckbox mg-b-5">
+													<input data-parsley-class-handler="#cbWrapper"
+														data-parsley-errors-container="#cbErrorContainer"
+														data-parsley-mincheck="2" name="browser[]" required=""
+														type="checkbox" value="1"><span>Sales</span></label>
+											</div>
+											<div class="col-xl-3">
+												<label class="ckbox mg-b-5"><input name="browser[]" type="checkbox"
+														value="2"><span>Marketing</span></label>
+											</div>
+											<div class="col-xl-3">
+												<label class="ckbox mg-b-5"><input name="browser[]" type="checkbox"
+														value="3"><span>Accounts</span></label>
+											</div>
+											<div class="col-xl-3">
+												<label class="ckbox"><input name="browser[]" type="checkbox"
+														value="4"><span>Procurements</span></label>
+											</div>
+											<div class="col-xl-3">
+												<label class="ckbox"><input name="browser[]" type="checkbox"
+														value="4"><span>Contracting</span></label>
+											</div>
+											<div class="col-xl-3">
+												<label class="ckbox"><input name="browser[]" type="checkbox"
+														value="4"><span>Transport</span></label>
+											</div>
+											<div class="col-xl-3">
+												<label class="ckbox"><input name="browser[]" type="checkbox"
+														value="4"><span>Legal</span></label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn ripple btn-primary" type="button">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--End Large Modal -->
+
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+	<!-- Jquery js-->
+	<script src="../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap js-->
+	<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+	<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Internal Jquery-Ui js-->
+	<script src="../assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+	<!-- Internal Jquery.maskedinput js-->
+	<script src="../assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+	<!-- Internal Specturm-colorpicker js-->
+	<script src="../assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+
+	<!-- Internal Ion-rangeslider js-->
+	<script src="../assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+	<!-- Select2 js-->
+	<script src="../assets/plugins/select2/js/select2.min.js"></script>
+	<script src="../assets/js/select2.js"></script>
+
+	<!-- Internal Form-elements js-->
+	<script src="../assets/js/form-elements.js"></script>
+
+	<!-- Perfect-scrollbar js -->
+	<script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+	<!-- Sidemenu js -->
+	<script src="../assets/plugins/sidemenu/sidemenu.js" id="leftmenu"></script>
+
+	<!--Bootstrap-datepicker js-->
+	<script src="../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+	<!-- Internal jquery-simple-datetimepicker js -->
+	<script src="../assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+
+	<!-- COLOR PICKER JS -->
+	<script src="../assets/plugins/pickr-master/pickr.es5.min.js"></script>
+	<script src="../assets/js/picker.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../assets/plugins/sidebar/sidebar.js"></script>
+
+	<!-- Color Theme js -->
+	<script src="../assets/js/themeColors.js"></script>
+
+	<!-- Sticky js -->
+	<script src="../assets/js/sticky.js"></script>
+
+	<!-- Custom js -->
+	<script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>
