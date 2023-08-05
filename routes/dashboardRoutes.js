@@ -1,6 +1,7 @@
 const express = require("express");
 const Router = express.Router();
 const dashboardController = require("../controllers/dashboardcontroller");
+const protectRoute = require("../auth/checkAuth");
 const multer = require("multer");
 const path = require('path');
 // Configure Multer to handle file uploads
@@ -21,8 +22,8 @@ const upload = multer({ storage: storage });
 //   res.send("Dashboard apis is running");
 // });
 
-Router.get("/",dashboardController.getAdmindashboard)
-Router.get("/employees", dashboardController.ListEmployee);
+Router.get("/",protectRoute,dashboardController.getAdmindashboard)
+Router.get("/employees", protectRoute,dashboardController.ListEmployee);
 Router.get("/register-employee", dashboardController.get_register_employee);
 Router.post("/register-employee", 
 upload.fields([
