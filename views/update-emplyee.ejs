@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Employee</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Update Employee</h1>
+    <form id="updateForm" method="post" action="/admin/dashboard/update-employee/<%= employee.id %>">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" value="<%= employee.firstName %>" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" value="<%= employee.lastName %>" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="<%= employee.email %>" required><br>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" name="mobileNumber" value="<%= employee.mobileNumber %>"
+        oninput="validateMobileNumber(this)"><br>
+        <!-- The 'oninput' attribute will trigger the 'validateMobileNumber' function when the user types or changes the mobile number -->
+
+        <span id="mobileNumberError" style="color: red;"></span>
+        <!-- Include other input fields for the remaining parameters -->
+
+        <button type="submit">Update</button>
+    </form>
+    <script>
+        function validateMobileNumber(inputField) {
+            const mobileNumber = inputField.value.trim();
+            const mobileNumberPattern = /^[0-9]{10}$/;
+            const errorSpan = document.getElementById("mobileNumberError");
+
+            if (!mobileNumberPattern.test(mobileNumber)) {
+                errorSpan.textContent = "Please enter a valid 10-digit mobile number (numbers only, no spaces or dashes).";
+            } else {
+                errorSpan.textContent = ""; // Clear the error message if mobile number is valid
+            }
+        }
+    </script>
+</body>
+</html>
+
+

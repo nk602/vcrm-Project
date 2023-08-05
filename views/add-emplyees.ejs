@@ -1,18 +1,267 @@
- <!-- Main Header-->
-	  <%- include('./includes/meta-head') %>
-	  <!-- End Main Header-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta name="description" content="Spruha -  Admin Panel HTML Dashboard Template">
+	<meta name="author" content="Spruko Technologies Private Limited">
+	<meta name="keywords"
+		content="admin,dashboard,panel,bootstrap admin template,bootstrap dashboard,dashboard,themeforest admin dashboard,themeforest admin,themeforest dashboard,themeforest admin panel,themeforest admin template,themeforest admin dashboard,cool admin,it dashboard,admin design,dash templates,saas dashboard,dmin ui design">
+
+	<!-- Favicon -->
+	<link rel="icon" href="/assets/img/brand/favicon.ico" type="image/x-icon" />
+
+	<!-- Title -->
+	<title>Spruha - Bootstrap Premium HTML Dashboard Template</title>
+
+	<!-- Bootstrap css-->
+	<link id="style" href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- Icons css-->
+	<link href="/assets/plugins/web-fonts/icons.css" rel="stylesheet" />
+	<link href="/assets/plugins/web-fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+	<link href="/assets/plugins/web-fonts/plugin.css" rel="stylesheet" />
+
+	<!-- Style css-->
+	<link href="/assets/css/style.css" rel="stylesheet">
+
+	<!-- Select2 css -->
+	<link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+
+	<!-- Internal Daterangepicker css-->
+	<link href="/assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+	<!-- InternalFileupload css-->
+	<link href="/assets/plugins/fileuploads/css/fileupload.css" rel="stylesheet" type="text/css" />
+
+	<!-- InternalFancy uploader css-->
+	<link href="/assets/plugins/fancyuploder/fancy_fileupload.css" rel="stylesheet" />
+
+	<!-- Internal TelephoneInput css-->
+	<link rel="stylesheet" href="/assets/plugins/telephoneinput/telephoneinput.css">
+	<!--Bootstrap-datepicker css-->
+	<link rel="stylesheet" href="/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.css">
+
+	<!-- Internal Datetimepicker-slider css -->
+	<link href="/assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
+
+	<!-- Internal Specturm-color picker css-->
+	<link href="/assets/plugins/spectrum-colorpicker/spectrum.css" rel="stylesheet">
+
+	<!-- Internal Ion.rangeslider css-->
+	<link href="/assets/plugins/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
+	<link href="/assets/plugins/ion-rangeslider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
+</head>
+
 <body class="ltr main-body leftmenu dash_admin light-theme">
 
 	<!-- Loader -->
-    <%- include('./includes/header-loader') %>
-    <!-- End Loader -->
+	<div id="global-loader">
+		<img src="/assets/img/loader.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- End Loader -->
 
 	<!-- Page -->
 	<div class="page">
-   <!-- Main Header-->
-   <%- include('./includes/header') %>
-   <!-- End Main Header-->
-	<!-- Main Content-->
+
+		<!-- Main Header-->
+		<div class="main-header side-header sticky">
+			<div class="main-container container-fluid">
+				<div class="main-header-left">
+					<a class="main-header-menu-icon" href="index.html"><img
+							src="https://www.verandalearning.com/web/application/themes/green_elemental/img/footer_veranda_logo.png"
+							class="header-brand-img desktop-logo" alt="logo"></a>
+
+				</div>
+				<div class="main-header-center dash_admin_menu text-center">
+
+					<ul>
+						<li><a href="business-dashboard.html"><i class="fe fe-compass"></i> Dashboard </a></li>
+						<li><a href="list-staff.html"><i class="fe fe-compass"></i> Manage Staff </a></li>
+						<li><a href="list-campaigns.html"><i class="fe fe-compass"></i> Manage Campaigns </a></li>
+						<li><a href="list-vendors.html"><i class="fe fe-compass"></i> Vendors </a></li>
+						<li><a href="list-leads.html"><i class="fe fe-compass"></i> Manage Leads </a></li>
+						<li><a href="#"><i class="fe fe-compass"></i> Quality & Audit</a></li>
+					</ul>
+				</div>
+				<!--div class="main-header-center">
+					<div class="responsive-logo">
+						<a href="index.html"><img src="/assets/img/brand/logo.png" class="mobile-logo" alt="logo"></a>
+						<a href="index.html"><img src="/assets/img/brand/logo-light.png" class="mobile-logo-dark"
+								alt="logo"></a>
+					</div>
+					<div class="input-group">
+						<div class="input-group-btn search-panel">
+							<select class="form-control select2">
+								<option label="All categories">
+								</option>
+							<option>Staff/Agent</option>
+<option>Sales Lead</option>
+<option>Subscriber</option>
+<option>Cases/Incident</option>
+<option>Lawyer</option>
+							</select>
+						</div>
+						<input type="search" class="form-control rounded-0" placeholder="Search for anything...">
+						<button class="btn search-btn"><i class="fe fe-search"></i></button>
+					</div>
+				</div-->
+				<div class="main-header-right">
+					<button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+					</button><!-- Navresponsive closed -->
+					<div
+						class="navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+							<div class="d-flex order-lg-2 ms-auto">
+								<!-- Search -->
+								<div class="dropdown header-search">
+									<a class="nav-link icon header-search">
+										<i class="fe fe-search header-icons"></i>
+									</a>
+									<div class="dropdown-menu">
+										<div class="main-form-search p-2">
+											<div class="input-group">
+												<div class="input-group-btn search-panel">
+													<select class="form-control select2">
+														<option label="All categories"> </option>
+														<option>Staff/Agent</option>
+														<option>Sales Lead</option>
+														<option>Subscriber</option>
+														<option>Cases/Incident</option>
+														<option>Lawyer</option>
+													</select>
+												</div>
+												<input type="search" class="form-control"
+													placeholder="Search for anything...">
+												<button class="btn search-btn"><svg xmlns="http://www.w3.org/2000/svg"
+														width="20" height="20" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="feather feather-search">
+														<circle cx="11" cy="11" r="8"></circle>
+														<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+													</svg></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Search -->
+								<!-- Theme-Layout -->
+								<div class="dropdown d-flex main-header-theme">
+									<a class="nav-link icon layout-setting">
+										<span class="dark-layout">
+											<i class="fe fe-sun header-icons"></i>
+										</span>
+										<span class="light-layout">
+											<i class="fe fe-moon header-icons"></i>
+										</span>
+									</a>
+								</div>
+								<!-- Theme-Layout -->
+
+								<!-- Full screen -->
+								<div class="dropdown ">
+									<a class="nav-link icon full-screen-link">
+										<i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
+										<i class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"></i>
+									</a>
+								</div>
+								<!-- Full screen -->
+								<!-- Notification -->
+								<div class="dropdown main-header-notification">
+									<a class="nav-link icon" href="">
+										<i class="fe fe-bell header-icons"></i>
+										<span class="badge bg-danger nav-link-badge">4</span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<p class="main-notification-text">You have 1 unread notification<span
+													class="badge bg-pill bg-primary ms-3">View all</span></p>
+										</div>
+										<div class="main-notification-list">
+											<div class="media new">
+												<div class="main-img-user online"><img alt="avatar"
+														src="/assets/img/users/5.jpg"></div>
+												<div class="media-body">
+													<p>Congratulate <strong>Olivia James</strong> for New template
+														start</p>
+													<span>Oct 15 12:32pm</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user"><img alt="avatar"
+														src="/assets/img/users/2.jpg">
+												</div>
+												<div class="media-body">
+													<p><strong>Joshua Gray</strong> New Message Received</p>
+													<span>Oct 13
+														02:56am</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user online"><img alt="avatar"
+														src="/assets/img/users/3.jpg"></div>
+												<div class="media-body">
+													<p><strong>Elizabeth Lewis</strong> added new schedule realease
+													</p><span>Oct
+														12 10:40pm</span>
+												</div>
+											</div>
+										</div>
+										<div class="dropdown-footer">
+											<a href="javascript:void(0)">View All Notifications</a>
+										</div>
+									</div>
+								</div>
+								<!-- Notification -->
+
+								<!-- Profile -->
+								<div class="dropdown main-profile-menu">
+									<a class="d-flex" href="javascript:void(0)">
+										<span class="main-img-user"><img alt="avatar"
+												src="/assets/img/users/5.jpg"></span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<h6 class="main-notification-title">Sonia Taylor</h6>
+											<p class="main-notification-text">Web Designer</p>
+										</div>
+										<a class="dropdown-item border-top" href="profile.html">
+											<i class="fe fe-user"></i> My Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-edit"></i> Edit Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Account Settings
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Support
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-compass"></i> Activity
+										</a>
+										<a class="dropdown-item" href="signin.html">
+											<i class="fe fe-power"></i> Sign Out
+										</a>
+									</div>
+								</div>
+								<!-- Profile -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Main Header-->
+
+		<!-- Main Content-->
 		<div class="main-content side-content pt-0">
 
 			<div class="main-container container-fluid">
@@ -69,7 +318,7 @@
 									<div>
 										<h6 class="main-content-label mb-3">BASIC INFO</h6>
 									</div>
-									<form action="/update-employee/<%=employee.id %>" method="post"
+									<form action="/admin/dashboard/register-employee" method="post"
 										data-parsley-validate="">
 										<div class="">
 											<div class="row row-sm">
@@ -77,35 +326,31 @@
 													<label class="form-label">Firstname: <span
 															class="tx-danger">*</span></label>
 													<input class="form-control" name="firstName"
-														value="<%= employee.firstName %>" placeholder=" Enter firstname"
-														required="" type="text">
+														placeholder="Enter firstname" required="" type="text">
 												</div>
 												<div class="col-lg-6 form-group">
 													<label class="form-label">Lastname: <span
 															class="tx-danger">*</span></label>
 													<input class="form-control" name="lastName"
-														value="<%= employee.lastName %>" placeholder=" Enter lastname"
-														required="" type="text">
+														placeholder="Enter lastname" required="" type="text">
 												</div>
 												<div class="col-lg-6 form-group">
 													<label class="form-label">Email ID: <span
 															class="tx-danger">*</span></label>
-													<input class="form-control" name="email"
-														value="<%= employee.email %>"  placeholder=" Enter email
-														address " required="" type=" text">
+													<input class="form-control" name="lastName"
+														placeholder="Enter email" required="" type="text">
 												</div>
 												<div class="col-lg-6 form-group">
 													<label class="form-label">Mobile No: <span
 															class="tx-danger">*</span></label>
-													<input class="form-control" name="mobileNumber"
-														value="<%= employee.mobileNumber %>  placeholder=" Enter mobile
-														number " required="" type=" text">
+													<input class="form-control" name="mobileNumber" placeholder="Enter "
+													 type="text"pattern="[0-9]{10}" required
+														title="Please enter a 10-digit mobile number (numbers only, no spaces or dashes)."><br>>
 												</div>
 												<div class="col-lg-6">
 													<label class="form-label">Gender: <span
 															class="tx-danger">*</span></label>
-													<select class="form-control select2"
-														value="<%= employee.mobileNumber %> name=" gender">
+													<select class="form-control select2" name="gender">
 														<option>Select
 														</option>
 														<option value="Male">
@@ -130,7 +375,6 @@
 											</div>
 
 										</div>
-									</form>
 								</div>
 							</div>
 						</div>
@@ -152,37 +396,37 @@
 											<label class="form-label">Country</label>
 											<select class="form-control select select2" name="currentAddressCountry">
 												<option>Select</option>
-												<option>India</option>
+												<option value="India">India</option>
 											</select>
 										</div>
 										<div class="col-sm-6 mg-t-10">
 											<label class="form-label">State</label>
-											<select class="form-control select select2">
+											<select class="form-control select select2" name="currentAddressState">
 												<option>Select</option>
-												<option>Andhra Pradesh</option>
-												<option>Arunachal Pradesh</option>
-												<option>Assam</option>
-												<option>Bihar</option>
-												<option>Chhattisgarh</option>
-												<option>Goa</option>
-												<option>Gujarat</option>
+												<option value="Andhra Pradesh">Andhra Pradesh</option>
+												<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+												<option value="Assam">Assam</option>
+												<option value="Bihar">Bihar</option>
+												<option value="Chhattisgarh">Chhattisgarh</option>
+												<option value="Goa">Goa</option>
+												<option value="Gujarat">Gujarat</option>
 											</select>
 										</div>
 										<div class="col-sm-6 mg-t-10">
 											<label class="form-label">City</label>
-											<select class="form-control select select2">
+											<select class="form-control select select2" name="currentAddressCity">
 												<option>Select</option>
-												<option>Mumbai</option>
-												<option>Delhi</option>
-												<option>Bangalore</option>
-												<option>Ahmedabad</option>
+												<option value="Mumbai">Mumbai</option>
+												<option value="Delhi">Delhi</option>
+												<option value="Bangalore">Bangalore</option>
+												<option value="Ahmedabad">Ahmedabad</option>
 											</select>
 										</div>
 
 										<div class="col-sm-6 mg-t-10">
 											<div class="form-group mb-0">
 												<label class="form-label">Area</label>
-												<input class="form-control" required="" type="text">
+												<input class="form-control" type="text" name="currentAddressArea">
 											</div>
 										</div>
 										<div class="col-sm-6 mg-t-10">
@@ -209,59 +453,60 @@
 									<div>
 										<h6 class="main-content-label mb-1">Permanent Address <label class="ckbox"
 												style="float: right;">
-												<input type="checkbox"><span class="tx-12">Same as Current
-													Address</span>
+												<input type="checkbox" type="checkbox" id="sameAsCurrentAddress"
+													name="sameAsCurrentAddress" onclick="autoFilAddress()"><span
+													class="tx-12">Same as Current Address</span>
 											</label></h6>
 
 									</div>
 									<div class="row row-sm">
 										<div class="col-sm-6 mg-t-10">
 											<label class="form-label">Country</label>
-											<select class="form-control select select2">
+											<select class="form-control select select2" name="permanentAddressCountry">
 												<option>Select</option>
-												<option>India</option>
+												<option value="India">India</option>
 											</select>
 										</div>
 										<div class="col-sm-6 mg-t-10">
 											<label class="form-label">State</label>
-											<select class="form-control select select2">
+											<select class="form-control select select2" name="permanentaddressState">
 												<option>Select</option>
-												<option>Andhra Pradesh</option>
-												<option>Arunachal Pradesh</option>
-												<option>Assam</option>
-												<option>Bihar</option>
-												<option>Chhattisgarh</option>
-												<option>Goa</option>
-												<option>Gujarat</option>
+												<option value="Andhra Pradesh">Andhra Pradesh</option>
+												<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+												<option value="Assam">Assam</option>
+												<option value="Bihar">Bihar</option>
+												<option value="Chhattisgarh">Chhattisgarh</option>
+												<option value="Goa">Goa</option>
+												<option value="Gujarat">Gujarat</option>
 											</select>
 										</div>
 										<div class="col-sm-6 mg-t-10">
 											<label class="form-label">City</label>
-											<select class="form-control select select2">
+											<select class="form-control select select2" name="permanentAddressCity">
 												<option>Select</option>
-												<option>Mumbai</option>
-												<option>Delhi</option>
-												<option>Bangalore</option>
-												<option>Ahmedabad</option>
+												<option value="Mumbai">Mumbai</option>
+												<option value="Delhi">Delhi</option>
+												<option value="Bangalore">Bangalore</option>
+												<option value="Ahmedabad">Ahmedabad</option>
 											</select>
 										</div>
 
 										<div class="col-sm-6 mg-t-10">
 											<div class="form-group mb-0">
 												<label class="form-label">Area</label>
-												<input class="form-control" required="" type="text">
+												<input class="form-control" type="text" name="permanentAddressArea">
 											</div>
 										</div>
 										<div class="col-sm-6 mg-t-10">
 											<div class="form-group mb-0">
 												<label class="form-label">Address lane</label>
-												<input class="form-control" required="" type="text">
+												<input class="form-control" type="text" name="permanentAddressLane">
 											</div>
 										</div>
 										<div class="col-sm-6 mg-t-10">
 											<div class="form-group mb-0">
 												<label class="form-label">Pin Code</label>
-												<input class="form-control" required="" type="text">
+												<input class="form-control" type="text" name="permanentAddressPinCode">
 											</div>
 										</div>
 									</div>
@@ -282,31 +527,31 @@
 									<div class="row row-sm">
 										<div class="col-sm-4 form-group">
 											<label class="form-label">Company</label>
-											<select class="form-control select select2">
-												<option>Select</option>
-
+											<select class="form-control select select2" name="companyName">
+												<option value="Select">Select</option>
+												<option value="Webkype">Webkype</option>
 											</select>
 										</div>
 										<div class="col-sm-4  form-group">
 											<label class="form-label">Department</label>
-											<select class="form-control select select2">
+											<select class="form-control select select2" name="department">
 												<option>Select</option>
-												<option>Sales</option>
-												<option>Marketing</option>
-												<option>Accounts</option>
-												<option>Procurements</option>
-												<option>Contracting</option>
-												<option>Transport</option>
-												<option>Legal</option>
+												<option value="Sales">Sales</option>
+												<option value="Marketing">Marketing</option>
+												<option value="Accounts">Accounts</option>
+												<option value="Procurements">Procurements</option>
+												<option value="Contracting">Contracting</option>
+												<option value="Transport">Transport</option>
+												<option value="Legal">Legal</option>
 											</select>
 										</div>
 										<div class="col-sm-4  form-group">
 											<label class="form-label">Designation</label>
-											<select class="form-control select select2">
+											<select class="form-control select select2" name="designation">
 												<option>Select</option>
-												<option>Executive</option>
-												<option>Manager</option>
-												<option>Intern</option>
+												<option value="Executive">Executive</option>
+												<option value="Manager">Manager</option>
+												<option value="Intern">Intern</option>
 											</select>
 										</div>
 
@@ -318,7 +563,7 @@
 													<i class="fe fe-calendar lh--9 op-6"></i>
 												</div>
 												<input class="form-control fc-datepicker" placeholder="MM/DD/YYYY"
-													type="text">
+													type="text" name="dateOfJoin">
 											</div>
 										</div>
 										<div class="col-sm-4  form-group">
@@ -329,13 +574,13 @@
 											</select>
 										</div>
 
-										<div class="col-sm-4  form-group">
+										<!-- <div class="col-sm-4  form-group">
 											<label class="form-label">Reporting Boss-B</label>
 											<select class="form-control select select2">
 												<option>Select</option>
 
 											</select>
-										</div>
+										</div> -->
 										<div class="col-sm-12 form-group mb-0">
 											<div class="row">
 												<div class="col-sm-4"> <label class="form-label">Assign
@@ -404,37 +649,37 @@
 										<div class="col-sm-3 ">
 											<div class="form-group">
 												<label class="form-label">Aadhaar Upload</label>
-												<input class="form-control" required="" type="file">
+												<input class="form-control" type="file">
 											</div>
 										</div>
 										<div class="col-sm-3">
 											<div class="form-group">
 												<label class="form-label">Aadhaar No</label>
-												<input class="form-control" required="" type="text">
+												<input class="form-control" type="text" name="adharNumber">
 											</div>
 										</div>
 										<div class="col-sm-3">
 											<div class="form-group">
 												<label class="form-label">PAN Upload</label>
-												<input class="form-control" required="" type="file">
+												<input class="form-control" type="file">
 											</div>
 										</div>
 										<div class="col-sm-3">
 											<div class="form-group">
 												<label class="form-label">PAN No</label>
-												<input class="form-control" required="" type="text">
+												<input class="form-control" type="text" name="PanNumber">
 											</div>
 										</div>
 										<div class="col-sm-3">
 											<div class="form-group mb-0">
 												<label class="form-label">Driving Licence</label>
-												<input class="form-control" required="" type="file">
+												<input class="form-control" type="file" name="drivingLicenseImage">
 											</div>
 										</div>
 										<div class="col-sm-3">
 											<div class="form-group mb-0">
 												<label class="form-label">Cheque</label>
-												<input class="form-control" required="" type="file">
+												<input class="form-control" type="file">
 											</div>
 										</div>
 									</div>
@@ -455,26 +700,26 @@
 										<div class="col-sm-3 ">
 											<div class="form-group mb-0">
 												<label class="form-label">Account No.</label>
-												<input class="form-control" required="" type="text">
+												<input class="form-control" type="text" name="accountNumber">
 											</div>
 										</div>
 										<div class="col-sm-3">
 											<div class="form-group mb-0">
 												<label class="form-label">Account Name</label>
-												<input class="form-control" required="" type="text">
+												<input class="form-control" type="text" name="accountName">
 											</div>
 										</div>
 										<div class="col-sm-3">
 											<div class="form-group mb-0">
 												<label class="form-label">Bank Name</label>
-												<input class="form-control" required="" type="text">
+												<input class="form-control" required="" type="text" name="bankName">
 											</div>
 										</div>
 
 										<div class="col-sm-3">
 											<div class="form-group mb-0">
 												<label class="form-label">IFSC</label>
-												<input class="form-control" required="" type="text">
+												<input class="form-control" required="" type="text" name="ifsc">
 											</div>
 										</div>
 
@@ -488,10 +733,10 @@
 
 					<div class="row row-sm">
 						<div class="col-12 mb-3">
-							<a href="#" class="btn btn-primary" type="submit">Submit</a>
+							<button class="btn btn-primary" type="submit">Submit</button>
 						</div>
 					</div>
-
+					</form>
 
 				</div>
 			</div>
@@ -733,5 +978,3 @@
 </body>
 
 </html>
-
-

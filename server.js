@@ -4,6 +4,7 @@ const session = require('express-session');  // session middleware
 const passport = require('passport');  // authentication
 const connectEnsureLogin = require('connect-ensure-login');// authorization
 const cookieParser = require('cookie-parser');
+const path = require('path');
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const app = express();
@@ -27,10 +28,10 @@ app.use(passport.session());
 // // To use with sessions
 // passport.serializeUser(prisma.admin.serializeUser());
 // passport.deserializeUser(prisma.admin.deserializeUser());
-
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 //routes
 app.use("/", require("./routes"));
 app.get("/", (req, res) => {
