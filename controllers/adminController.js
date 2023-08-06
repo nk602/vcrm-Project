@@ -1,9 +1,12 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 const bcrypt = require("bcrypt");
+const passport = require('passport');
 module.exports.get_admin_login = async (req, res) => {
-  res.render("adminLogin", { message: "Admin Login Successfully" });
+  //Login form
+  res.render("adminLogin", { message: "" });
 };
+/*
 module.exports.admin_login = async (req, res) => {
   const { email, password } = req.body;
   const token = req.cookies.token;
@@ -26,9 +29,26 @@ module.exports.admin_login = async (req, res) => {
     console.log("Error during login", error);
     res.render("login", { message: "Internal server error" });
   }
+};*/
+module.exports.adminLogin = async (req, res) => {
+  console.log('kkkkkn',req.body);
+  const { email, password } = req.body;
+
+  //Required
+  if (!email || !password) {
+    console.log("Please fill in all the fields");
+    res.render("adminLogin", {email, password, message: "Please enter the correct details"});
+  } else {
+    passport.authenticate("local", {
+      successRedirect: "/admin/dashboard",
+      failureRedirect: "/admin",
+      failureFlash: true,
+    })(req, res);
+  }
 };
+
 module.exports.adminLogout = async (req, res) => {
-  // console.log("logout successfully");
-  // res.clearCookie('token');
-  res.render("adminLogin");
+  req.session.destroy()
+  //req.logOut();
+  res.redirect('/admin'); //redirecto login form(main route)
 };
