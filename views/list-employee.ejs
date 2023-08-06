@@ -98,8 +98,8 @@
 													<td><label class="ckbox"><input type="checkbox"
 																value="5"><span></span></label></td>
 													<td>
-														EMP-<%= employee.id %><br>
-														DOJ-<%=employee.dateOfJoin %>
+														EMP : VH100<%= employee.id %><br>
+														DOJ : <%=employee.dateOfJoin %>
 														<!--span class="plus_btn_" data-bs-target="#modaldemo-employee-form" data-bs-toggle="modal"></span-->
 													</td>
 													<td><img alt="avatar" class="rounded-circle me-3"
@@ -140,11 +140,13 @@
 														<a href="staff-attendance.html"
 															class="btn ripple btn-warning btn-xs w-100 mb-1">
 															Attendance</a><br>
-															<a href="/admin/dashboard/update-employee/<%= employee.id %>"onclick="return confirm('Are you sure you want to update <%= employee.firstName %>?')"
-															class="btn ripple btn-info btn-xs w-100">Edit Profile</a>
-
+															<a href="/admin/dashboard/update-employee/<%=employee.id%>"onclick="return confirm('Are you sure you want to update <%= employee.firstName %>?')"
+															class="btn ripple btn-info btn-xs w-100">Edit Profile</a></br>
+													
 															
-
+																<form action="/admin/dashboard/delete-employee/<%= employee.id %>?_method=DELETE" method="POST">
+																		<button class="btn ripple btn-red" type="submit">Delete Profile</button>
+																  </form>
 												
 
 												</tr>

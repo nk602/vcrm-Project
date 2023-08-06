@@ -1,19 +1,14 @@
 <%- include('./includes/meta-head') %>
-
   <body class="ltr main-body leftmenu dash_admin light-theme">
     <!-- Loader -->
     <%- include('includes/header-loader') %>
     <!-- End Loader -->
-
-    <!-- Page -->
+   <!-- Page -->
     <div class="page">
           <!-- Main Header-->
           <%- include('./includes/header') %>
           <!-- End Main Header-->
-
-      <!-- End Main Header-->
-
-      <!-- Main Content-->
+  <!-- Main Content-->
       <div class="main-content side-content pt-0">
         <div class="main-container container-fluid">
           <div class="inner-body">
@@ -42,9 +37,6 @@
             <!-- End Page Header -->
 
             <form id="myEmployeeRegistrationForm">
-              <% if (employee.id) { %>
-                <input type="text" value="<%= employee.id %>" />
-                <% } %>
               <!-- Row -->
               <div class="row row-sm">
                 <div class="col-xl-4 col-lg-4 col-md-4">
@@ -89,7 +81,7 @@
                               class="form-control"
                               name="firstName"
                               type="text"
-                              id="firstName" value="<%= employee.firstName %>"
+                              id="firstName"
                               placeholder="Enter first name"
                             />
                             <span id="firstNameError" class="error"></span>
@@ -118,7 +110,6 @@
                               class="form-control"
                               name="lastName"
                               id="lastName"
-                              value="<%= employee.lastName %>"
                               placeholder="Enter lastname"
                               type="text"
                             />
@@ -605,6 +596,7 @@
                               class="form-control"
                               type="file"
                               name="adharImage"
+                              id="adharImage"
                             />
                           </div>
                         </div>
@@ -1053,11 +1045,11 @@
           permanentAddressAreaInput.value = currentAddressAreaInput.value;
           permanentAddressPinCodeInput.value = currentAddressPinCodeInput.value;
           permanentAddressCountryInput.value = currentAddressCountryInput.value;
-          permanentAddressAreaInput.setAttribute("disabled", "disabled");
-          permanentAddressLaneInput.setAttribute("disabled", "disabled");
-          permanentAddressPinCodeInput.setAttribute("disabled", "disabled");
+         // permanentAddressAreaInput.setAttribute("disabled", "disabled");
+         /// permanentAddressLaneInput.setAttribute("disabled", "disabled");
+          //permanentAddressPinCodeInput.setAttribute("disabled", "disabled");
         } else {
-          permanentAddressLaneInput.removeAttribute("disabled");
+          //permanentAddressLaneInput.removeAttribute("disabled");
         }
       }
     </script>
@@ -1211,6 +1203,7 @@
           try {
             const form = event.target;
             const formData = new FormData(form); // Create a FormData object with the form data
+            form.append('adharImage', document.getElementById('adharImage').files[0]);
             const response = await fetch("/admin/dashboard/register-employee", {
               method: "POST",
               body: formData,

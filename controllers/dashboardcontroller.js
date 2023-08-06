@@ -26,7 +26,6 @@ module.exports.getAdmindashboard = async (req, res) => {
 module.exports.ListEmployee = async (req, res) => {
   try {
     const employees = await prisma.employee.findMany();
-    console.log(employees);
     res.render("list-employee", { employees });
   } catch (error) {
     console.log("Error While fetching employeess", error);
@@ -35,13 +34,8 @@ module.exports.ListEmployee = async (req, res) => {
 module.exports.createEmplyee = async (req, res) => {
   // console.log(req.files['adharImage'][0].path);
   try {
-    // const adharImagePath = req.files['adharImage'][0].path;
-    // const panImagePath = req.files['panImage'][0].path;
-    // const emailExists=await prisma.findUnique({email:email});
-    // if(emailExists){
-    //   console.log("emailExists",emailExists);
-    //   return res.send({message:"Email already exists"});
-    // }
+   
+   console.log(req.file); 
 
     // Define validation schema for employee data
     const employeeSchema = Joi.object({
@@ -88,7 +82,7 @@ module.exports.createEmplyee = async (req, res) => {
     }
 
     await prisma.employee.create({
-      data: req.body,
+      data:{...req.body,adharImage:req.file.path}
     });
 
     return res.status(200).json({
@@ -107,6 +101,7 @@ module.exports.get_register_employee = async (req, res) => {
 };
 // Route to handle the employee deletion
 module.exports.delete_emplyee = async (req, res) => {
+  console.log(req.body);
   const employeeId = parseInt(req.params.id);
   console.log("req.body", req.body);
   try {
@@ -124,7 +119,7 @@ module.exports.delete_emplyee = async (req, res) => {
       where: { id: employeeId },
     });
 
-    res.redirect("/employees"); // Redirect back to the employee list
+    res.redirect("/admin/dashboard/employees"); // Redirect back to the employee list
   } catch (error) {
     res.status(500).json({ error: "Error deleting employee." });
   }
@@ -133,7 +128,7 @@ module.exports.delete_emplyee = async (req, res) => {
 // Route to render the update-employee.ejs template
 module.exports.get_update_employee = async (req, res) => {
   const employeeId = parseInt(req.params.id, 10);
-  console.log("update");
+  console.log("list-emplyee", req.body);
   try {
     const employee = await prisma.employee.findUnique({
       where: {
@@ -141,107 +136,76 @@ module.exports.get_update_employee = async (req, res) => {
       },
     });
 
-    // if (!employee) {
-    //   return res.status(404).json({ error: "Employee not found." });
-    // }
-
-    res.render("add-employee1", { employee });
+    if (!employee) {
+      return res.status(404).json({ error: "Employee not found." });
+    }
+    console.log(employee);
+    res.render("update-emplyee", { employee });
   } catch (error) {
     res.status(500).json({ error: "Error fetching employee data." });
   }
 };
 module.exports.update_employee = async (req, res) => {
-  const employeeId = parseInt(req.params.id, 10);
-  console.log("updated");
+  console.log("user1", req.body);
+
+  const {
+    firstName,
+    lastName,
+    email,
+    mobileNumber,
+    gender,
+    currentAddressCountry,
+    currentAddressState,
+    currentAddressCity,
+    currentAddressArea,
+    currentAddressLane,
+    currentAddressPinCode,
+    sameAsCurrentAddress,
+    permanentAddressCountry,
+    permanentAddressState,
+    permanentAddressCity,
+    permanentAddressArea,
+    permanentAddressLane,
+    permanentAddressPinCode,
+    companyName,
+    department,
+    designation,
+    dateOfJoin,
+    adharImage,
+    adharNumber,
+    panImage,
+    PanNumber,
+    drivingLicenseImage,
+    chequeImage,
+    accountNumber,
+    accountName,
+    bankName,
+    ifsc,
+  } = req.body;
+
   try {
-    const employees = await prisma.employee.findUnique({
+    const employeeId = parseInt(req.params.id, 10);
+    const employee = await prisma.employee.findUnique({
       where: {
         id: employeeId,
       },
     });
-
+    console.log("employee", employee);
     // if (!employee) {
     //   return res.status(404).json({ error: "Employee not found." });
     // }
 
-    const {
-      firstName,
-      lastName,
-      email,
-      mobileNumber,
-      gender,
-      currentAddressCountry,
-      currentaddressState,
-      currentAddressCity,
-      currentAddressArea,
-      currentAddressLane,
-      currentAddressPinCode,
-      sameAsCurrentAddress,
-      permanentAddressCountry,
-      permanentaddressState,
-      permanentAddressCity,
-      permanentAddressArea,
-      permanentAddressLane,
-      permanentAddressPinCode,
-      companyName,
-      department,
-      designation,
-      dateOfJoin,
-      adharImage,
-      adharNumber,
-      panImage,
-      PanNumber,
-      drivingLicenseImage,
-      chequeImage,
-      accountNumber,
-      accountName,
-      bankName,
-      ifsc,
-    } = req.body;
-    const employee = await prisma.employee.update({
+    const updateEmployee = await prisma.employee.update({
       where: {
         id: employeeId,
       },
-      data: {
-        firstName,
-        lastName,
-        email,
-        mobileNumber,
-        gender,
-        // currentAddressCountry,
-        // currentaddressState,
-        // currentAddressCity,
-        // currentAddressArea,
-        // currentAddressLane,
-        // currentAddressPinCode,
-        // sameAsCurrentAddress,
-        // permanentAddressCountry,
-        // permanentaddressState,
-        // permanentAddressCity,
-        // permanentAddressArea,
-        // permanentAddressLane,
-        // permanentAddressPinCode,
-        // companyName,
-        // department,
-        // designation,
-        // dateOfJoin,
-        // adharImage:adharImagePath,
-        // panImage:panImagePath,
-        // adharNumber,
-        // PanNumber,
-        // drivingLicenseImage,
-        // chequeImage,
-        // accountNumber,
-        // accountName,
-        // bankName,
-        // ifsc
-      },
+      data:req.body,
     });
-    console.log("updated2");
-
-    res.render("list-employee", { employee }); // Redirect to the employee list page after successful update
+    return res
+      .status(200)
+      .json({ status: "success", message: "Employee updated successfully." }); // Redirect to the employee list page after successful update
   } catch (error) {
     // If an error occurs during the update process, redirect to an error page or display an error message
-    res.status(500).send("Error updating employee.");
+    res.status(500).json({ message: "Error updating employee." });
   }
 };

@@ -25,9 +25,7 @@ Router.get("/",dashboardController.getAdmindashboard)
 Router.get("/employees", dashboardController.ListEmployee);
 Router.get("/register-employee", dashboardController.get_register_employee);
 Router.post("/register-employee", 
-upload.fields([
-    { name: 'adharImage', maxCount: 1 },
-    { name: 'panImage', maxCount: 1 }]),
+upload.single('adharImage'),
 dashboardController.createEmplyee);
 //update employee
 Router.get("/register-employee/:id", dashboardController.get_update_employee);

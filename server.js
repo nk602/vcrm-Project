@@ -16,9 +16,11 @@ app.use(session({
   saveUninitialized: true,
   cookie: { maxAge: 60 * 60 * 1000 } // 1 hour
 }));
-
+// Middleware setup
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 // Configure Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+//app.use(bodyParser.urlencoded({ extended: false }));
 app.use(passport.initialize());
 app.use(passport.session());
 

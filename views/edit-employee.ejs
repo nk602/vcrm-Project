@@ -69,8 +69,7 @@
 									<div>
 										<h6 class="main-content-label mb-3">BASIC INFO</h6>
 									</div>
-									<form action="/update-employee/<%=employee.id %>" method="post"
-										data-parsley-validate="">
+									<form id="myEmployeeUpdateForm">
 										<div class="">
 											<div class="row row-sm">
 												<div class="col-lg-6 form-group">
@@ -98,14 +97,14 @@
 													<label class="form-label">Mobile No: <span
 															class="tx-danger">*</span></label>
 													<input class="form-control" name="mobileNumber"
-														value="<%= employee.mobileNumber %>  placeholder=" Enter mobile
+														value="<%= employee.mobileNumber %>"  placeholder=" Enter mobile
 														number " required="" type=" text">
 												</div>
 												<div class="col-lg-6">
 													<label class="form-label">Gender: <span
 															class="tx-danger">*</span></label>
 													<select class="form-control select2"
-														value="<%= employee.mobileNumber %> name=" gender">
+														value="<%= employee.gender %>"" name="gender">
 														<option>Select
 														</option>
 														<option value="Male">
@@ -645,7 +644,39 @@
 
 	</div>
 	<!-- End Page -->
-
+	<script>
+		document
+		  .querySelector("#myEmployeeUpdateForm")
+		  .addEventListener("submit", async function (event) {
+			event.preventDefault(); // Prevent the default form submission
+			try {
+			  const form = event.target;
+			  const formData = new FormData(form); // Create a FormData object with the form data
+			  const employeeId = formData.get("employeeId"); // Assuming there's an input with the name "employeeId" for identifying the employee
+	  
+			  const response = await fetch(`/admin/dashboard/update-employee/${employeeId}`, {
+				method: "POST", // You can also use "PUT" depending on your API design
+				body: formData,
+			  });
+	  
+			  const data = await response.json();
+	  
+			  if (data.status === "error") {
+				throw new Error(data.message);
+			  }
+	  
+			  alert(data.message);
+			  setTimeout(() => {
+				location.href = "/admin/dashboard/employees";
+			  }, 1500);
+			} catch (error) {
+			  console.log(error);
+			  scrollTo(0, 0);
+			  document.querySelector(".errors").textContent = error.message;
+			}
+		  });
+	  </script>
+	  
 
 	<!-- Jquery js-->
 	<script src="/assets/plugins/jquery/jquery.min.js"></script>
