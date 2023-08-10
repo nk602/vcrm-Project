@@ -2083,15 +2083,14 @@
     <!-- </form>
   </form> -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-  <script type='text/javascript'>
-    $(function(){
-        alert('inside jquery');
-        $(".masterEditModel").click(function(){
-          var dynamicId = $(this).data("id"); // Get the dynamic ID from the clicked element
-          alert(dynamicId);
-          $("#update-masters-form").load("/admin/dashboard/edit-master-model-content/"+dynamicId);
-        });
-    });
-  </script>
-  
+<script type='text/javascript'>
+  $(function(){
+      // alert('inside jquery');
+      let id = 0;
+      $(".masterEditModel").click(function(){
+        id = $(this).data("id");
+      })
+      $("#update-masters-form").load("/admin/dashboard/edit-master-model-content/"+id);
+  });
+</script>
 </body>

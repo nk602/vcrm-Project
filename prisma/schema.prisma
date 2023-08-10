@@ -68,11 +68,30 @@ model Masters {
 
 model MastersValues {
   id        Int      @id @default(autoincrement())
-  masterId  Int      
+  masterId  Int
   name      String   @default("")
   icon      String   @default("")
   status    Boolean  @default(true)
   master    Masters  @relation(fields: [masterId], references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model EnquiryForm {
+  id                      Int    @id @default(autoincrement())
+  firstName               String @default("")
+  lastName                String @default("")
+  email                   String @default("")
+  phoneNumber             String @default("")
+  totalWorkExperience     String @default("")
+  highestLevelOfEducation String @default("")
+  graduationYear          String @default("")
+  jobTitle                String @default("")
+  companyName             String @default("")
+  utmCompaign             String @default("")
+  englishLanguage         String @default("")
+  city                    String @default("")
+  utmTerm                 String @default("")
+  utmMedium               String @default("")
+  utmSource               String @default("")
 }

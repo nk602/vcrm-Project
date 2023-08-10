@@ -6,5 +6,5 @@ router.use("/admin", require("./admin/adminRoutes"));
 router.use("/admin/dashboard", require("./dashboardRoutes"));
 // router.use('/user/test',require('./user/test'))
 router.use("/admin/dashboard",require("./mastersRoutes"))
-
+router.use("/admin/dashboard",require("./enquiryRoutes"))
 module.exports = router;

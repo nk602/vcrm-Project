@@ -21,7 +21,9 @@ Router.get("/masters-lists/", masterController.getMasters);
 Router.post("/add-masters/",upload.single("icon"), masterController.addMasters);
 Router.get("/list-masters-values/", masterController.getMasterValues);
 Router.post("/add-master-values/",upload.single("icon"), masterController.addMasterValues);
+Router.get("/update-master/:id",masterController.get_update_masters)
 Router.post("/update-master/:id",masterController.update_masters)
+
 Router.post("/delete-master/:id",masterController.delete_master);
 
 Router.get("/masters-lists/",masterController.listValuesFromMasterTable);

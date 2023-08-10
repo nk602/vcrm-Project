@@ -72,11 +72,8 @@ module.exports.listValuesFromMasterTable = async (req, res) => {
     res.status(500).json({ success: false, error: "Internal server error" });
   }
 };
-module.exports.update_masters = async (req, res) => {
+module.exports.get_update_masters = async (req, res) => {
   console.log("update", req.body); // Logging the request body
-
-  try {
-    // Fetching the "masters" record with id 2
     const masters = await prisma.masters.findUnique({
       where: {
         id: 2,
@@ -85,31 +82,30 @@ module.exports.update_masters = async (req, res) => {
 
     // Rendering a view named "modelbox/edit-master-model" with the fetched masters data
     res.render("modelbox/edit-master-model", { masters });
-
-    // Updating the "masters" record with new data
+};
+module.exports.update_masters = async (req, res) => {
+  console.log("update", req.body); // Logging the request body
+  try {
+  
     const updatedEmployee = await prisma.masters.update({
       where: {
         id: 2,
       },
       data: {
-        name: "Vehicle Type 2",
+        name: "Vehicles",
         icon: "",
       },
     });
-
-    // Sending a success response if the update was successful
     return res
       .status(200)
       .json({ status: "success", message: "Masters updated successfully..." });
   } catch (error) {
     console.error(error);
-
-    // Sending an error response if any error occurs during the process
     res
       .status(500)
       .json({ status: "error", message: "Error updating employee..." });
   }
-};
+};  
 
 module.exports.delete_master = async (req, res) => {
   console.log(req.body);
