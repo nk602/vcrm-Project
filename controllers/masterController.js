@@ -5,19 +5,18 @@ const path = require("path");
 
 module.exports.getMasters = async (req, res) => {
   const masters = await prisma.masters.findMany({});
-  return res.render("list-masters", { masters });
+  return res.render("list-masters", { masters,messages:'' });
 };
 module.exports.addMasters = async (req, res) => {
   console.log("add", req.body);
-  console.log(req.file);
-  // const adharImage = req.files["adharImage"];
+  const filePath = req.file ? path.join('uploads', req.file.filename) : "" ;
   const { name, icon, status } = req.body;
 
   try {
     const newMaster = await prisma.masters.create({
       data: {
         name,
-        icon: req.file?req.file.path:"",
+        icon: filePath,
         status: true,
       },
     });
@@ -84,26 +83,28 @@ module.exports.get_update_masters = async (req, res) => {
     res.render("modelbox/edit-master-model", { masters });
 };
 module.exports.update_masters = async (req, res) => {
-  console.log("update", req.body); // Logging the request body
+  console.log("updateneww", req.body); // Logging the request body
+  console.log("ddddd", req.file);
+  const {masterid,master_name} = req.body;
+  const filePath = req.file ? path.join('uploads', req.file.filename) : "" ;
   try {
   
     const updatedEmployee = await prisma.masters.update({
       where: {
-        id: 2,
+        id: parseInt(masterid),
       },
       data: {
-        name: "Vehicles",
-        icon: "",
+        name: master_name,
+        icon: filePath,
       },
     });
-    return res
-      .status(200)
-      .json({ status: "success", message: "Masters updated successfully..." });
+    req.flash('success',"Record has been updated.")
+    res.redirect("/admin/dashboard/masters-lists");
+    
   } catch (error) {
     console.error(error);
-    res
-      .status(500)
-      .json({ status: "error", message: "Error updating employee..." });
+    req.flash('error',"Error to update this record.")
+    res.redirect("/admin/dashboard/masters-lists");
   }
 };  
 

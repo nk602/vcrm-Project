@@ -9,55 +9,55 @@
         type="button"
       ></button>
     </div>
-<form id="myEmployeeUpdateForm">
-    <div class="modal-body">
-      <div class="row">
-        <div>
-          <input
-            type="hidden"
-            class="form-control"
-            name="id"
-            id="id"
-  
-          />
-        </div>
-        <div class="col-sm-4 form-group">
-          <label class="form-label">Name</label>
-          <% console.log(masters); %>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value="<%= masters ? masters.name : '' %>"
-          />
-        </div>
-        <div class="col-sm-4 form-group">
-          <label class="form-label">Icon</label>
-          <% console.log(masters); %>
-          <input
-            type="file"
-            class="form-control"
-            name="icon"
-            id="icon"
-            value="<%= masters ? masters.icon:''%>"
-          />
-        </div>
-        <!-- <div class="col-sm-4 form-group">
-                  <label class="form-label">Status</label>
-                  <select class="form-control" name="status" id="status">
-                      <option value="true">Active</option>
-                      <option value="false">Inactive</option>
-                  </select>
-        </div> -->
-        <div class="col-lg-2">
-          <button class="btn ripple btn-primary w-100">Submit</button>
+    <form method="POST" action="update-master" enctype="multipart/form-data">
+      <div class="modal-body">
+        <div class="row">
+          <div>
+            <input
+              type="hidden"
+              class="form-control"
+              name="masterid"              
+              value="<%= masters ? masters.id : '' %>"
+            />
+          </div>
+          <div class="col-sm-4 form-group">
+            <label class="form-label">Name</label>
+            <% console.log(masters); %>
+            <input
+              type="text"
+              name="master_name"
+              id="name"
+              value="<%= masters ? masters.name : '' %>"
+            />
+          </div>
+          <div class="col-sm-4 form-group">
+            <label class="form-label">Icon</label>
+            <% console.log(masters); %>
+            <input
+              type="file"
+              class="form-control"
+              name="icon"
+              id="icon"
+              value="<%= masters ? masters.icon:''%>"
+            />
+          </div>
+          <!-- <div class="col-sm-4 form-group">
+                    <label class="form-label">Status</label>
+                    <select class="form-control" name="status" id="status">
+                        <option value="true">Active</option>
+                        <option value="false">Inactive</option>
+                    </select>
+          </div> -->
+          <div class="col-lg-2">
+            <button type="submit" class="btn ripple btn-primary w-100">Submit</button>
+          </div>
         </div>
       </div>
-    </div>
-    </form>>
+    </form>
   </div>
 </div>
 <script>
+  /*
   document
     .querySelector("#myEmployeeUpdateForm")
     .addEventListener("submit", async function (event) {
@@ -86,5 +86,5 @@
         scrollTo(0, 0);
         document.querySelector(".errors").textContent = error.message;
       }
-    });
+    }); */
 </script>

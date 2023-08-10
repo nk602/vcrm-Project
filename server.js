@@ -4,7 +4,7 @@ const session = require('express-session');  // session middleware
 const passport = require('passport');  // authentication
 const cookieParser = require('cookie-parser');
 const path = require('path');
-
+const flash = require('express-flash');
 const app = express();
 // Configure Sessions Middleware
 app.use(session({
@@ -26,6 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 // Configure Middleware
 //app.use(express.static(__dirname + 'public'));
+app.use(flash());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 //routes
