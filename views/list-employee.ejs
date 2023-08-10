@@ -120,13 +120,13 @@
 													</td>
 													<td>
 														<p class="mb-0">Aadhaar: <a href="" class="mb-1" title="View"
-																data-bs-target="#modaldemo-id" data-bs-toggle="modal"><i
+																data-bs-target="#modaldemo-<%= employee.id %>" data-bs-toggle="modal"><i
 																	class="fe fe-eye"></i></a><br>
 															C.Cheque: <a href="" class=" mb-1" title="View"
-																data-bs-target="#modaldemo-cheque"
+																data-bs-target="#modaldemo-cheque-<%= employee.id %>"
 																data-bs-toggle="modal"><i class="fe fe-eye"></i></a><br>
 															Add Proof: <a href="" class=" mb-1" title="View"
-																data-bs-target="#modaldemo-address"
+																data-bs-target="#modaldemo-address-<%= employee.id %>"
 																data-bs-toggle="modal"><i class="fe fe-eye"></i></a></p>
 													</td>
 													<td>
@@ -150,6 +150,142 @@
 												
 
 												</tr>
+												<!-- Large Modal -->
+												<div class="modal" id="modaldemo-<%= employee.id %>">
+													<div class="modal-dialog modal-lg" role="document">
+														<div class="modal-content modal-content-demo">
+															<div class="modal-header">
+																<h6 class="modal-title">Aadhaar</h6><button aria-label="Close" class="btn-close"
+																	data-bs-dismiss="modal" type="button"></button>
+															</div>
+															<div class="modal-body">
+																<div class="row">
+																	<div class="col-sm-8">
+																		<img src="/<%= employee.adharImage %>" style="width:100%;">
+																	</div>
+																	<div class="col-sm-4">
+																		<h6>Aadhaar No. <%= employee.adharNumber %></h6>
+																		<div class="form-group">
+																			<select class="form-control select2">
+																				<option>Status</option>
+																				<option>Approved</option>
+																				<option>Disapproved</option>
+																			</select>
+																		</div>
+																		<div class="form-group">
+																			<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+																		</div>
+																	</div>
+																</div>
+
+
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--End Large Modal -->
+													
+												<div class="modal" id="modaldemo-pan">
+													<div class="modal-dialog modal-lg" role="document">
+														<div class="modal-content modal-content-demo">
+															<div class="modal-header">
+																<h6 class="modal-title">PAN</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal"
+																	type="button"></button>
+															</div>
+															<div class="modal-body">
+																<div class="row">
+																	<div class="col-sm-8">
+																		<img src="/<%= employee.adharImage %>" style="width:100%;">
+																	</div>
+																	<div class="col-sm-4">
+																		<h6>Pan No. : CLDPK8793</h6>
+																		<div class="form-group">
+																			<select class="form-control select2">
+																				<option>Status</option>
+																				<option>Approved</option>
+																				<option>Disapproved</option>
+																			</select>
+																		</div>
+																		<div class="form-group">
+																			<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+																		</div>
+																	</div>
+																</div>
+
+
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--End Large Modal -->
+												<!--End Large Modal -->
+												<div class="modal" id="modaldemo-cheque-<%= employee.id %>">
+													<div class="modal-dialog modal-lg" role="document">
+														<div class="modal-content modal-content-demo">
+															<div class="modal-header">
+																<h6 class="modal-title">Cheque</h6><button aria-label="Close" class="btn-close"
+																	data-bs-dismiss="modal" type="button"></button>
+															</div>
+															<div class="modal-body">
+																<div class="row">
+																	<div class="col-sm-8">
+																		<img src="/<%= employee.chequeImage %>" style="width:100%;">
+																	</div>
+																	<div class="col-sm-4">
+																		<h6>Cheque No. : 0123456789</h6>
+																		<div class="form-group">
+																			<select class="form-control select2">
+																				<option>Status</option>
+																				<option>Approved</option>
+																				<option>Disapproved</option>
+																			</select>
+																		</div>
+																		<div class="form-group">
+																			<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+																		</div>
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--End Large Modal -->
+												<!--End Large Modal -->
+												<div class="modal" id="modaldemo-address-<%= employee.id %>">
+													<div class="modal-dialog modal-lg" role="document">
+														<div class="modal-content modal-content-demo">
+															<div class="modal-header">
+																<h6 class="modal-title">Address</h6><button aria-label="Close" class="btn-close"
+																	data-bs-dismiss="modal" type="button"></button>
+															</div>
+															<div class="modal-body">
+																<div class="row">
+																	<div class="col-sm-8">
+																		<p>3-15/10/403 Newark, Street no 5, Next To Pizza Hut, Bangalore, Karnataka, 560003, India.
+																		</p>
+																		<p class="mb-0">soniataylor344@example.com</p>
+																		<p>+91 08023310451</p>
+																	</div>
+																	<div class="col-sm-4">
+
+																		<div class="form-group">
+																			<select class="form-control select2">
+																				<option>Status</option>
+																				<option>Approved</option>
+																				<option>Disapproved</option>
+																			</select>
+																		</div>
+																		<div class="form-group">
+																			<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
 												<% }); %>
 											</tbody>
 										</table>
@@ -175,141 +311,7 @@
 	<!-- End Page -->
 
 
-	<!-- Large Modal -->
-	<div class="modal" id="modaldemo-id">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content modal-content-demo">
-				<div class="modal-header">
-					<h6 class="modal-title">Aadhaar</h6><button aria-label="Close" class="btn-close"
-						data-bs-dismiss="modal" type="button"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col-sm-8">
-							<img src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif" style="width:100%;">
-						</div>
-						<div class="col-sm-4">
-							<h6>Aadhaar : 234567837480</h6>
-							<div class="form-group">
-								<select class="form-control select2">
-									<option>Status</option>
-									<option>Approved</option>
-									<option>Disapproved</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
-							</div>
-						</div>
-					</div>
 
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--End Large Modal -->
-	<div class="modal" id="modaldemo-pan">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content modal-content-demo">
-				<div class="modal-header">
-					<h6 class="modal-title">PAN</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal"
-						type="button"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col-sm-8">
-							<img src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif" style="width:100%;">
-						</div>
-						<div class="col-sm-4">
-							<h6>Pan No. : CLDPK8793</h6>
-							<div class="form-group">
-								<select class="form-control select2">
-									<option>Status</option>
-									<option>Approved</option>
-									<option>Disapproved</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
-							</div>
-						</div>
-					</div>
-
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--End Large Modal -->
-	<!--End Large Modal -->
-	<div class="modal" id="modaldemo-cheque">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content modal-content-demo">
-				<div class="modal-header">
-					<h6 class="modal-title">Cheque</h6><button aria-label="Close" class="btn-close"
-						data-bs-dismiss="modal" type="button"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col-sm-8">
-							<img src="https://newadmin.webkype.com/assets/img/pngs/cheque-img.jpg" style="width:100%;">
-						</div>
-						<div class="col-sm-4">
-							<h6>Cheque No. : 0123456789</h6>
-							<div class="form-group">
-								<select class="form-control select2">
-									<option>Status</option>
-									<option>Approved</option>
-									<option>Disapproved</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--End Large Modal -->
-	<!--End Large Modal -->
-	<div class="modal" id="modaldemo-address">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content modal-content-demo">
-				<div class="modal-header">
-					<h6 class="modal-title">Address</h6><button aria-label="Close" class="btn-close"
-						data-bs-dismiss="modal" type="button"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col-sm-8">
-							<p>3-15/10/403 Newark, Street no 5, Next To Pizza Hut, Bangalore, Karnataka, 560003, India.
-							</p>
-							<p class="mb-0">soniataylor344@example.com</p>
-							<p>+91 08023310451</p>
-						</div>
-						<div class="col-sm-4">
-
-							<div class="form-group">
-								<select class="form-control select2">
-									<option>Status</option>
-									<option>Approved</option>
-									<option>Disapproved</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!--End Large Modal -->
 	<!--End Large Modal -->
 	<div class="modal" id="modaldemo-employee-form">

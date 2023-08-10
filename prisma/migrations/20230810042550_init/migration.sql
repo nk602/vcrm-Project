@@ -23,9 +23,8 @@ CREATE TABLE `employee` (
     `currentAddressArea` VARCHAR(191) NOT NULL DEFAULT '',
     `currentAddressLane` VARCHAR(191) NOT NULL DEFAULT '',
     `currentAddressPinCode` VARCHAR(191) NOT NULL DEFAULT '',
-    `sameAsCurrentAddress` BOOLEAN NOT NULL DEFAULT false,
     `permanentAddressCountry` VARCHAR(191) NOT NULL DEFAULT '',
-    `permanentaddressState` VARCHAR(191) NOT NULL DEFAULT '',
+    `permanentAddressState` VARCHAR(191) NOT NULL DEFAULT '',
     `permanentAddressCity` VARCHAR(191) NOT NULL DEFAULT '',
     `permanentAddressArea` VARCHAR(191) NOT NULL DEFAULT '',
     `permanentAddressLane` VARCHAR(191) NOT NULL DEFAULT '',
@@ -45,6 +44,37 @@ CREATE TABLE `employee` (
     `bankName` VARCHAR(191) NOT NULL DEFAULT '',
     `ifsc` VARCHAR(191) NOT NULL DEFAULT '',
     `published` BOOLEAN NOT NULL DEFAULT false,
+    `status` BOOLEAN NOT NULL DEFAULT false,
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updatedAt` DATETIME(3) NOT NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `Masters` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(191) NOT NULL DEFAULT '',
+    `icon` VARCHAR(191) NOT NULL DEFAULT '',
+    `status` BOOLEAN NOT NULL DEFAULT true,
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updatedAt` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `MastersValues` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `masterId` INTEGER NOT NULL,
+    `name` VARCHAR(191) NOT NULL DEFAULT '',
+    `icon` VARCHAR(191) NOT NULL DEFAULT '',
+    `status` BOOLEAN NOT NULL DEFAULT true,
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updatedAt` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- AddForeignKey
+ALTER TABLE `MastersValues` ADD CONSTRAINT `MastersValues_masterId_fkey` FOREIGN KEY (`masterId`) REFERENCES `Masters`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;

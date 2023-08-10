@@ -5,5 +5,6 @@ const app = express();
 router.use("/admin", require("./admin/adminRoutes"));
 router.use("/admin/dashboard", require("./dashboardRoutes"));
 // router.use('/user/test',require('./user/test'))
+router.use("/admin/dashboard",require("./mastersRoutes"))
 
 module.exports = router;

@@ -31,12 +31,12 @@ const loginCheck = passport => {
   passport.use(strategy);
 
   passport.serializeUser((adminUser,done)=>{
-    console.log("inside serialize");
+    // console.log("inside serialize");
     done(null,adminUser.id)
   });
 
   passport.deserializeUser( async function(userId,done){
-    console.log('deserializeUser'+ userId);
+    // console.log('deserializeUser'+ userId);
     const id = userId;
     const adminUser = await prisma.admin.findUnique({
       where: { id },

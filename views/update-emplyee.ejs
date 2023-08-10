@@ -36,7 +36,7 @@
                     </div>
                     <!-- End Page Header -->
 
-                    <!-- <form id="myEmployeeUpdateForm"> -->
+                     <form id="myEmployeeUpdateForm"> 
                         <!-- Row -->
                         <div class="row row-sm">
                             <div class="col-xl-4 col-lg-4 col-md-4">
@@ -70,8 +70,8 @@
                                             <h6 class="main-content-label mb-3">BASIC
                                                 INFO</h6>
                                         </div>
-                                        <form id="myEmployeeUpdateForm">
-                                            <input type="hidden" name="id" id="id" value="<%= employee.id %>"/>
+                                        <!-- <form id="myEmployeeUpdateForm"> -->
+                                            <input type="hidden" name="id" id="id" value="<%= parseInt(employee.id) %>"/>
                                          <div class>
                                             <div class="row row-sm">
                                                 <div class="col-lg-6 form-group">
@@ -574,7 +574,7 @@
                                                     <input
                                                         class="form-control"
                                                         type="file"
-                                                        name="adharImage" />
+                                                        name="adharImage" id="adharImage" value="<%= employee.adharImage %>" />
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -584,7 +584,7 @@
                                                     <input
                                                         class="form-control"
                                                         type="text"
-                                                        name="adharNumber" />
+                                                        name="adharNumber" value="<%= employee.adharNumber %>"  />
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -592,7 +592,7 @@
                                                     <label class="form-label">PAN
                                                         Upload</label>
                                                     <input class="form-control"
-                                                        type="file" />
+                                                        type="file" name="panImage" id="panImage" value="<%= employee.panImage %>"  />
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -610,14 +610,14 @@
                                                     <label class="form-label">Driving
                                                         Licence</label>
                                                     <input class="form-control"
-                                                        type="file" />
+                                                        type="file" name="drivingLicenseImage" id="drivingLicenseImage"  value="<%= employee.drivingLicenseImage %>"/>
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
                                                 <div class="form-group mb-0">
                                                     <label class="form-label">Cheque</label>
                                                     <input class="form-control"
-                                                        type="file" />
+                                                        type="file" name="chequeImage" id="chequeImage" value="<%= employee.chequeImage %>" />
                                                 </div>
                                             </div>
                                         </div>
@@ -643,7 +643,7 @@
                                                     <input
                                                         class="form-control"
                                                         type="text"
-                                                        name="accountNumber" />
+                                                        name="accountNumber" id="accountNumber" />
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -925,92 +925,22 @@
                 event.preventDefault(); // Prevent the default form submission
                 try {
                   const form = event.target;
-                  const formData = new FormData(form); // Create a FormData object with the form data
-                  const staffid = formData.get("id"); // Assuming there's an input with the name "employeeId" for identifying the employee
-                   // Retrieve all the form fields
-            const id = formData.get("id");
-            const firstName = formData.get("firstName");
-            const lastName = formData.get("lastName");
-            const email = formData.get("email");
-            const mobileNumber = formData.get("mobileNumber");
-            const gender = formData.get("gender");
-            const currentAddressCountry = formData.get("currentAddressCountry");
-            const currentaddressState = formData.get("currentaddressState");
-            const currentAddressCity = formData.get("currentAddressCity");
-            const currentAddressArea = formData.get("currentAddressArea");
-            const currentAddressLane = formData.get("currentAddressLane");
-            const currentAddressPinCode = formData.get("currentAddressPinCode");
-            const permanentAddressCountry = formData.get("permanentAddressCountry");
-            const permanentaddressState = formData.get("permanentaddressState");
-            const permanentAddressCity = formData.get("permanentAddressCity");
-            const permanentAddressArea = formData.get("permanentAddressArea");
-            const permanentAddressLane = formData.get("permanentAddressLane");
-            const permanentAddressPinCode = formData.get("permanentAddressPinCode");
-            // const companyName = formData.get("companyName");
-            // const department = formData.get("department");
-            // const designation = formData.get("designation");
-            // const dateOfJoin = formData.get("dateOfJoin");
-            // const adharImage = formData.get("adharImage");
-            // const adharNumber = formData.get("adharNumber");
-            // const panImage = formData.get("panImage");
-            // const PanNumber = formData.get("PanNumber");
-            // const drivingLicenseImage = formData.get("drivingLicenseImage");
-            // const chequeImage = formData.get("chequeImage");
-            // const accountNumber = formData.get("accountNumber");
-            // const accountName = formData.get("accountName");
-            // const bankName = formData.get("bankName");
-            // const ifsc = formData.get("ifsc");
-                  const response = await fetch(`/admin/dashboard/update-employee/${staffid}`, {
+                  const formData = new FormData(form); //
+
+                  const response = await fetch(`/admin/dashboard/update-employee/`, {
                     method: "POST", // You can also use "PUT" depending on your API design
-                    body: JSON.stringify({
-                        firstName,
-                    lastName,
-                    email,
-                    mobileNumber,
-                    gender,
-                   currentAddressCountry,
-                    currentAddressState,
-                    currentAddressCity,
-                    currentAddressArea,
-                    currentAddressLane,
-                    currentAddressPinCode,
-                    permanentAddressCountry,
-                    permanentAddressState,
-                    permanentAddressCity,
-                    permanentAddressArea,
-                    permanentAddressLane,
-                    permanentAddressPinCode,
-                    // companyName,
-                    // department,
-                    // designation,
-                    // dateOfJoin,
-                    // adharImage,
-                    // adharNumber,
-                    // panImage,
-                    // PanNumber,
-                    // drivingLicenseImage,
-                    // chequeImage,
-                    // accountNumber,
-                    // accountName,
-                    // bankName,
-                    // ifsc
-                    
-                    
-                    }), // Send the updated first name in the request body
-                    headers: {
-                              "Content-Type": "application/json"
-                              },
-                  });
-          
+                    body:formData
+                })
+            
                   const data = await response.json();
                   if (data.status === "error") {
                     throw new Error(data.message);
                   }
           
                   alert(data.message);
-                //   setTimeout(() => {
-                //     location.href = "/admin/dashboard/employees";
-                //   }, 1500);
+                  setTimeout(() => {
+                    location.href = "/admin/dashboard/employees";
+                  }, 1500);
                 } catch (error) {
                   console.log(error);
                   scrollTo(0, 0);

@@ -31,7 +31,7 @@ module.exports.admin_login = async (req, res) => {
   }
 };*/
 module.exports.adminLogin = async (req, res) => {
-  console.log('kkkkkn',req.body);
+//  console.log('kkkkkn',req.body);
   const { email, password } = req.body;
 
   //Required

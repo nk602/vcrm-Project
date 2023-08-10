@@ -32,11 +32,14 @@ module.exports.ListEmployee = async (req, res) => {
   }
 };
 module.exports.createEmplyee = async (req, res) => {
-  // console.log(req.files['adharImage'][0].path);
+  console.log(req.files);
+  const adharImage = req.files["adharImage"];
+  const panImage = req.files["panImage"];
+  const chequeImage = req.files["chequeImage"];
+  const drivingLicenseImage = req.files["drivingLicenseImage"];
+  //console.log("adharImage",adharImage[0].path);
+  //console.log("adharImage",adharImage.path);
   try {
-   
-   console.log(req.file); 
-
     // Define validation schema for employee data
     const employeeSchema = Joi.object({
       firstName: Joi.string().min(4).max(100).required(),
@@ -80,9 +83,19 @@ module.exports.createEmplyee = async (req, res) => {
     if (error) {
       throw new Error(error.details[0].message);
     }
-
+    ////adharImage[0] ? adharImage[0].filename : null;
     await prisma.employee.create({
-      data:{...req.body,adharImage:req.file.path}
+      data: {
+        ...req.body,
+        adharImage: adharImage && adharImage[0] ? adharImage[0].filename : "",
+        panImage: panImage && panImage[0] ? panImage[0].filename : "",
+        chequeImage:
+          chequeImage && chequeImage[0] ? chequeImage[0].filename : "",
+        drivingLicenseImage:
+          drivingLicenseImage && drivingLicenseImage[0]
+            ? drivingLicenseImage[0].filename
+            : "",
+      },
     });
 
     return res.status(200).json({
@@ -128,7 +141,10 @@ module.exports.delete_emplyee = async (req, res) => {
 // Route to render the update-employee.ejs template
 module.exports.get_update_employee = async (req, res) => {
   const employeeId = parseInt(req.params.id, 10);
-  console.log("list-emplyee", req.body);
+  // const adharImage = req.files['adharImage'];
+  // const panImage = req.files['panImage'];
+  // const chequeImage = req.files['chequeImage'];
+  // const drivingLicenseImage = req.files['drivingLicenseImage'];
   try {
     const employee = await prisma.employee.findUnique({
       where: {
@@ -146,66 +162,59 @@ module.exports.get_update_employee = async (req, res) => {
   }
 };
 module.exports.update_employee = async (req, res) => {
-  console.log("user1", req.body);
-
-  const {
-    firstName,
-    lastName,
-    email,
-    mobileNumber,
-    gender,
-    currentAddressCountry,
-    currentAddressState,
-    currentAddressCity,
-    currentAddressArea,
-    currentAddressLane,
-    currentAddressPinCode,
-    sameAsCurrentAddress,
-    permanentAddressCountry,
-    permanentAddressState,
-    permanentAddressCity,
-    permanentAddressArea,
-    permanentAddressLane,
-    permanentAddressPinCode,
-    companyName,
-    department,
-    designation,
-    dateOfJoin,
-    adharImage,
-    adharNumber,
-    panImage,
-    PanNumber,
-    drivingLicenseImage,
-    chequeImage,
-    accountNumber,
-    accountName,
-    bankName,
-    ifsc,
-  } = req.body;
-
   try {
-    const employeeId = parseInt(req.params.id, 10);
-    const employee = await prisma.employee.findUnique({
+    const adharImage = req.files["adharImage"];
+    const panImage = req.files["panImage"];
+    const chequeImage = req.files["chequeImage"];
+    const drivingLicenseImage = req.files["drivingLicenseImage"];
+    //  .. console.log("updatedFileds",updatedFileds);
+    const updatedEmployee = await prisma.employee.update({
       where: {
-        id: employeeId,
+        id: parseInt(req.params.id),
+      },
+      data: {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        mobileNumber: req.body.mobileNumber,
+        gender: req.body.gender,
+        dob: req.body.dob,
+        currentAddressCountry: req.body.currentAddressCountry,
+        currentAddressState: req.body.currentAddressState,
+        currentAddressCity: req.body.currentAddressCity,
+        currentAddressArea: req.body.currentAddressArea,
+        currentAddressLane: req.body.currentAddressLane,
+        currentAddressPinCode: req.body.currentAddressPinCode,
+        permanentAddressCountry: req.body.permanentAddressCountry,
+        permanentAddressState: req.body.permanentAddressState,
+        permanentAddressCity: req.body.permanentAddressCity,
+        permanentAddressArea: req.body.permanentAddressArea,
+        permanentAddressLane: req.body.permanentAddressLane,
+        permanentAddressPinCode: req.body.permanentAddressPinCode,
+        companyName: req.body.companyName,
+        department: req.body.department,
+        designation: req.body.designation,
+        dateOfJoin: req.body.dateOfJoin,
+        adharNumber: req.body.adharNumber,
+        PanNumber: req.body.PanNumber,
+        accountNumber: req.body.accountNumber,
+        accountName: req.body.accountName,
+        bankName: req.body.bankName,
+        ifsc: req.body.ifsc,
+        adharImage: adharImage && adharImage[0] ? adharImage[0].path : "",
+        panImage: panImage && panImage[0] ? panImage[0].filename : "",
+        chequeImage:chequeImage && chequeImage[0] ? chequeImage[0].filename : "",
+        drivingLicenseImage:drivingLicenseImage && drivingLicenseImage[0]?drivingLicenseImage[0].filename: "",
       },
     });
-    console.log("employee", employee);
-    // if (!employee) {
-    //   return res.status(404).json({ error: "Employee not found." });
-    // }
 
-    const updateEmployee = await prisma.employee.update({
-      where: {
-        id: employeeId,
-      },
-      data:req.body,
-    });
     return res
       .status(200)
-      .json({ status: "success", message: "Employee updated successfully." }); // Redirect to the employee list page after successful update
+      .json({ status: "success", message: "Employee updated successfully..." });
   } catch (error) {
-    // If an error occurs during the update process, redirect to an error page or display an error message
-    res.status(500).json({ message: "Error updating employee." });
+    console.error(error);
+    res
+      .status(500)
+      .json({ status: "error", message: "Error updating employee..." });
   }
 };

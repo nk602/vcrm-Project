@@ -3,17 +3,15 @@ const Router = express.Router();
 const dashboardController = require("../controllers/dashboardcontroller");
 const protectRoute = require("../auth/checkAuth");
 const multer = require("multer");
-const path = require('path');
-// Configure Multer to handle file uploads
+const path = require("path");
+// Configure multer for file uploads
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/');
+  destination: (req, file, cb) => {
+    cb(null, "./public/uploads/"); // Store uploaded files in the 'uploads' directory
   },
-  filename: function (req, file, cb) {
-    // Generate a unique filename for the uploaded file
-    const uniqueFileName = file.fieldname + '-' + Date.now() + path.extname(file.originalname);
-    cb(null, uniqueFileName);
-  }
+  filename: (req, file, cb) => {
+    cb(null, file.fieldname + "-" + Date.now() + file.originalname); // Use a unique filename
+  },
 });
 
 const upload = multer({ storage: storage });
@@ -22,12 +20,19 @@ const upload = multer({ storage: storage });
 //   res.send("Dashboard apis is running");
 // });
 
-Router.get("/",protectRoute,dashboardController.getAdmindashboard)
-Router.get("/employees", protectRoute,dashboardController.ListEmployee);
+Router.get("/", protectRoute, dashboardController.getAdmindashboard);
+Router.get("/employees", protectRoute, dashboardController.ListEmployee);
 Router.get("/register-employee", dashboardController.get_register_employee);
-Router.post("/register-employee", 
-upload.single('adharImage'),
-dashboardController.createEmplyee);
+Router.post(
+  "/register-employee",
+  upload.fields([
+    { name: "adharImage" },
+    { name: "panImage" },
+    { name: "chequeImage" },
+    { name: "drivingLicenseImage" },
+  ]),
+  dashboardController.createEmplyee
+);
 //update employee
 Router.get("/register-employee/:id", dashboardController.get_update_employee);
 
@@ -36,6 +41,15 @@ Router.post("/delete-employee/:id", dashboardController.delete_emplyee);
 
 // Route to render the update-employee.ejs template
 Router.get("/update-employee/:id", dashboardController.get_update_employee);
-Router.post("/update-employee/:id", dashboardController.update_employee);
-
+Router.post(
+  "/update-employee/:id",
+  upload.fields([
+    { name: "adharImage" },
+    { name: "panImage" },
+    { name: "chequeImage" },
+    { name: "drivingLicenseImage" },
+  ]),
+  dashboardController.update_employee
+);
+///?///?////???
 module.exports = Router;

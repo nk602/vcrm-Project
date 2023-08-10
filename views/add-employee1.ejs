@@ -613,7 +613,7 @@
                         <div class="col-sm-3">
                           <div class="form-group">
                             <label class="form-label">PAN Upload</label>
-                            <input class="form-control" type="file" />
+                            <input class="form-control" type="file" name="panImage" id="panImage" />
                           </div>
                         </div>
                         <div class="col-sm-3">
@@ -629,13 +629,13 @@
                         <div class="col-sm-3">
                           <div class="form-group mb-0">
                             <label class="form-label">Driving Licence</label>
-                            <input class="form-control" type="file" />
+                            <input class="form-control" type="file" name="drivingLicenseImage" id="drivingLicenseImage" />
                           </div>
                         </div>
                         <div class="col-sm-3">
                           <div class="form-group mb-0">
                             <label class="form-label">Cheque</label>
-                            <input class="form-control" type="file" />
+                            <input class="form-control" type="file" name="chequeImage" id="chequeImage"/>
                           </div>
                         </div>
                       </div>
@@ -1203,7 +1203,8 @@
           try {
             const form = event.target;
             const formData = new FormData(form); // Create a FormData object with the form data
-            form.append('adharImage', document.getElementById('adharImage').files[0]);
+          //  form.append('adharImage', document.getElementById('adharImage').files[0]);
+           // formData.append('chequeImage', document.getElementById('chequeImage').files[0]);
             const response = await fetch("/admin/dashboard/register-employee", {
               method: "POST",
               body: formData,
