@@ -12,7 +12,7 @@ const verifyCallback= async (email,password,done)=>{
     if(!adminUser){
       return done(null,false);
     }
-    adminUser.loginType = "adminLogin";
+    adminUser['loginType'] = "adminLogin";
     return done(null,adminUser);
     /*
     const passwordMatch = await bcrypt.compare(password, adminUser.password);
