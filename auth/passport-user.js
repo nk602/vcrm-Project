@@ -12,7 +12,7 @@ const verifyCallback = async (username, password, done) => {
     if (!empUser) {
       return done(null, false);
     }
-    empUser['loginType'] = "empLogin";
+    empUser.loginType = "empLogin";
     return done(null, empUser);
     /*
     const passwordMatch = await bcrypt.compare(password, empUser.password);

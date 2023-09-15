@@ -12,7 +12,7 @@ const verifyCallback= async (email,password,done)=>{
     if(!adminUser){
       return done(null,false);
     }
-    adminUser['loginType'] = "adminLogin";
+    adminUser.loginType = "adminLogin";
     return done(null,adminUser);
     /*
     const passwordMatch = await bcrypt.compare(password, adminUser.password);
@@ -39,18 +39,18 @@ const loginCheck = passport => {
   passport.deserializeUser( async function(user,done){
     console.log('deserializeUser'+ user.id);
     const id = user.id;
-    if (user.userType === 'adminLogin') {
+    if (user.loginType === 'adminLogin') {
     const adminUser = await prisma.admin.findUnique({
       where: { id },
     });
     done(null, adminUser);   
-  } else if (user.userType === 'empLogin') {
+  } else if (user.loginType === 'empLogin') {
     const empUser = await prisma.employee.findUnique({
       where: { id },
     });
     done(null, empUser);  
   } else {
-    done(new Error('Invalid user type'));
+    done(null, false);  
   }
   });
 };
