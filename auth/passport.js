@@ -8,10 +8,11 @@ const verifyCallback= async (email,password,done)=>{
     const adminUser = await prisma.admin.findUnique({
       where: { email },
     });
-    console.log(adminUser);
+    //console.log(adminUser);
     if(!adminUser){
       return done(null,false);
     }
+    adminUser.loginType = "adminLogin";
     return done(null,adminUser);
     /*
     const passwordMatch = await bcrypt.compare(password, adminUser.password);
@@ -32,17 +33,25 @@ const loginCheck = passport => {
 
   passport.serializeUser((adminUser,done)=>{
     // console.log("inside serialize");
-    done(null,adminUser.id)
+    done(null,adminUser)
   });
 
-  passport.deserializeUser( async function(userId,done){
-    console.log('deserializeUser'+ userId);
-    const id = userId;
+  passport.deserializeUser( async function(user,done){
+    console.log('deserializeUser'+ user.id);
+    const id = user.id;
+    if (user.userType === 'adminLogin') {
     const adminUser = await prisma.admin.findUnique({
       where: { id },
     });
     done(null, adminUser);   
-   
+  } else if (user.userType === 'empLogin') {
+    const empUser = await prisma.employee.findUnique({
+      where: { id },
+    });
+    done(null, empUser);  
+  } else {
+    done(new Error('Invalid user type'));
+  }
   });
 };
 module.exports = loginCheck;

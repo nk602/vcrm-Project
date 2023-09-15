@@ -8,10 +8,11 @@ const verifyCallback = async (username, password, done) => {
     const empUser = await prisma.employee.findUnique({
       where: { username },
     });
-    console.log('helloEPM',empUser);
+    //console.log('helloEPM',empUser);
     if (!empUser) {
       return done(null, false);
     }
+    empUser.loginType = "empLogin";
     return done(null, empUser);
     /*
     const passwordMatch = await bcrypt.compare(password, empUser.password);
@@ -34,12 +35,12 @@ const loginCheckUser = (passport) => {
 
   passport.serializeUser((empUser, done) => {
     // console.log("inside serialize");
-    done(null, empUser.id);
+    done(null, empUser);
   });
 
-  passport.deserializeUser(async function (userId, done) {
-    console.log('deserializeUser'+ userId);
-    const id = userId;
+  passport.deserializeUser(async function (user, done) {
+    console.log('deserializeUser'+ user.id);
+    const id = user.id;
     const empUser = await prisma.employee.findUnique({
       where: { id },
     });
