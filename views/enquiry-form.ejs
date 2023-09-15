@@ -1,0 +1,1306 @@
+<%- include('./includes/meta-head') %>
+
+<body class="ltr main-body leftmenu dash_admin light-theme">
+  <!-- Loader -->
+  <%- include('includes/header-loader') %>
+  <!-- End Loader -->
+
+  <!-- Page -->
+  <div class="page">
+    <!-- Main Header-->
+    <!-- Main Header-->
+    <%- include('./includes/header') %>
+    <!-- End Main Header-->
+    <!-- End Main Header-->
+
+    <!-- Main Content-->
+    <div class="main-content side-content pt-0">
+      <div class="main-container container-fluid">
+        <div class="inner-body">
+          <!-- Page Header -->
+          <div class="page-header">
+            <div>
+              <h2 class="main-content-title tx-24 mg-b-5">Lists Enquiry</h2>
+            </div>
+            <div class="d-flex">
+              <div class="justify-content-center">
+                <!-- <button type="button" class="btn btn-white btn-icon-text my-2 me-2"
+										data-bs-target="#add-enquiry-form"
+										data-bs-toggle="modal">
+									  Add New Enquiry
+									</button> -->
+                <a
+                  href="#"
+                  type="button"
+                  class="btn btn-white btn-icon-text my-2 me-2"
+                  data-bs-target="#add-enquiry-form"
+                  data-bs-toggle="modal"
+                >
+                  <i class="fe fe-plus me-2"></i> Add New Enquiry</a
+                >
+				<a
+				href="#"
+				type="button"
+				class="btn btn-white btn-icon-text my-2 me-2"
+				data-bs-target="#add-excel-form"
+				data-bs-toggle="modal"
+			  >
+				<i class="fe fe-plus me-2"></i> Add Excel</a
+			  >
+
+        <a
+				href="/admin/dashboard/downloadEnquiryFormExcel"
+				type="button"
+				class="btn btn-white btn-icon-text my-2 me-2"
+			  >
+				<i class="fe fe-download me-2"></i> Download Excel</a
+			  >
+              </div>
+            </div>
+          </div>
+
+          <!-- End Page Header -->
+
+          <!-- <div class="row">
+					    	<div class="col-lg-12">
+								<div class="card custom-card">
+									<div class="card-body py-3" style="padding-bottom:0 !important">
+									    <div class="row">
+									         
+					      <div class="col-sm-2">
+					          <div class=" form-group">
+					        	<select class="form-control select2">
+													<option label="Choose one">Partner</option>
+												<option>Select</option>
+												</select>
+					    </div></div>
+					      <div class="col-sm-2">
+					          <div class=" form-group">
+					        	<select class="form-control select2">
+													<option label="Choose one">Campaign</option>
+												<option>	Chrun_HRM_Camp</option>
+<option>Fresh_Mix_Camp</option>
+<option>LPU_Chrun</option>
+<option>Edu_All_Inbound</option>
+												</select>
+					    </div></div>
+					     <div class="col-sm-2">
+					          <div class=" form-group">
+					        	<select class="form-control select2">
+													<option label="Choose one">Program</option>
+												<option>Select</option>
+												</select>
+					    </div></div>
+					      <div class="col-sm-2">
+					          <div class=" form-group">
+					        	<select class="form-control select2">
+													<option label="Choose one">Course</option>
+												<option>Select</option>
+												</select>
+					    </div></div>
+					     <div class="col-sm-2">
+					          <div class=" form-group">
+					        	<select class="form-control select2">
+													<option label="Choose one">Source</option>
+												<option>Select</option>
+												</select>
+					    </div></div>
+					    <div class="col-sm-2">
+					          <div class=" form-group">
+					        	<select class="form-control select2">
+													<option label="Choose one">Data</option>
+												<option>Select</option>
+												</select>
+					    </div></div>
+					     <div class="col-sm-2">
+					          <div class=" form-group">
+					        	<select class="form-control select2">
+													<option label="Choose one"> Work Exp</option>
+												<option>Select</option>
+												</select>
+					    </div></div>
+					    <div class="col-sm-2">
+					          <div class=" form-group">
+					        	<select class="form-control select2">
+													<option label="Choose one">Highest Qualification</option>
+												<option>Select</option>
+												</select>
+					    </div></div>
+					    
+					    
+					    
+					    
+					    <div class="col-sm-2">
+					        <a href="#" type="button" class="btn btn-primary btn-icon-text w-100"> Apply</a>
+					    </div>
+					    
+					</div>	</div></div>
+	</div>
+	</div> -->
+          <!-- Row -->
+          <div class="row row-sm">
+            <div class="col-lg-12">
+              <div class="card custom-card">
+                <div class="card-body">
+                  <div class="text-wrap">
+                    <div
+                      class="panel panel-primary tabs-style-3 p-0 tabs-style-3-0"
+                    >
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="tab11">
+                          <div class="table-responsive">
+                            <table
+                              class="table table-striped table-bordered text-nowrap mb-0"
+                            >
+                              <thead class="table-success">
+                                <tr>
+                                  <th>
+                                    <label class="ckbox"
+                                      ><input
+                                        type="checkbox"
+                                        value="5" /><span></span
+                                    ></label>
+                                  </th>
+                                  <th>ID</th>
+                                  <th>Courseid</th>
+                                  <th>First Name</th>
+                                  <th>Last Name</th>
+                                  <th>Email ID</th>
+                                  <th>Phone No</th>
+                                  <th>Total Work Experience</th>
+                                  <th>Highest Qualification</th>
+                                  <th>Graduation Year</th>
+                                  <th>Job Title</th>
+                                  <th>Company Name</th>
+                                  <th>Utm Compaign</th>
+                                  <th>English Language</th>
+                                  <th>State</th>
+                                  <th>City</th>
+                                  <th>Utm Term</th>
+                                  <th>Utm Medium</th>
+                                  <th>Utm Source</th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                <% enquiries.forEach(enquiry => { %>
+                                <tr>
+                                  <td>
+                                    <label class="ckbox"
+                                      ><input
+                                        type="checkbox"
+                                        value="5" /><span></span
+                                    ></label>
+                                  </td>
+                                  <td>V00000<%= enquiry.id %></td>
+                                  <td><%= enquiry.courseid%></td>
+                                  <td><%= enquiry.firstName %></td>
+                                  <td><%= enquiry.lastName %></td>
+                                  <td><%= enquiry.email %></td>
+                                  <td><%= enquiry.phoneNumber %></td>
+                                  <td><%= enquiry.totalWorkExperience %></td>
+                                  <td>
+                                    <%= enquiry.highestLevelOfEducation %>
+                                  </td>
+                                  <td><%= enquiry.graduationYear %></td>
+                                  <td><%= enquiry.jobTitle %></td>
+                                  <td><%= enquiry.companyName%></td>
+                                  <td><%= enquiry.utmCompaign%></td>
+                                  <td><%= enquiry.englishLanguage%></td>
+                                  <td><%= enquiry.state%></td>
+                                  <td><%= enquiry.city%></td>
+                                  <td><%= enquiry.utmTerm%></td>
+                                  <td><%= enquiry.utmMedium%></td>
+                                  <td><%= enquiry.utmSource%></td>
+                                </tr>
+                                <% })%>
+                              </tbody>
+                              <!-- <tbody>
+													<tr>
+													    <td><label class="ckbox"><input type="checkbox" value="5"><span></span></label></td>
+													    <td> V000001</td>
+													        <td> Sastraonline
+													    </td>
+													    <td>
+													         Gajendra  </td>
+													      <td>   Singh  </td>
+<td> gajenn@webkype.com  </td>
+<td> 81383283838  </td>
+<td> Uttar Pradesh  </td>
+<td> Noida  </td>
+													    
+													    
+<td> MBA</td>
+<td> 10 Yrs</td>
+<td> CEO</td>
+<td> 20,00,000</td>
+<td> IT</td>
+
+<td> Fresh_Mix_Camp</td>
+<td> MBA- LPU</td>
+<td>
+    Comment / Remark </td>
+<td>Display Source </td>
+<td>Remark</td>
+<td>NA</td>
+													   <td>NA</td>
+													<td>NA</td>
+														<td>NA</td>
+														<td>NA</td>
+														<td>NA</td>
+													<td>NA</td>
+														<td>NA</td>
+														<td>NA</td>
+													<td>NA</td>
+														
+													</tr>
+													
+													
+												</tbody> -->
+                            </table>
+                          </div>
+                          <!-- Pagination controls -->
+                          <!-- <nav>
+                          <div class="pagination">
+                            <ul>
+                                <% if (currentPage > 1) { %>
+                                    <li><a href="/admin/dashboard/enquiry/?/page=<%= currentPage - 1 %>">Previous</a></li>
+                                <% } %>
+                                <% for (let i = 1; i <= totalPages; i++) { %>
+                                    <li <% if (i === currentPage) { %>class="active"<% } %>><a href="/admin/dashboard/enquiry/?page=<%= i %>"><%= i %></a></li>
+                                <% } %>
+                                <% if (currentPage < totalPages) { %>
+                                    <li><a href="/admin/dashboard/enquiry/?/page=<%= currentPage + 1 %>">Next</a></li>
+                                <% } %>
+                            </ul>
+                        </div>
+                          </nav> -->
+                          <!-- <div class="pagination">
+                            <ul>
+                                <% if (currentPage > 1) { %>
+                                    <li><a href="admin/dashboard/enquiry?page=<%= currentPage - 1 %>">Previous</a></li>
+                                <% } %>
+                                <% for (let i = 1; i <= totalPages; i++) { %>
+                                    <li <% if (i === currentPage) { %>class="active"<% } %>><a href="/?page=<%= i %>"><%= i %></a></li>
+                                <% } %>
+                                <% if (currentPage < totalPages) { %>
+                                    <li><a href="enquiry?page=<%= currentPage + 1 %>">Next</a></li>
+                                <% } %>
+                            </ul>
+                        </div> -->
+                         <nav>
+                          <ul class="pagination justify-content-center">
+                            <% if (currentPage > 1) { %>
+                            <li class="page-item"><a class="page-link" href="enquiry?page=<%= currentPage - 1 %>">Previous</a></li>
+                            <% } %>
+                            <% for (let i = 1; i <= totalPages; i++) { %>
+                                       <% if (i === currentPage) { %>
+                                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true"><%= i %></a</li>
+                                <% } else { %>
+                                  <li class="page-item <%= parseInt(currentPage)==i?'active':'' %>"><a class="page-link" href="enquiry?page=<%= i %>"><%= i %></a></li>
+                                <% } %>                              
+                            <% } %>
+                            <% if (currentPage < totalPages) { %>
+                            <li class="page-item"><a class="page-link" href="enquiry?page=<%= parseInt(currentPage) + 1 %>">Next</a></li>
+                            <% } %>
+                          </ul>
+                        </nav> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Row -->
+        </div>
+      </div>
+    </div>
+    <!-- End Main Content-->
+
+    <!-- Main Footer-->
+    <div class="main-footer text-center">
+      <div class="container">
+        <div class="row row-sm">
+          <div class="col-md-12">
+            <span
+              >Copyright © 2023
+              <a href="javascript:void(0)">Verandahighered</a>.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Footer-->
+  </div>
+  <!-- End Page -->
+  <!--Large Model-->
+  <!-- <form action="/download-enquiry-excel" method="GET">
+    <button type="submit">Download Excel</button>
+  </form>	 -->
+  <!-- <form id="addEmployeeForm"  method="post" action="/admin/dashboard/register-enquiry">  -->
+	<form action="/admin/dashboard/uploadEnquiryExcel" method="POST" enctype="multipart/form-data">
+	<div class="modal" id="add-excel-form">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content modal-content-demo">
+		  <div class="modal-header">
+			<h6 class="modal-title">Add Excel</h6>
+			<!-- <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+							  <button -->
+			<button
+			  aria-label="Close"
+			  class="btn-close"
+			  data-bs-dismiss="modal"
+			  type="button"
+			></button>
+		  </div>
+		  <div class="modal-body">
+			<div class="row">
+			  <!-- <div class="col-sm-4 form-group">
+								 <label class="form-label">ID</label>
+								 <input type="text" class="form-control" value="Enter">
+							 </div> -->
+			  <!-- <div class="col-sm-4 form-group">
+								 <label class="form-label">Source</label>
+								 <input type="text" class="form-control" value="Enter">
+							 </div> -->
+							  
+								<div class="col-sm-12 form-group">
+									<label class="form-label"> Upload Excel File </label>
+									<input
+									  type="file"
+									  class="form-control"
+									  name="filePath"  
+									  id="filePath"    
+									  accept=".xlsx"    
+				
+									/>
+								  </div>
+		
+				<!-- <button class="btn ripple btn-primary w-100">Submit</button> -->
+			   <!-- First Name-->
+			  <div class="col-lg-2">
+				<!-- <button class="btn ripple btn-primary w-100" type="button">Save </button> -->
+				<button class="btn ripple btn-primary w-100">Submit</button>
+			  </div>
+			 </form>	  
+			</div>
+		  <!-- </form> -->
+		  </div>
+		</div>
+	  </div>
+	  </div>
+	</div>
+ <!--End Large Model-->
+
+  <!-- Large Modal -->
+   <form id="addEmployeeForm"  method="post" action="/admin/dashboard/register-enquiry"> 
+  <div class="modal" id="add-enquiry-form">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+          <h6 class="modal-title">Add Enquiry</h6>
+          <!-- <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+							<button -->
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <!-- <div class="col-sm-4 form-group">
+					           <label class="form-label">ID</label>
+					           <input type="text" class="form-control" value="Enter">
+					       </div> -->
+            <!-- <div class="col-sm-4 form-group">
+					           <label class="form-label">Source</label>
+					           <input type="text" class="form-control" value="Enter">
+					       </div> -->
+            
+            <!-- <form id="Enquiries" class="my-form">
+              <input type="hidden" name="age" value="18" /> -->
+              <div class="col-sm-4 form-group">
+                <label class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="Enter first name"
+                />
+              </div>
+              <!-- <button class="btn ripple btn-primary w-100">Submit</button> -->
+           
+            <!-- </form> -->
+            <div class="col-sm-4 form-group">
+					           <label class="form-label"> Last Name </label>
+					           <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Enter last name">
+					       </div>
+            <div class="col-sm-4 form-group">
+					           <label class="form-label">Email ID </label>
+					           <input type="text" class="form-control" name="email" id="email" placeholder="Enter email addres">
+					       </div>
+                 <!-- <div class="col-sm-4 form-group">
+                  <label class="form-label">Password</label>
+                  <input type="text" class="form-control" name="password" id="password" placeholder="Enter password">
+              </div> -->
+            <div class="col-sm-4 form-group">
+					           <label class="form-label">Phone No</label>
+					           <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Enter phone number">
+					       </div>
+                 <div class="col-sm-4 form-group">
+                  <label class="form-label">course Id</label>
+                  <input type="text" class="form-control" name="courseid" id="courseid" placeholder="Enter course ID">
+              </div>
+                
+            <div class="col-sm-4 form-group">
+												    <div class="form-group">
+												<p class="mg-b-5">Total Work Experience </p>
+												<select class="form-control select2" name="totalWorkExperience">
+													<option value="">Select</option>
+												<option value="1 year">1 year</option>
+												<option value="2 year">2 year</option>
+												</select></div>
+											</div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                    <p class="mg-b-5">State</p>
+                    <select class="form-control select2" name="state">
+                      <option value="">Select</option>
+                      <option value="UP">UP</option>
+                    </select>	</div>
+                    </div>
+            <!-- col-4 -->
+             <div class="col-lg-3">
+												    <div class="form-group">
+												<p class="mg-b-5">City</p>
+												<select class="form-control select2" name="city">
+													<option value="">Select</option>
+													<option value="Noida">Noida</option>
+												</select>	</div>
+             </div>
+												<!-- <--- col-4 -->
+            <div class="col-lg-3">
+												    <div class="form-group">
+												<p class="mg-b-5">Highest Qualification </p>
+												<select class="form-control select2" name="highestLevelOfEducation">
+													<option value="">Select</option>
+														<option value="MBA">MBA</option>
+												</select>	</div>
+											</div>
+
+            <!-- col-4 -->
+
+             <div class="col-sm-3 form-group">
+              <label class="form-label">Graduation Year</label>
+              <input type="text" class="form-control" name="graduationYear" placeholder="Enter graduation year" />
+            </div>
+
+            <div class="col-lg-3">
+              <div class="form-group">
+                <p class="mg-b-5">Job Title</p>
+                <select class="form-control select2" name="jobTitle">
+                  <option value="">Select</option>
+                  <option value="CEO">CEO</option>
+                </select>
+              </div>
+            </div> 
+            <!-- col-4 -->
+
+            <div class="col-sm-3 form-group">
+              <label class="form-label">Company Name</label>
+              <input type="text" class="form-control" name="companyName" placeholder="Enter company name" />
+            </div>
+            <!--col 4-->
+            <div class="col-lg-3">
+              <div class="form-group">
+                <p class="mg-b-5">Utm Compaign</p>
+                <input type="text" class="form-control" name="utmCompaign" placeholder="Enter name" />
+                <!-- <select class="form-control select2" name="utmCompaign">
+                  <option>Select</option>
+                  <option value="IT">IT</option>
+                </select> -->
+              </div>
+            </div>
+            <!-- col-4 -->
+
+            <div class="col-sm-3 form-group">
+              <label class="form-label">English Language</label>
+              <input type="text" class="form-control" name="englishLanguage" placeholder="Vijay Road" />
+            </div>
+            <!--col-4-->
+            <div class="col-lg-3">
+              <div class="form-group">
+                <p class="mg-b-5">Utm Term</p>
+                <select class="form-control select2" name="utmTerm">
+                  <option>Select</option>
+                  <option>Interested</option>
+                </select>
+              </div>
+            </div>
+            <!-- col-4 -->
+           <div class="col-lg-3">
+              <div class="form-group">
+                <p class="mg-b-5">Utm Medium</p>
+                <select class="form-control select2" name="utmMedium">
+                  <option>Select</option>
+                  <option>Call back</option>
+                </select>
+              </div> 
+            </div> 
+            <!-- col-4 -->
+            <div class="col-lg-3 form-group">
+              <label class="form-label"> Utm Source</label>
+              <input
+                type="text"
+                class="form-control"
+                name="utmSource"
+                placeholder="Enter utm source"
+              />
+            </div>
+            <div class="col-mb3">
+            <div class="col-lg-2">
+              <!-- <button class="btn ripple btn-primary w-100" type="button">Save </button> -->
+              <button class="btn ripple btn-primary w-100">Submit</button>
+            </div>
+            </div>
+            <!-- First Name-->
+			<!-- <button class="btn ripple btn-primary w-100">Submit</button> -->
+			
+          </div>
+		</form>
+        </div>
+      </div>
+    </div>
+    <!--End Large Modal -->
+  </div>
+  <!-- End Page -->
+
+  <!-- Large Modal -->
+  <div class="modal" id="modaldemo-id">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+          <h6 class="modal-title">ID</h6>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-8">
+              <img
+                src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif"
+                style="width: 100%"
+              />
+            </div>
+            <div class="col-sm-4">
+              <h6>ID : Law001</h6>
+              <div class="form-group">
+                <select class="form-control select2">
+                  <option>Status</option>
+                  <option>Approved</option>
+                  <option>Disapproved</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button class="btn ripple btn-primary w-100" type="button">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Large Modal -->
+  <div class="modal" id="modaldemo-pan">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+          <h6 class="modal-title">PAN</h6>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-8">
+              <img
+                src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif"
+                style="width: 100%"
+              />
+            </div>
+            <div class="col-sm-4">
+              <h6>Pan No. : CLDPK8793</h6>
+              <div class="form-group">
+                <select class="form-control select2">
+                  <option>Status</option>
+                  <option>Approved</option>
+                  <option>Disapproved</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button class="btn ripple btn-primary w-100" type="button">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Large Modal -->
+  <!--End Large Modal -->
+  <div class="modal" id="modaldemo-cheque">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+          <h6 class="modal-title">Cheque</h6>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-8">
+              <img
+                src="https://newadmin.webkype.com/assets/img/pngs/cheque-img.jpg"
+                style="width: 100%"
+              />
+            </div>
+            <div class="col-sm-4">
+              <h6>Cheque No. : 0123456789</h6>
+              <div class="form-group">
+                <select class="form-control select2">
+                  <option>Status</option>
+                  <option>Approved</option>
+                  <option>Disapproved</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button class="btn ripple btn-primary w-100" type="button">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Large Modal -->
+  <!--End Large Modal -->
+  <div class="modal" id="modaldemo-address">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+          <h6 class="modal-title">Address</h6>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-8">
+              <p>
+                3-15/10/403 Newark, Street no 5, Next To Pizza Hut, Bangalore,
+                Karnataka, 560003, India.
+              </p>
+              <p class="mb-0">soniataylor344@example.com</p>
+              <p>+91 08023310451</p>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <select class="form-control select2">
+                  <option>Status</option>
+                  <option>Approved</option>
+                  <option>Disapproved</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button class="btn ripple btn-primary w-100" type="button">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Large Modal -->
+  <!--End Large Modal -->
+  <div class="modal" id="modaldemo-employee-form">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+          <h6 class="modal-title">Assign</h6>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row row-sm">
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Select Department</label>
+                <select class="form-control select select2">
+                  <option>Select</option>
+                </select>
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Select Designation</label>
+                <select class="form-control select select2">
+                  <option>Select</option>
+                </select>
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Select Employee </label>
+                <select class="form-control select select2">
+                  <option>Select</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn ripple btn-primary" type="button">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Large Modal -->
+
+  <!--End Large Modal -->
+  <div class="modal" id="modaldemo-followup-form">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+          <h6 class="modal-title">Followup</h6>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row row-sm">
+              <div class="col-sm-12 form-group">
+                <div class="row">
+                  <div class="col-lg-2">
+                    <label class="rdiobox update_box"
+                      ><input checked name="rdio" type="radio" />
+                      <span>Update</span></label
+                    >
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="rdiobox meeting_box"
+                      ><input name="rdio" type="radio" />
+                      <span>Meeting</span></label
+                    >
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="rdiobox quotation_box"
+                      ><input name="rdio" type="radio" />
+                      <span>Quotation</span></label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-sm update_wrap">
+              <div class="col-sm-12 form-group">
+                <label class="form-label">Comment</label>
+                <textarea
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter"
+                ></textarea>
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Attachment</label>
+                <input type="file" class="form-control" />
+              </div>
+
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Status</label>
+                <select class="form-control select select2">
+                  <option>Select</option>
+                  <option>Followup</option>
+                  <option>Quotation</option>
+                  <option>Projection</option>
+                  <option>Invoiced</option>
+                  <option>Sale</option>
+                </select>
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Priority</label>
+                <select class="form-control select select2">
+                  <option>Select</option>
+                  <option>High</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-12 mt-2 mb-2"><hr /></div>
+            <div class="row row-sm meeting_wrap">
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" placeholder="Enter" />
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Time</label>
+                <input type="time" class="form-control" placeholder="Enter" />
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Mode</label>
+                <input type="text" class="form-control" placeholder="Enter" />
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Venue</label>
+                <input type="text" class="form-control" placeholder="Enter" />
+              </div>
+              <div class="col-sm-8 form-group">
+                <label class="form-label">Comment</label>
+                <input type="text" class="form-control" placeholder="Enter" />
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Attachment</label>
+                <input type="file" class="form-control" />
+              </div>
+
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Status</label>
+                <select class="form-control select select2">
+                  <option>Select</option>
+                  <option>Followup</option>
+                  <option>Quotation</option>
+                  <option>Projection</option>
+                  <option>Invoiced</option>
+                  <option>Sale</option>
+                </select>
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Priority</label>
+                <select class="form-control select select2">
+                  <option>Select</option>
+                  <option>High</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-12 mt-2 mb-2"><hr /></div>
+
+            <div class="row row-sm quotation_wrap">
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Total No of Truck</label>
+                <input type="text" class="form-control" placeholder="Enter" />
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Subscription</label>
+                <input type="text" class="form-control" placeholder="Enter" />
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Rate Per Truck</label>
+                <input type="text" class="form-control" placeholder="Enter" />
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Total Amount</label>
+                <input type="text" class="form-control" placeholder="Enter" />
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Discount (%)</label>
+                <input type="text" class="form-control" placeholder="Enter" />
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Start Date</label>
+                <input type="date" class="form-control" />
+              </div>
+              <div class="col-sm-4 form-group">
+                <label class="form-label">End Date </label>
+                <input type="date" class="form-control" />
+              </div>
+
+              <div class="col-sm-4 form-group">
+                <label class="form-label">Grace Period </label>
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn ripple btn-primary" type="button">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Large Modal -->
+
+  <!--End Large Modal -->
+  <div class="modal" id="modaldemo-subscription">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+          <h6 class="modal-title">Subscription</h6>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="media mt-0">
+            <div class="media-body ms-2 d-flex">
+              <div class="me-3 pt-4">
+                <img src="../assets/img/lots-logo.png" style="width: 200px" />
+              </div>
+              <div>
+                <p class="mb-0 tx-13 text-dark">
+                  <i class="fe fe-chevrons-right me-1"></i>Total No of Truck :
+                  100
+                </p>
+                <p class="mb-0 tx-13 text-dark">
+                  <i class="fe fe-chevrons-right me-1"></i>Subscription : LOTS
+                  Premium
+                </p>
+                <p class="mb-0 tx-13 text-dark">
+                  <i class="fe fe-chevrons-right me-1"></i>Rate Per Truck : 100
+                </p>
+                <p class="mb-0 tx-13 text-dark">
+                  <i class="fe fe-chevrons-right me-1"></i>Total Amount : 10000
+                </p>
+                <p class="mb-0 tx-13 text-dark">
+                  <i class="fe fe-chevrons-right me-1"></i>Discount (%) : 5
+                </p>
+                <p class="mb-0 tx-13 text-dark">
+                  <i class="fe fe-chevrons-right me-1"></i>Start Date :
+                  01/05/2023
+                </p>
+                <p class="mb-0 tx-13 text-dark">
+                  <i class="fe fe-chevrons-right me-1"></i>End Date : 01/05/2024
+                </p>
+                <p class="mb-0 tx-13 text-dark">
+                  <i class="fe fe-chevrons-right me-1"></i>Grace Period : 1 Year
+                </p>
+                <a
+                  href=""
+                  class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light"
+                  >Accepted</a
+                >
+                <a
+                  href=""
+                  class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light"
+                  >Cancel</a
+                >
+                <a
+                  href=""
+                  class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light"
+                  >Revise</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Large Modal -->
+  <!-- <script type='text/javascript'>
+				$(function(){
+				   alert('inside jquery2');
+				   $(".AddEnquiryForm").click(function(){
+					 var dynamicId = $(this).data("id"); // Get the dynamic ID from the clicked element
+					 alert(dynamicId);
+					 $("#add-enquiry-form").load("/admin/dashboard/enquiry/");
+				   });
+			   });
+			   </script> -->
+
+  <!-- <script>
+				document
+				  .querySelector("#addEnquiryForm")
+				  .addEventListener("submit", async function (event) {
+					event.preventDefault(); // Prevent the default form submission
+					try {
+					  const form = event.target;
+					  const formData = new FormData(form); // Create a FormData object with the form data
+					//  form.append('adharImage', document.getElementById('adharImage').files[0]);
+					 // formData.append('chequeImage', document.getElementById('chequeImage').files[0]);
+					  const response = await fetch("/admin/dashboard/register-enquiry", {
+						method: "POST",
+						body: formData,
+					  });
+		  
+					  const data = await response.json();
+		  
+					  if (data.status === "error") {
+						throw new Error(data.message);
+					  }
+		  
+					  alert(data.message);
+					  setTimeout(() => {
+						location.href ="/admin/dashboard/enquiry";
+					  }, 1500);
+					} catch (error) {
+					  console.log(error);
+					  scrollTo(0, 0);
+					  document.querySelector(".errors").textContent = error.message;
+					}
+				  });
+			  </script>			   
+			    -->
+  <!-- <script>
+				document
+				  .querySelector("#addEnquiries")
+				  .addEventListener("submit", async function (event) {
+					event.preventDefault(); // Prevent the default form submission
+					try {
+					  const form = event.target;
+					  const formData = new FormData(form); // Create a FormData object with the form data
+					//  form.append('adharImage', document.getElementById('adharImage').files[0]);
+					 // formData.append('chequeImage', document.getElementById('chequeImage').files[0]);
+					  const response = await fetch("/admin/dashboard/register-enquiry", {
+						method: "POST",
+						body: formData,
+					  });
+		  
+					  const data = await response.json();
+		  
+					  if (data.status === "error") {
+						throw new Error(data.message);
+					  }
+		  
+					  alert(data.message);
+					  setTimeout(() => {
+						location.href ="/admin/dashboard/enquiry";
+					  }, 1500);
+					} catch (error) {
+					  console.log(error);
+					  scrollTo(0, 0);
+					  document.querySelector(".errors").textContent = error.message;
+					}
+				  });
+			  </script>	
+			    -->
+
+  <!-- Back-to-top -->
+  <a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+  <!-- Jquery js-->
+  <script src="../assets/plugins/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap js-->
+  <script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+  <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Perfect-scrollbar js -->
+  <script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+  <!-- Sidemenu js -->
+  <script src="../assets/plugins/sidemenu/sidemenu.js" id="leftmenu"></script>
+
+  <!-- Sidebar js -->
+  <script src="../assets/plugins/sidebar/sidebar.js"></script>
+
+  <!-- Select2 js-->
+  <script src="../assets/plugins/select2/js/select2.min.js"></script>
+  <script src="../assets/js/select2.js"></script>
+
+  <!-- Internal Datepicker js -->
+  <script src="../assets/plugins/model-datepicker/js/datepicker.js"></script>
+  <script src="../assets/plugins/model-datepicker/js/main.js"></script>
+
+  <!-- Color Theme js -->
+  <script src="../assets/js/themeColors.js"></script>
+
+  <!-- Sticky js -->
+  <script src="../assets/js/sticky.js"></script>
+
+  <!-- Modal js-->
+  <script src="../assets/js/modal.js"></script>
+
+  <!-- Custom js -->
+  <script src="../assets/js/custom.js"></script>
+  <!-- <script>
+    document
+      .querySelector(".my-form")
+      .addEventListener("submit", async function (event) {
+        event.preventDefault(); // Prevent the default form submission
+        try {
+          const form = event.target;
+          const formData = new FormData(form); // Create a FormData object with the form data
+          //  form.append('adharImage', document.getElementById('adharImage').files[0]);
+          // formData.append('chequeImage', document.getElementById('chequeImage').files[0]);
+          console.log(form); // Check if the form is correctly selected
+          console.log(formData);
+          const response = await fetch("/admin/dashboard/register-enquiry", {
+            method: "POST",
+            body: formData,
+          });
+
+          const data = await response.json();
+
+          if (data.status === "error") {
+            throw new Error(data.message);
+          }
+
+          alert(data.message);
+          // setTimeout(() => {
+          //   location.href = "/admin/dashboard/employees";
+          // }, 1500);
+        } catch (error) {
+          console.log(error);
+          scrollTo(0, 0);
+          document.querySelector(".errors").textContent = error.message;
+        }
+      });
+  </script> -->
+  <!-- <script>
+	document
+	  .querySelector("#Enquiries")
+	  .addEventListener("submit", async function (event) {
+		event.preventDefault(); // Prevent the default form submission
+		try {
+		const form = event.target;
+		const formData = new FormData(form); // Create a FormData object with the form data
+		  const response = await fetch("/admin/dashboard/register-enquiry", {
+			method: "POST",
+			body: formData,
+		  });
+
+		  const data = await response.json();
+
+		  if (data.status === "error") {
+			throw new Error(data.message);
+		  }
+
+		  alert(data.message);
+		  setTimeout(() => {
+			location.href = "/admin/dashboard/masters-lists";
+		  }, 1500);
+		} catch (error) {
+		  console.log(error);
+		  scrollTo(0, 0);
+		  document.querySelector(".errors").textContent = error.message;
+		}
+	  });
+  </script> -->
+  <!-- <script>
+			document.addEventListener("DOMContentLoaded", function () {
+
+			document.querySelector("#Enquiries").addEventListener("submit", async function (event) {
+				event.preventDefault(); // Prevent the default form submission
+				try {
+					const form = event.target;
+					const formData = new FormData(form); // Create a FormData object with the form data
+					console.log(formData);
+					const response = await fetch("/admin/dashboard/register-enquiry", {
+						method: "POST",
+						body: formData,
+					});
+	
+					const data = await response.json();
+	
+					if (data.status === "error") {
+						throw new Error(data.message);
+					}
+	
+					alert(data.message);
+					setTimeout(() => {
+						location.href = "/admin/dashboard/enquiry";
+					}, 1500);
+				} catch (error) {
+					console.log(error);
+					scrollTo(0, 0);
+					document.querySelector(".errors").textContent = error.message;
+				}
+			});
+		})
+		</script> -->
+  <!-- <script>
+			document
+			  .querySelector("#Enquiries")
+			  .addEventListener("submit", async function (event) {
+				event.preventDefault(); // Prevent the default form submission
+				try {
+				const form = event.target;
+				const formData = new FormData(form); // Create a FormData object with the form data
+				 console.log(formData);
+				const response = await fetch("/admin/dashboard/register-enquiry", {
+					method: "POST",
+					body: formData,
+				  });
+	
+				  const data = await response.json();
+	
+				  if (data.status === "error") {
+					throw new Error(data.message);
+				  }
+	
+				  alert(data.message);
+				  setTimeout(() => {
+					location.href = "/admin/dashboard/enquiry";
+				  }, 1500);
+				} catch (error) {
+				  console.log(error);
+				  scrollTo(0, 0);
+				  document.querySelector(".errors").textContent = error.message;
+				}
+			  });
+		  </script>	
+	 -->
+	 <script>
+
+	 document.getElementById("addEnquiries").addEventListener("submit", function(event) {
+		event.preventDefault(); // Prevent the default form submission
+	
+		const formData = new FormData(this); // Create a FormData object with the form data
+	
+		fetch("/admin/dashboard/register-enquiry", {
+			method: "POST",
+			body: formData,
+		})
+		.then(response => response.json())
+		.then(data => {
+			if (data.status === "success") {
+				document.getElementById("result").innerHTML = `<p>Success: ${data.message}</p>`;
+			} else {
+				document.getElementById("result").innerHTML = `<p>Error: ${data.message}</p>`;
+			}
+		})
+		.catch(error => {
+			console.error("Error:", error);
+			document.getElementById("result").innerHTML = `<p>Error: ${error.message}</p>`;
+		});
+	});
+</script>
+	
+</body>

@@ -1,0 +1,208 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  username   String   @unique
+  password   String
+  profilePic String   @default("")
+  date       String   @default("")
+  auth_token String   @default("")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model employee {
+  id                      Int                @id @default(autoincrement())
+  firstName               String             @default("")
+  lastName                String             @default("")
+  email                   String             @default("")
+  username                String             @unique
+  password                String             @default("")
+  mobileNumber            String             @default("")
+  gender                  String             @default("")
+  dob                     String             @default("")
+  currentAddressCountry   String             @default("")
+  currentAddressState     String             @default("")
+  currentAddressCity      String             @default("")
+  currentAddressArea      String             @default("")
+  currentAddressLane      String             @default("")
+  currentAddressPinCode   String             @default("")
+  permanentAddressCountry String             @default("")
+  permanentAddressState   String             @default("")
+  permanentAddressCity    String             @default("")
+  permanentAddressArea    String             @default("")
+  permanentAddressLane    String             @default("")
+  permanentAddressPinCode String             @default("")
+  companyName             String             @default("")
+  department              String             @default("")
+  designation             String             @default("")
+  dateOfJoin              String             @default("")
+  adharImage              String             @default("")
+  adharNumber             String             @default("")
+  panImage                String             @default("")
+  PanNumber               String             @default("")
+  drivingLicenseImage     String             @default("")
+  chequeImage             String             @default("")
+  accountNumber           String             @default("")
+  accountName             String             @default("")
+  bankName                String             @default("")
+  ifsc                    String             @default("")
+  published               Boolean            @default(false)
+  status                  Boolean            @default(false)
+  agentActivityLog        agentActivityLog[]
+  createdAt               DateTime           @default(now())
+  updatedAt               DateTime           @updatedAt
+}
+
+model Masters {
+  id           Int             @id @default(autoincrement())
+  name         String          @default("")
+  icon         String          @default("")
+  status       Boolean         @default(true)
+  masterValues MastersValues[]
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+}
+
+model MastersValues {
+  id        Int      @id @default(autoincrement())
+  masterId  Int
+  name      String   @default("")
+  icon      String   @default("")
+  status    Boolean  @default(true)
+  master    Masters  @relation(fields: [masterId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model EnquiryForm {
+  id                      Int      @id @default(autoincrement())
+  firstName               String   @default("")
+  lastName                String   @default("")
+  email                   String   @default("")
+  phoneNumber             String   @default("")
+  totalWorkExperience     String   @default("")
+  highestLevelOfEducation String   @default("")
+  graduationYear          String   @default("")
+  jobTitle                String   @default("")
+  companyName             String   @default("")
+  utmCompaign             String   @default("")
+  englishLanguage         String   @default("")
+  city                    String   @default("")
+  state                   String   @default("")
+  courseid                String   @default("")
+  utmTerm                 String   @default("")
+  utmMedium               String   @default("")
+  utmSource               String   @default("")
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+}
+
+model Leads {
+  id                      Int      @id @default(autoincrement())
+  firstName               String   @default("")
+  lastName                String   @default("")
+  email                   String   @default("")
+  phoneNumber             String   @default("")
+  totalWorkExperience     String   @default("")
+  highestLevelOfEducation String   @default("")
+  graduationYear          String   @default("")
+  jobTitle                String   @default("")
+  companyName             String   @default("")
+  utmCompaign             String   @default("")
+  englishLanguage         String   @default("")
+  city                    String   @default("")
+  state                   String   @default("")
+  courseid                String   @default("")
+  utmTerm                 String   @default("")
+  utmMedium               String   @default("")
+  utmSource               String   @default("")
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+}
+
+model Disposition {
+  id             Int              @id @default(autoincrement())
+  name           String           @default("")
+  icon           String           @default("")
+  status         Boolean          @default(true)
+  Subdisposition Subdisposition[]
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+}
+
+model Subdisposition {
+  id           Int         @id @default(autoincrement())
+  depositionId Int
+  name         String      @default("")
+  icon         String      @default("")
+  status       Boolean     @default(true)
+  disposition  Disposition @relation(fields: [depositionId], references: [id])
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+}
+
+// model CampaignHistory {
+//   id               Int                @id @default(autoincrement())
+//   campaignName     String             @default("")
+//   campaignTeam     String             @default("")
+//   dispositionName  String             @default("")
+//   createdBy        String             @default("")
+//   count            Int
+//   campaignStatus   Boolean            @default(true)
+//   agentActivityLog agentActivityLog[]
+//   campaign_id      String             @default("")
+//   createdAt        DateTime           @default(now())
+//   updatedAt        DateTime           @updatedAt
+// }
+
+model Campaigns {
+  id               Int      @id @default(autoincrement())
+  department       Int
+  designation      Int
+  logo             String   @default("")
+  campaign_id      String   @unique
+  campaign_name    String   @default("")
+  campaign_type    String   @default("")
+  campaign_product String   @default("")
+  team_leaders     String   @default("")
+  team_agents      String   @default("")
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  // agentActivityLog agentActivityLog[]
+}
+
+model agentActivityLog {
+  id            Int          @id @default(autoincrement())
+  agent_id      Int
+  campaign_id   String
+  activity_type activityType @default(Start)
+  activity_time String       @default("")
+  agent         employee     @relation(fields: [agent_id], references: [id])
+  campaign      Campaigns    @relation(fields: [campaign_id], references: [id])
+  updatedAt     DateTime     @updatedAt
+}
+
+enum activityType {
+  Start
+  End
+  Break
+}

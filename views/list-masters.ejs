@@ -1,0 +1,1033 @@
+<%- include('./includes/meta-head') %>
+
+<body class="ltr main-body leftmenu dash_admin light-theme">
+  <!-- Loader -->
+  <%- include('includes/header-loader') %>
+  <!-- End Loader -->
+
+  <!-- Page -->
+  <div class="page">
+    <!-- Main Header-->
+    <!-- Main Header-->
+    <%- include('./includes/header') %>
+    <!-- End Main Header-->
+    <!-- End Main Header-->
+
+    <!-- Main Content-->
+    <div class="main-content side-content pt-0">
+      <div class="main-container container-fluid">
+        <div class="inner-body">
+          <!-- Page Header -->
+          <div class="page-header">
+            <div>
+              <h2 class="main-content-title tx-24 mg-b-5">Master Lists</h2>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home </a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Followup Lead
+                </li>
+              </ol>
+            </div>
+            <div class="d-flex">
+              <div class="justify-content-center">
+                <a
+                  href="#"
+                  type="button"
+                  class="btn btn-primary my-2 btn-icon-text"
+                  data-bs-target="#add-masters-form"
+                  data-bs-toggle="modal"
+                >
+                  <i class="fe fe-plus me-2"></i> Add New Masters</a
+                >
+                <a
+                  href="/admin/dashboard/list-masters-values"
+                  class="btn btn-primary my-2 btn-icon-text"
+                >
+                  <i class="fe fe-plus me-2"></i>Masters Values</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- End Page Header -->
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div>
+                <div
+                  class="card-body py-3" >
+                  <div class="row"> 
+                      <p>
+                          
+                    <% if (messages.success) { %>
+                     
+                        <%= messages.success %>
+                      
+                    <% } %>
+                    
+                    <% if (messages.error) { %>
+                     
+                        <%= messages.error %>
+                      
+                    <% } %>
+                    
+
+                      </p>
+                    
+                  </div>
+                </div>
+
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row -->
+      <div class="row row-sm">
+        <div class="col-lg-12">
+          <div class="card custom-card">
+            <div class="card-body">
+              <div class="text-wrap">
+                <div
+                  class="panel panel-primary tabs-style-3 p-0 tabs-style-3-0"
+                >
+                  <div class="tab-menu-heading">
+                    <div class="tab-content mt-4">
+                      <div class="tab-pane active" id="tab13">
+                        <div class="table-responsive">
+                          <table
+                            class="table table-striped table-bordered text-nowrap mb-0"
+                          >
+                            <thead class="table-success">
+                              <tr>
+                                <!-- <th>
+                                  <label class="ckbox"
+                                    ><input
+                                      type="checkbox"
+                                      value="5" /><span></span
+                                  ></label>
+                                </th> -->
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>icon</th>
+                                <th>status</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <% masters.forEach(master => { %>
+                              <tr>
+                                <!-- <td>
+                                  <label class="ckbox"
+                                    ><input
+                                      type="checkbox"
+                                      value="5" /><span></span
+                                  ></label>
+                                </td> -->
+                                <td>V00000<%= master.id %></td>
+                                <td><%= master.name %></td>
+                                <td><img src="/<%= master.icon %>" width="100" height="100"  style="border-radius: 50%;" ></td>
+                                <!-- <td><%= master.status %></td> -->
+                                <td>
+                                  <!-- <%= master.status ? 'Active' : 'Inactive' %>  -->
+                                  <!-- <button id="myButtonCls" data-mastervalId="<%=master.id%>" data-mastervalstatus="<%= master.status %>" class="myButtonCls <%= master.status?'enabled':'disabled'%>"><%= master.status?'Active':'Inactive'%></button> -->
+                                  <button id="myButtonCls" data-mastervalId="<%=master.id%>" data-mastervalstatus="<%= master.status %>" class="myButtonCls <%= master.status?'enabled':'disabled'%>"><%= master.status?'Active':'Inactive'%></button>
+                                </td>
+
+                                 <td> 
+                                 <!-- <br> <button id="myButtonCls" data-mastervalId="<%=master.id%>" data-mastervalstatus="<%= master.status %>" class="myButtonCls <%= master.status?'enabled':'disabled'%>"><%= master.status?'Active':'Inactive'%></button></br> -->
+                                  <a
+                                    href="#"
+                                    class="btn ripple btn-warning btn-xs w-100 masterEditModel"
+                                    data-bs-target="#update-masters-form"
+                                    data-bs-toggle="modal"
+                                    data-id="<%= master.id %>"
+                                    >Edit</a
+                                  > </br></br>
+                                
+                                  <form
+                                  action="/admin/dashboard/delete-master/<%= master.id %>?_method=DELETE"
+                                  method="POST"
+                                  onsubmit="return confirm('Are you sure want to delete <%= master.name %>?');"
+                                >
+                                  <button
+                                    class="btn ripple btn-warning btn-xs w-100"
+                                    type="submit"
+                                  >
+                                    Delete
+                                  </button>
+                                </form>
+                                </td>                          
+                              </tr>
+                            
+                              <% }) %>
+                            </tbody>
+                          </table>
+                        </div>
+                        <nav>
+                          <ul class="pagination justify-content-center">
+                            <% if (currentPage > 1) { %>
+                            <li class="page-item"><a class="page-link" href="masters-lists?page=<%= currentPage - 1 %>">Previous</a></li>
+                            <% } %>
+                            <% for (let i = 1; i <= totalPages; i++) { %>
+                             
+                                <% if (i === currentPage) { %>
+
+                                  <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true"><%= i %></a</li>
+                                <% } else { %>
+                                  <li class="page-item"><a class="page-link" href="masters-lists?page=<%= i %>"><%= i %></a></li>
+                                <% } %>                              
+                            <% } %>
+                            <% if (currentPage < totalPages) { %>
+                            <li class="page-item"><a class="page-link" href="masters-lists?page=<%= parseInt(currentPage) + 1 %>">Next</a></li>
+                            <% } %>
+                          </ul>
+                        </nav>
+                      </div>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+    </div>
+  </div>
+  <!-- End Main Content-->
+
+  <!-- Main Footer-->
+  <div class="main-footer text-center">
+    <div class="container">
+      <div class="row row-sm">
+        <div class="col-md-12">
+          <span
+            >Copyright © 2023 <a href="javascript:void(0)">Verandahighered</a>.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Footer-->
+
+  <!-- End Page -->
+  <!-- Large Modal -->
+ 
+  <form id="myMastersRegistrationForm">
+    <div class="modal" id="add-masters-form">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-content-demo">
+          <div class="modal-header">
+            <h6 class="modal-title">Add Master</h6>
+            <button
+              aria-label="Close"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              type="button"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  id="name"
+                  placeholder="Enter name" required 
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid name with at most 10 characters..
+                </div>
+              </div>
+              <div class="col-sm-6 form-group">
+                <label class="form-label"> Icon </label>
+                <input
+                  type="file"
+                  class="form-control"
+                  name="icon"required
+                  id="icon"/>
+              </div>
+              <!-- <div class="col-sm-4 form-group">
+										   <label class="form-label">Status </label>
+										   <input type="text" class="form-control" name="status" id="status" placeholder="Enter">
+									   </div> -->
+              <!-- col-4 -->
+
+              <div class="col-lg-2">
+                <button class="btn ripple btn-primary w-100">Submit</button>
+              </div>
+			</form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Large Modal -->
+    </div>
+    <!-- End Page -->
+      <!-- Large Modal -->
+     
+      <div class="modal" id="update-masters-form">
+         <!--load conetent from dynamic model-->
+         <div class="modal-dialog">
+            <div class="modal-content"></div>
+         </div>
+      </div>
+    
+
+      <!-- Large Modal -->
+      <div class="modal" id="modaldemo-id">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+              <h6 class="modal-title">ID</h6>
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-sm-8">
+                  <img
+                    src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif"
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="col-sm-4">
+                  <h6>ID : Law001</h6>
+                  <div class="form-group">
+                    <select class="form-control select2">
+                      <option>Status</option>
+                      <option>Approved</option>
+                      <option>Disapproved</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn ripple btn-primary w-100" type="button">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Large Modal -->
+      <div class="modal" id="modaldemo-pan">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+              <h6 class="modal-title">PAN</h6>
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-sm-8">
+                  <img
+                    src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif"
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="col-sm-4">
+                  <h6>Pan No. : CLDPK8793</h6>
+                  <div class="form-group">
+                    <select class="form-control select2">
+                      <option>Status</option>
+                      <option>Approved</option>
+                      <option>Disapproved</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn ripple btn-primary w-100" type="button">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Large Modal -->
+      <!--End Large Modal -->
+      <div class="modal" id="modaldemo-cheque">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+              <h6 class="modal-title">Cheque</h6>
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-sm-8">
+                  <img
+                    src="https://newadmin.webkype.com/assets/img/pngs/cheque-img.jpg"
+                    style="width: 100%"
+                  />
+                </div>
+                <div class="col-sm-4">
+                  <h6>Cheque No. : 0123456789</h6>
+                  <div class="form-group">
+                    <select class="form-control select2">
+                      <option>Status</option>
+                      <option>Approved</option>
+                      <option>Disapproved</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn ripple btn-primary w-100" type="button">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Large Modal -->
+      <!--End Large Modal -->
+      <div class="modal" id="modaldemo-address">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+              <h6 class="modal-title">Address</h6>
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-sm-8">
+                  <p>
+                    3-15/10/403 Newark, Street no 5, Next To Pizza Hut,
+                    Bangalore, Karnataka, 560003, India.
+                  </p>
+                  <p class="mb-0">soniataylor344@example.com</p>
+                  <p>+91 08023310451</p>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <select class="form-control select2">
+                      <option>Status</option>
+                      <option>Approved</option>
+                      <option>Disapproved</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn ripple btn-primary w-100" type="button">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Large Modal -->
+      <!--End Large Modal -->
+      <div class="modal" id="modaldemo-employee-form">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+              <h6 class="modal-title">Assign</h6>
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row row-sm">
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Select Department</label>
+                    <select class="form-control select select2">
+                      <option>Select</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Select Designation</label>
+                    <select class="form-control select select2">
+                      <option>Select</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Select Employee </label>
+                    <select class="form-control select select2">
+                      <option>Select</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn ripple btn-primary" type="button">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Large Modal -->
+
+      <!--End Large Modal -->
+      <div class="modal" id="modaldemo-followup-form">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+              <h6 class="modal-title">Followup</h6>
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row row-sm">
+                  <div class="col-sm-12 form-group">
+                    <div class="row">
+                      <div class="col-lg-2">
+                        <label class="rdiobox update_box"
+                          ><input checked name="rdio" type="radio" />
+                          <span>Update</span></label
+                        >
+                      </div>
+                      <div class="col-lg-2">
+                        <label class="rdiobox meeting_box"
+                          ><input name="rdio" type="radio" />
+                          <span>Meeting</span></label
+                        >
+                      </div>
+                      <div class="col-lg-2">
+                        <label class="rdiobox quotation_box"
+                          ><input name="rdio" type="radio" />
+                          <span>Quotation</span></label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row-sm update_wrap">
+                  <div class="col-sm-12 form-group">
+                    <label class="form-label">Comment</label>
+                    <textarea
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter"
+                    ></textarea>
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Attachment</label>
+                    <input type="file" class="form-control" />
+                  </div>
+
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Status</label>
+                    <select class="form-control select select2">
+                      <option>Select</option>
+                      <option>Followup</option>
+                      <option>Quotation</option>
+                      <option>Projection</option>
+                      <option>Invoiced</option>
+                      <option>Sale</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Priority</label>
+                    <select class="form-control select select2">
+                      <option>Select</option>
+                      <option>High</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 mt-2 mb-2"><hr /></div>
+                <div class="row row-sm meeting_wrap">
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Date</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Time</label>
+                    <input
+                      type="time"
+                      class="form-control"
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Mode</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Venue</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="col-sm-8 form-group">
+                    <label class="form-label">Comment</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Attachment</label>
+                    <input type="file" class="form-control" />
+                  </div>
+
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Status</label>
+                    <select class="form-control select select2">
+                      <option>Select</option>
+                      <option>Followup</option>
+                      <option>Quotation</option>
+                      <option>Projection</option>
+                      <option>Invoiced</option>
+                      <option>Sale</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Priority</label>
+                    <select class="form-control select select2">
+                      <option>Select</option>
+                      <option>High</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-12 mt-2 mb-2"><hr /></div>
+
+                <div class="row row-sm quotation_wrap">
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Total No of Truck</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Subscription</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Rate Per Truck</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Total Amount</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Discount (%)</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Start Date</label>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">End Date </label>
+                    <input type="date" class="form-control" />
+                  </div>
+
+                  <div class="col-sm-4 form-group">
+                    <label class="form-label">Grace Period </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn ripple btn-primary" type="button">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Large Modal -->
+
+      <!--End Large Modal -->
+      <div class="modal" id="modaldemo-subscription">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+              <h6 class="modal-title">Subscription</h6>
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="media mt-0">
+                <div class="media-body ms-2 d-flex">
+                  <div class="me-3 pt-4">
+                    <img
+                      src="/assets/img/lots-logo.png"
+                      style="width: 200px"
+                    />
+                  </div>
+                  <div>
+                    <p class="mb-0 tx-13 text-dark">
+                      <i class="fe fe-chevrons-right me-1"></i>Total No of Truck
+                      : 100
+                    </p>
+                    <p class="mb-0 tx-13 text-dark">
+                      <i class="fe fe-chevrons-right me-1"></i>Subscription :
+                      LOTS Premium
+                    </p>
+                    <p class="mb-0 tx-13 text-dark">
+                      <i class="fe fe-chevrons-right me-1"></i>Rate Per Truck :
+                      100
+                    </p>
+                    <p class="mb-0 tx-13 text-dark">
+                      <i class="fe fe-chevrons-right me-1"></i>Total Amount :
+                      10000
+                    </p>
+                    <p class="mb-0 tx-13 text-dark">
+                      <i class="fe fe-chevrons-right me-1"></i>Discount (%) : 5
+                    </p>
+                    <p class="mb-0 tx-13 text-dark">
+                      <i class="fe fe-chevrons-right me-1"></i>Start Date :
+                      01/05/2023
+                    </p>
+                    <p class="mb-0 tx-13 text-dark">
+                      <i class="fe fe-chevrons-right me-1"></i>End Date :
+                      01/05/2024
+                    </p>
+                    <p class="mb-0 tx-13 text-dark">
+                      <i class="fe fe-chevrons-right me-1"></i>Grace Period : 1
+                      Year
+                    </p>
+                    <a
+                      href=""
+                      class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light"
+                      >Accepted</a
+                    >
+                    <a
+                      href=""
+                      class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light"
+                      >Cancel</a
+                    >
+                    <a
+                      href=""
+                      class="mb-0 text-muted tx-11 badge bg-pill bg-danger-light"
+                      >Revise</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Large Modal -->
+
+      <!-- Back-to-top -->
+      <a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+	  <!-- <!-- <script>
+        document
+          .querySelector("#myUpdateMasterForm")
+          .addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            try {
+			const form = event.target;
+            const formData = new FormData(form); // Create a FormData object with the form data
+              const response = await fetch("/admin/dashboard/add-masters", {
+                method: "POST",
+                body: formData,
+              });
+
+              const data = await response.json();
+
+              if (data.status === "error") {
+                throw new Error(data.message);
+              }
+
+              alert(data.message);
+              setTimeout(() => {
+                location.href = "/admin/dashboard/masters-lists";
+              }, 1500);
+            } catch (error) {
+              console.log(error);
+              scrollTo(0, 0);
+              document.querySelector(".errors").textContent = error.message;
+            }
+          });
+      </script> -->
+       <script>
+        document
+          .querySelector("#myUpdateMasterForm")
+          .addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            try {
+              const form = event.target;
+              const formData = new FormData(form); // Create a FormData object with the form data
+            //  const masterId = formData.get("id");
+              const response = await fetch(
+                `/admin/dashboard/update-master/${formData.get("id")}`,
+                {
+                  method: "POST",
+                  body: formData,
+                }
+              );
+
+              const data = await response.json();
+
+              if (data.status === "error") {
+                throw new Error(data.message);
+              }
+
+              alert(data.message);
+              setTimeout(() => {
+                location.href = "/admin/dashboard/masters-lists";
+              }, 1500);
+            } catch (error) {
+              console.log(error);
+              scrollTo(0, 0);
+              document.querySelector(".errors").textContent = error.message;
+            }
+          });
+      </script>     
+	  <!-- <script>
+		document.querySelector("#myUpdateMasterForm").addEventListener("submit", async function (event) {
+		  event.preventDefault(); // Prevent the default form submission
+	  
+		  try {
+			const form = event.target;
+			const formData = new FormData(form); // Create a FormData object with the form data
+	  
+			// Convert the string value of 'status' to a boolean
+			formData.set("status", formData.get("status") === "true");
+	  
+			const masterId = formData.get("id"); // Get the master ID
+	  
+			const response = await fetch(`/admin/dashboard/update-master/${masterId}`, {
+			  method: "POST",
+			  body: formData,
+			});
+	  
+			const data = await response.json();
+	  
+			if (data.status === "error") {
+			  throw new Error(data.message);
+			}
+	  
+			alert(data.message);
+			setTimeout(() => {
+			  location.href = "/admin/dashboard/masters-lists";
+			}, 1500);
+		  } catch (error) {
+			console.log(error);
+			scrollTo(0, 0);
+			document.querySelector(".errors").textContent = error.message;
+		  }
+		});
+	  </script> -->
+	  
+	 
+	 <script>
+        document
+          .querySelector("#myMastersRegistrationForm")
+          .addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            try {
+			const form = event.target;
+            const formData = new FormData(form); // Create a FormData object with the form data
+              const response = await fetch("/admin/dashboard/add-masters", {
+                method: "POST",
+                body: formData,
+              });
+
+              const data = await response.json();
+
+              if (data.status === "error") {
+                throw new Error(data.message);
+              }
+
+              alert(data.message);
+              setTimeout(() => {
+                location.href = "/admin/dashboard/masters-lists";
+              }, 1500);
+            } catch (error) {
+              console.log(error);
+              scrollTo(0, 0);
+              document.querySelector(".errors").textContent = error.message;
+            }
+          });
+      </script>
+      <script>
+        // Get a reference to the button element using its ID
+        const mastersValuesButton =
+          document.getElementById("masters-values-btn");
+
+        // Add a click event listener to the button
+        mastersValuesButton.addEventListener("click", function (event) {
+          // Prevent the default link behavior (navigating to the URL)
+          event.preventDefault();
+
+          // Get the href attribute of the button (the target URL)
+          const targetUrl = mastersValuesButton.getAttribute("href");
+
+          // Navigate to the target URL using window.location.href
+          window.location.href = targetUrl;
+        });
+      </script>
+      <!-- Jquery js-->
+      <script src="/assets/plugins/jquery/jquery.min.js"></script>
+
+      <!-- Bootstrap js-->
+      <script src="/assets/plugins/bootstrap/js/popper.min.js"></script>
+      <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+      <!-- Perfect-scrollbar js -->
+      <script src="/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+      <!-- Sidemenu js -->
+      <script
+        src="/assets/plugins/sidemenu/sidemenu.js"
+        id="leftmenu"
+      ></script>
+
+      <!-- Sidebar js -->
+      <script src="/assets/plugins/sidebar/sidebar.js"></script>
+
+      <!-- Select2 js-->
+      <script src="/assets/plugins/select2/js/select2.min.js"></script>
+      <script src="/assets/js/select2.js"></script>
+
+      <!-- Internal Datepicker js -->
+      <script src="/assets/plugins/model-datepicker/js/datepicker.js"></script>
+      <script src="/assets/plugins/model-datepicker/js/main.js"></script>
+
+      <!-- Color Theme js -->
+      <script src="/assets/js/themeColors.js"></script>
+
+      <!-- Sticky js -->
+      <script src="/assets/js/sticky.js"></script>
+
+      <!-- Modal js-->
+      <script src="/assets/js/modal.js"></script>
+
+      <!-- Custom js -->
+      <script src="/assets/js/custom.js"></script>
+    <!-- </form>
+  </form> -->
+  <script type='text/javascript'>
+     $(function(){
+        // alert('inside jquery1');
+        $(".masterEditModel").click(function(){
+          var dynamicId = $(this).data("id"); // Get the dynamic ID from the clicked element
+          // alert(dynamicId);
+          $("#update-masters-form").load("/admin/dashboard/edit-master-model-content/"+dynamicId);
+        });
+    });
+    $(".myButtonCls").click(function(){
+							var btnElement = $(this);
+							var masterValid     = $(this).data("mastervalid"); //
+							var mastervalstatus = $(this).data("mastervalstatus");
+							var changeStatus =  mastervalstatus == 1 ? 0 : 1;
+						    // alert(mastervalstatus);
+							if (changeStatus == 1) {
+								btnElement.removeClass('disabled');
+								btnElement.addClass('enabled');
+								btnElement.html('Active');
+							} else {
+								btnElement.removeClass('enabled');
+								btnElement.addClass('disabled');
+								btnElement.html('Inactive');
+							}
+							$.post("/admin/dashboard/mastersUpdateStatus/"+masterValid,{newStatus: changeStatus}, function( data ) {
+								btnElement.data("mastervalstatus",changeStatus);
+							});
+						});
+					 </script>
+  </script>
+  <style>
+    /* body {
+      display:full;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    } */
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .enabled {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .disabled {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+    }
+  </style>
+  
+</body>

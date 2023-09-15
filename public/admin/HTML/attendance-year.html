@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta name="description" content="Lawyered Beta ERP Design">
+	<meta name="author" content="Lawyered Beta ERP Design">
+	<meta name="keywords" content="Lawyered Beta ERP Design">
+		<!-- Favicon -->
+		<link rel="icon" href="../assets/img/brand/favicon.ico" type="image/x-icon"/>
+
+		<!-- Title -->
+		<title>Lawyered Beta ERP Design</title>
+
+		<!-- Bootstrap css-->
+		<link  id="style" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+		<!-- Icons css-->
+		<link href="../assets/plugins/web-fonts/icons.css" rel="stylesheet"/>
+		<link href="../assets/plugins/web-fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+		<link href="../assets/plugins/web-fonts/plugin.css" rel="stylesheet"/>
+
+		<!-- Style css-->
+		<link href="../assets/css/style.css" rel="stylesheet">
+
+		<!-- Select2 css -->
+		<link href="../assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+
+		<!-- Internal Daterangepicker css-->
+		<link href="../assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+		<!-- InternalFileupload css-->
+		<link href="../assets/plugins/fileuploads/css/fileupload.css" rel="stylesheet" type="text/css"/>
+
+		<!-- InternalFancy uploader css-->
+		<link href="../assets/plugins/fancyuploder/fancy_fileupload.css" rel="stylesheet" />
+
+		<!-- Internal TelephoneInput css-->
+		<link rel="stylesheet" href="../assets/plugins/telephoneinput/telephoneinput.css">
+			<!--Bootstrap-datepicker css-->
+		<link rel="stylesheet" href="../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.css">
+
+		<!-- Internal Datetimepicker-slider css -->
+		<link href="../assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
+
+		<!-- Internal Specturm-color picker css-->
+		<link href="../assets/plugins/spectrum-colorpicker/spectrum.css" rel="stylesheet">
+
+		<!-- Internal Ion.rangeslider css-->
+		<link href="../assets/plugins/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
+		<link href="../assets/plugins/ion-rangeslider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
+		
+	</head>
+
+<body class="ltr main-body leftmenu dash_admin light-theme">
+
+		<!-- Loader -->
+		<div id="global-loader">
+			<img src="../assets/img/loader.svg" class="loader-img" alt="Loader">
+		</div>
+		<!-- End Loader -->
+
+		<!-- Page -->
+		<div class="page">
+
+		<!-- Main Header-->
+		<div class="main-header side-header sticky">
+			<div class="main-container container-fluid">
+			<div class="main-header-left">
+					<a class="main-header-menu-icon" href="index.html"><img src="https://www.verandalearning.com/web/application/themes/green_elemental/img/footer_veranda_logo.png" class="header-brand-img desktop-logo" alt="logo"></a>
+				
+				</div>
+				<div class="main-header-center dash_admin_menu text-center">
+					
+					<ul>
+					   <li><a href="business-dashboard.html"><i class="fe fe-compass"></i> Dashboard </a></li>
+					   <li><a href="list-staff.html"><i class="fe fe-compass"></i> Manage Staff </a></li>
+					   <li><a href="list-campaigns.html"><i class="fe fe-compass"></i> Manage Campaigns </a></li>
+					   <li><a href="list-vendors.html"><i class="fe fe-compass"></i> Vendors </a></li>
+					   <li><a href="list-leads.html"><i class="fe fe-compass"></i> Manage Leads </a></li>
+					    <li><a href="#"><i class="fe fe-compass"></i> Quality & Audit</a></li>
+					</ul>
+				</div>
+				<!--div class="main-header-center">
+					<div class="responsive-logo">
+						<a href="index.html"><img src="../assets/img/brand/logo.png" class="mobile-logo" alt="logo"></a>
+						<a href="index.html"><img src="../assets/img/brand/logo-light.png" class="mobile-logo-dark"
+								alt="logo"></a>
+					</div>
+					<div class="input-group">
+						<div class="input-group-btn search-panel">
+							<select class="form-control select2">
+								<option label="All categories">
+								</option>
+							<option>Staff/Agent</option>
+<option>Sales Lead</option>
+<option>Subscriber</option>
+<option>Cases/Incident</option>
+<option>Lawyer</option>
+							</select>
+						</div>
+						<input type="search" class="form-control rounded-0" placeholder="Search for anything...">
+						<button class="btn search-btn"><i class="fe fe-search"></i></button>
+					</div>
+				</div-->
+				<div class="main-header-right">
+					<button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+					</button><!-- Navresponsive closed -->
+					<div
+						class="navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+							<div class="d-flex order-lg-2 ms-auto">
+								<!-- Search -->
+								<div class="dropdown header-search">
+									<a class="nav-link icon header-search">
+										<i class="fe fe-search header-icons"></i>
+									</a>
+									<div class="dropdown-menu">
+										<div class="main-form-search p-2">
+											<div class="input-group">
+												<div class="input-group-btn search-panel">
+													<select class="form-control select2">
+														<option label="All categories">	</option>
+															<option>Staff/Agent</option>
+<option>Sales Lead</option>
+<option>Subscriber</option>
+<option>Cases/Incident</option>
+<option>Lawyer</option>
+													</select>
+												</div>
+												<input type="search" class="form-control"
+													placeholder="Search for anything...">
+												<button class="btn search-btn"><svg xmlns="http://www.w3.org/2000/svg"
+														width="20" height="20" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="feather feather-search">
+														<circle cx="11" cy="11" r="8"></circle>
+														<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+													</svg></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Search -->
+								<!-- Theme-Layout -->
+								<div class="dropdown d-flex main-header-theme">
+									<a class="nav-link icon layout-setting">
+										<span class="dark-layout">
+											<i class="fe fe-sun header-icons"></i>
+										</span>
+										<span class="light-layout">
+											<i class="fe fe-moon header-icons"></i>
+										</span>
+									</a>
+								</div>
+								<!-- Theme-Layout -->
+							
+								<!-- Full screen -->
+								<div class="dropdown ">
+									<a class="nav-link icon full-screen-link">
+										<i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
+										<i class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"></i>
+									</a>
+								</div>
+								<!-- Full screen -->
+								<!-- Notification -->
+								<div class="dropdown main-header-notification">
+									<a class="nav-link icon" href="">
+										<i class="fe fe-bell header-icons"></i>
+										<span class="badge bg-danger nav-link-badge">4</span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<p class="main-notification-text">You have 1 unread notification<span
+													class="badge bg-pill bg-primary ms-3">View all</span></p>
+										</div>
+										<div class="main-notification-list">
+											<div class="media new">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/5.jpg"></div>
+												<div class="media-body">
+													<p>Congratulate <strong>Olivia James</strong> for New template
+														start</p>
+													<span>Oct 15 12:32pm</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user"><img alt="avatar"
+														src="../assets/img/users/2.jpg">
+												</div>
+												<div class="media-body">
+													<p><strong>Joshua Gray</strong> New Message Received</p>
+													<span>Oct 13
+														02:56am</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/3.jpg"></div>
+												<div class="media-body">
+													<p><strong>Elizabeth Lewis</strong> added new schedule realease
+													</p><span>Oct
+														12 10:40pm</span>
+												</div>
+											</div>
+										</div>
+										<div class="dropdown-footer">
+											<a href="javascript:void(0)">View All Notifications</a>
+										</div>
+									</div>
+								</div>
+								<!-- Notification -->
+								
+								<!-- Profile -->
+								<div class="dropdown main-profile-menu">
+									<a class="d-flex" href="javascript:void(0)">
+										<span class="main-img-user"><img alt="avatar"
+												src="../assets/img/users/5.jpg"></span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<h6 class="main-notification-title">Sonia Taylor</h6>
+											<p class="main-notification-text">Web Designer</p>
+										</div>
+										<a class="dropdown-item border-top" href="profile.html">
+											<i class="fe fe-user"></i> My Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-edit"></i> Edit Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Account Settings
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Support
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-compass"></i> Activity
+										</a>
+										<a class="dropdown-item" href="signin.html">
+											<i class="fe fe-power"></i> Sign Out
+										</a>
+									</div>
+								</div>
+								<!-- Profile -->
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Main Header-->
+
+			<!-- Main Content-->
+			<div class="main-content side-content pt-0">
+
+				<div class="main-container container-fluid">
+					<div class="inner-body">
+
+						<!-- Page Header -->
+						<div class="page-header">
+							<div>
+								<h2 class="main-content-title tx-24 mg-b-5">Attendance List <small>(Sushil Singh)</small></h2>
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="#">HRMS </a></li>
+									<li class="breadcrumb-item active" aria-current="page">Attendance Year </li>
+								</ol>
+							</div>
+							<div class="d-flex">
+								<div class="justify-content-center">
+									
+								
+									<button type="button" class="btn btn-primary my-2 btn-icon-text  me-2">
+									  <i class="fe fe-download-cloud me-2"></i> Download Report
+									</button>
+									<a href="add-staff.html" type="button" class="btn btn-primary my-2 btn-icon-text"> <i class="fe fe-plus me-2" ></i> Add Attendance</a>
+								</div>
+							</div>
+						</div>
+						<!-- End Page Header -->
+
+				
+						<!-- Row -->
+						<div class="row row-sm">
+							<div class="col-lg-12">
+								<div class="card custom-card">
+									<div class="card-body">
+									    	<div class="table-responsive">
+											<table  class="table table-striped table-bordered text-nowrap mb-0" >
+												<thead>
+													<tr>
+													    <th><label class="ckbox"><input type="checkbox" value="5"><span></span></label></th>
+														<th>ID</th>
+														<th>Employee</th>
+														<th>Month</th>
+														<th>Attendance</th>
+														<th>Actions</th>
+													
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+													    <td><label class="ckbox"><input type="checkbox" value="5"><span></span></label></td>
+														<td><img alt="avatar" class="rounded-circle me-3" src="../assets/img/users/5.jpg" style="width:60px"><br>EMP-0001
+													</td>
+														<td>
+														<p class="mb-0">
+														    Sushil Singh Sharma<br>
+                                                        M: 8786467890<br>
+                                                         Sales Manager</p>
+														</td>
+														<td>
+														    <p class="mb-0 badge bg-pill bg-primary-light text-center" > APRIL 2023</p>
+														</td>
+														<td>
+														    <p class="mb-0"> 
+														    Present :<span class="text-success"> 20</span><br>
+                                                            Absent :<span class="text-secondary"> 04</span><br>
+                                                            Leave :<span class="text-info"> 01</span><br> 
+                                                            Un-Informed : 00
+														    </p>
+														   </td>
+														<td>
+														<a href="staff-profile.html" class="btn ripple  btn-primary btn-xs w-100 mb-1 mt-1">Profile</a><br>
+															<a href="attendance-month.html" class="btn ripple btn-xs btn-warning w-100 mb-1">View Log</a>
+														</td>
+													</tr>
+														<tr>
+													    <td><label class="ckbox"><input type="checkbox" value="5"><span></span></label></td>
+														<td><img alt="avatar" class="rounded-circle me-3" src="../assets/img/users/5.jpg" style="width:60px"><br>EMP-0001
+													</td>
+														<td>
+														<p class="mb-0">
+														    Sushil Singh Sharma<br>
+                                                        M: 8786467890<br>
+                                                         Sales Manager</p>
+														</td>
+														<td>
+														    <p class="mb-0 badge bg-pill bg-primary-light text-center" > MAY 2023</p>
+														</td>
+														<td>
+														   <p class="mb-0"> 
+														    Present :<span class="text-success"> 20</span><br>
+                                                            Absent :<span class="text-secondary"> 04</span><br>
+                                                            Leave :<span class="text-info"> 01</span><br> 
+                                                            Un-Informed : 00
+														    </p>
+														   </td>
+														<td>
+														<a href="staff-profile.html" class="btn ripple  btn-primary btn-xs w-100 mb-1 mt-1">Profile</a><br>
+															<a href="attendance-month.html" class="btn ripple btn-xs btn-warning w-100 mb-1">View Log</a>
+														</td>
+													</tr>
+												
+												</tbody>
+											</table>
+										</div>
+									
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Row -->
+
+					
+					</div>
+				</div>
+			</div>
+			<!-- End Main Content-->
+
+			<!-- Main Footer-->
+			<div class="main-footer text-center">
+				<div class="container">
+					<div class="row row-sm">
+						<div class="col-md-12">
+							<span>Copyright © 2022 <a href="#">Lawyered</a>. Designed by <a href="https://www.spruko.com/">Spruko</a> All rights reserved.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Footer-->
+
+			
+
+		</div>
+		<!-- End Page -->
+		
+		
+		<!-- Large Modal -->
+			<div class="modal" id="modaldemo-id">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Aadhaar</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						    <div class="row">
+						        <div class="col-sm-8">
+						             <img src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif" style="width:100%;">
+						        </div>
+						        <div class="col-sm-4">
+						            	<h6>Aadhaar : 234567837480</h6>
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+						    </div>
+						    
+							
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<div class="modal" id="modaldemo-pan">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">PAN</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						     <div class="row">
+						        <div class="col-sm-8">
+						            <img src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif" style="width:100%;">
+						        </div>
+						        <div class="col-sm-4">
+						            	<h6>Pan No. : CLDPK8793</h6>
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+						    </div>
+						     
+						    
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-cheque">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Cheque</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						     <div class="row">
+						        <div class="col-sm-8">
+						            <img src="https://newadmin.webkype.com/assets/img/pngs/cheque-img.jpg" style="width:100%;">
+						        </div>
+						        <div class="col-sm-4">
+						            	<h6>Cheque No. : 0123456789</h6>
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+						    </div>
+						   
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-address">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Address</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						     <div class="row">
+						        <div class="col-sm-8">
+						<p>3-15/10/403 Newark, Street no 5, Next To Pizza Hut,  Bangalore,  Karnataka, 560003, India.</p>
+						<p class="mb-0">soniataylor344@example.com</p>
+							<p>+91 08023310451</p>
+								</div>
+								 <div class="col-sm-4">
+						            	
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+								
+								</div>
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-employee-form">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Employee Form</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+					<form>
+					   <div class="row row-sm">
+															<div class="col-sm-4 form-group">
+																<label class="form-label">Company</label>
+																<select class="form-control select select2">
+																    	<option>Select</option>
+																	
+																</select>
+															</div>
+															<div class="col-sm-4  form-group">
+																<label class="form-label">Department</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															<option>Sales</option>
+															<option>Marketing</option>
+															<option>Accounts</option>
+															<option>Procurements</option>
+															<option>Contracting</option>
+															<option>Transport</option>
+															<option>Legal</option>
+																</select>
+															</div>
+															<div class="col-sm-4  form-group">
+																<label class="form-label">Designation</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+																<option>Executive</option>
+                                                                <option>Manager</option>
+                                                                <option>Intern</option>
+																</select>
+															</div>
+															
+														<div class="col-lg-4 form-group">
+												    <label class="form-label">Date of Joining: <span class="tx-danger">*</span></label>
+													<div class="input-group">
+														<div class="input-group-text border-end-0">
+															<i class="fe fe-calendar lh--9 op-6"></i>
+														</div>
+														<input class="form-control fc-datepicker" placeholder="MM/DD/YYYY" type="text">
+													</div>
+											</div>
+											<div class="col-sm-4  form-group">
+																<label class="form-label">Reporting Boss-A</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															
+																</select>
+															</div>
+											
+												<div class="col-sm-4  form-group">
+																<label class="form-label">Reporting Boss-B</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															
+																</select>
+															</div>
+																<div class="col-sm-12 form-group mb-0">
+																    <div class="row">
+																     <div class="col-sm-12">	<label class="form-label">Assign Permission</label></div>
+																     <div class="col-sm-12">
+																         	<div class="parsley-checkbox row" id="cbWrapper">
+												<div class="col-xl-3">
+													<label class="ckbox mg-b-5">
+													<input data-parsley-class-handler="#cbWrapper" data-parsley-errors-container="#cbErrorContainer" data-parsley-mincheck="2" name="browser[]" required="" type="checkbox" value="1"><span>Sales</span></label>
+												</div>
+												<div class="col-xl-3">
+													<label class="ckbox mg-b-5"><input name="browser[]" type="checkbox" value="2"><span>Marketing</span></label>
+												</div>
+												<div class="col-xl-3">
+													<label class="ckbox mg-b-5"><input name="browser[]" type="checkbox" value="3"><span>Accounts</span></label>
+												</div>
+												<div class="col-xl-3">
+													<label class="ckbox"><input name="browser[]" type="checkbox" value="4"><span>Procurements</span></label>
+												</div>
+												<div class="col-xl-3">
+													<label class="ckbox"><input name="browser[]" type="checkbox" value="4"><span>Contracting</span></label>
+												</div>
+													<div class="col-xl-3">
+													<label class="ckbox"><input name="browser[]" type="checkbox" value="4"><span>Transport</span></label>
+												</div>
+													<div class="col-xl-3">
+													<label class="ckbox"><input name="browser[]" type="checkbox" value="4"><span>Legal</span></label>
+												</div>
+											</div>
+																     </div>  
+																    </div>
+																    </div>
+															
+														</div>
+					</form>
+								</div>
+									<div class="modal-footer">
+							<button class="btn ripple btn-primary" type="button">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+
+			<!-- Back-to-top -->
+		<a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+	
+		<!-- Jquery js-->
+		<script src="../assets/plugins/jquery/jquery.min.js"></script>
+
+		<!-- Bootstrap js-->
+		<script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Jquery-Ui js-->
+		<script src="../assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+		<!-- Internal Daternagepicker js-->
+		<script src="../assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+		<script src="../assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+		<!-- Internal Fileuploads js-->
+		<script src="../assets/plugins/fileuploads/js/fileupload.js"></script>
+        <script src="../assets/plugins/fileuploads/js/file-upload.js"></script>
+
+		<!-- InternalFancy uploader js-->
+		<script src="../assets/plugins/fancyuploder/jquery.ui.widget.js"></script>
+        <script src="../assets/plugins/fancyuploder/jquery.fileupload.js"></script>
+        <script src="../assets/plugins/fancyuploder/jquery.iframe-transport.js"></script>
+        <script src="../assets/plugins/fancyuploder/jquery.fancy-fileupload.js"></script>
+        <script src="../assets/plugins/fancyuploder/fancy-uploader.js"></script>
+
+		<!-- Internal Form-elements js-->
+		<script src="../assets/js/advanced-form-elements.js"></script>
+
+		<!-- Internal TelephoneInput js-->
+		<script src="../assets/plugins/telephoneinput/telephoneinput.js"></script>
+		<script src="../assets/plugins/telephoneinput/inttelephoneinput.js"></script>
+
+		<!-- Perfect-scrollbar js -->
+		<script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+		<!-- Sidemenu js -->
+		<script src="../assets/plugins/sidemenu/sidemenu.js" id="leftmenu"></script>
+		<!--Bootstrap-datepicker js-->
+		<script src="../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+		<!-- Internal jquery-simple-datetimepicker js -->
+		<script src="../assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+
+	<!-- COLOR PICKER JS -->
+		<script src="../assets/plugins/pickr-master/pickr.es5.min.js"></script>
+		<script src="../assets/js/picker.js"></script>
+		<!-- Sidebar js -->
+		<script src="../assets/plugins/sidebar/sidebar.js"></script>
+
+		<!-- Select2 js-->
+		<script src="../assets/plugins/select2/js/select2.min.js"></script>
+		<script src="../assets/js/select2.js"></script>
+
+		<!-- Color Theme js -->
+		<script src="../assets/js/themeColors.js"></script>
+
+		<!-- Sticky js -->
+		<script src="../assets/js/sticky.js"></script>
+
+		<!-- Custom js -->
+		<script src="../assets/js/custom.js"></script>
+		
+		
+		
+		<!-- Bootstrap js-->
+		<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+		<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Internal Jquery-Ui js-->
+		<script src="../assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+		<!-- Internal Jquery.maskedinput js-->
+		<script src="../assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+		<!-- Internal Specturm-colorpicker js-->
+		<script src="../assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+
+		<!-- Internal Ion-rangeslider js-->
+		<script src="../assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+	
+		<!-- Internal Form-elements js-->
+		<script src="../assets/js/form-elements.js"></script>
+		
+	</body>
+</html>

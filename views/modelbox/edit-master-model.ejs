@@ -1,0 +1,91 @@
+<div class="modal-dialog modal-lg" role="document">
+  <div class="modal-content modal-content-demo">
+    <div class="modal-header">
+      <h6 class="modal-title">Edit Master</h6>
+      <button
+        aria-label="Close"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        type="button"
+      ></button>
+    </div>
+    <form method="POST" action="update-master" enctype="multipart/form-data">
+      <div class="modal-body">
+        <div class="row">
+          <div>
+            <input
+              type="hidden"
+              class="form-control"
+              name="masterid"              
+              value="<%= masters ? masters.id : '' %>"
+            />
+          </div>
+          <div class="col-sm-6 form-group">
+            <label class="form-label">Name</label>
+            <% console.log(masters); %>
+            <input
+            class="form-control"
+              type="text"
+              name="master_name"
+              id="name"
+              value="<%= masters ? masters.name : '' %>" required
+            />
+          </div>
+          <div class="col-sm-6 form-group">
+            <label class="form-label">Icon</label>
+            <% console.log(masters); %>
+            <input
+              type="file"
+              class="form-control"
+              name="icon"
+              id="icon"
+              value="<%= masters ? masters.icon:''%>"
+            />
+          </div>
+          <!-- <div class="col-sm-4 form-group">
+                    <label class="form-label">Status</label>
+                    <select class="form-control" name="status" id="status">
+                        <option value="true">Active</option>
+                        <option value="false">Inactive</option>
+                    </select>
+          </div> -->
+          <div class="col-lg-2">
+            <button type="submit" class="btn ripple btn-primary w-100">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+  /*
+  document
+    .querySelector("#myEmployeeUpdateForm")
+    .addEventListener("submit", async function (event) {
+      event.preventDefault(); // Prevent the default form submission
+      try {
+        const form = event.target;
+        const formData = new FormData(form); //     
+///////update-master/:id
+        const masterId = formData.get("id")
+        const response = await fetch("admin/dashboard/update-master/2", {
+          method: "POST", // You can also use "PUT" depending on your API design
+          body:formData
+      })
+  
+        const data = await response.json();
+        if (data.status === "error") {
+          throw new Error(data.message);
+        }
+
+        alert(data.message);
+        setTimeout(() => {
+          location.href = "/admin/dashboard/masters-lists";
+        }, 1500);
+      } catch (error) {
+        console.log(error);
+        scrollTo(0, 0);
+        document.querySelector(".errors").textContent = error.message;
+      }
+    }); */
+</script>

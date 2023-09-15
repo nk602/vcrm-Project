@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en" id="demo">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <meta name="description" content="Verandahighered Beta ERP Design" />
+    <meta name="author" content="Verandahighered Beta ERP Design" />
+    <meta name="keywords" content="Verandahighered Beta ERP Design" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/img/brand/favicon.ico" type="image/x-icon" />
+
+    <!-- Title -->
+    <title>Verandahighered Beta ERP Design</title>
+
+    <!-- Bootstrap css-->
+    <link
+      id="style"
+      href="/assets/plugins/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Icons css-->
+    <link href="/assets/plugins/web-fonts/icons.css" rel="stylesheet" />
+    <link
+      href="/assets/plugins/web-fonts/font-awesome/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="/assets/plugins/web-fonts/plugin.css" rel="stylesheet" />
+
+    <!-- Style css-->
+    <link href="/agents/assets/css/style.css" rel="stylesheet" />
+
+    <!-- INTERNAL COLOR PICKER css-->
+    <link
+      href="//agents/assets//plugins/pickr-master/themes/classic.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//agents/assets//plugins/pickr-master/themes/monolith.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//agents/assets//plugins/pickr-master/themes/nano.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Select2 css -->
+    <link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+
+    <!--Bootstrap-datepicker css-->
+    <link
+      rel="stylesheet"
+      href="/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.css"
+    />
+
+    <!-- Internal Datetimepicker-slider css -->
+    <link
+      href="/assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css"
+      rel="stylesheet"
+    />
+
+    <!-- Internal Specturm-color picker css-->
+    <link
+      href="/assets/plugins/spectrum-colorpicker/spectrum.css"
+      rel="stylesheet"
+    />
+
+    <!-- Internal Ion.rangeslider css-->
+    <link
+      href="/assets/plugins/ion-rangeslider/css/ion.rangeSlider.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/plugins/ion-rangeslider/css/ion.rangeSlider.skinFlat.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="ltr main-body leftmenu agent_admin">
+    <!-- Loader -->
+    <div id="global-loader">
+      <img src="/assets/img/loader.svg" class="loader-img" alt="Loader" />
+    </div>
+    <!-- End Loader -->
+
+    <!-- Page -->
+    <div class="page">
+      <!-- Main Header-->
+      <!-- End Main Header-->
+
+      <!-- Main Header-->
+      <div class="main-header side-header sticky">
+        <div class="main-container container-fluid">
+          <div class="main-header-left">
+            <a class="main-header-menu-icon" href="/user/dashboard"
+              ><img
+                src="/assets/img/brand/logo-light.png"
+                class="header-brand-img desktop-logo"
+                alt="logo"
+            /></a>
+          </div>
+          <div class="main-header-center agent_admin_menu text-center">
+            <ul>
+              <li>
+                <a href="/user/dashboard/<%= users.id %>"
+                  ><i class="fe fe-compass"></i> Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="/user/dashboard/user-compaign"
+                  ><i class="fe fe-compass"></i> Campaigns
+                </a>
+              </li>
+              <li>
+                <a href="/user/dashboard/follow-up"
+                  ><i class="fe fe-compass"></i> Followup
+                </a>
+              </li>
+              <li>
+                <a href="/user/dashboard/users-leads"
+                  ><i class="fe fe-compass"></i> Leads
+                </a>
+              </li>
+              <li>
+                <a href="/user/dashboard/converted"
+                  ><i class="fe fe-compass"></i> Converted
+                </a>
+              </li>
+              <li>
+                <a href="/user/dashboard/reports"
+                  ><i class="fe fe-compass"></i> Reports
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-header-right">
+            <button
+              class="navbar-toggler navresponsive-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent-4"
+              aria-controls="navbarSupportedContent-4"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i
+                class="fe fe-more-vertical header-icons navbar-toggler-icon"
+              ></i></button
+            ><!-- Navresponsive closed -->
+            <div
+              class="navbar navbar-expand-lg nav nav-item navbar-nav-right responsive-navbar navbar-dark"
+            >
+              <div
+                class="collapse navbar-collapse"
+                id="navbarSupportedContent-4"
+              >
+                <div class="d-flex order-lg-2 ms-auto">
+                  <!-- Search -->
+                  <div class="dropdown header-search">
+                    <a class="nav-link icon header-search">
+                      <i class="fe fe-search header-icons"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      <div class="main-form-search p-2">
+                        <div class="input-group">
+                          <input
+                            type="search"
+                            class="form-control"
+                            placeholder="Search for anything..."
+                          />
+                          <button class="btn search-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="feather feather-search"
+                            >
+                              <circle cx="11" cy="11" r="8"></circle>
+                              <line
+                                x1="21"
+                                y1="21"
+                                x2="16.65"
+                                y2="16.65"
+                              ></line>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Search -->
+                  <!-- Theme-Layout -->
+                  <div class="dropdown d-flex main-header-theme">
+                    <a class="nav-link icon layout-setting">
+                      <span class="dark-layout">
+                        <i class="fe fe-sun header-icons"></i>
+                      </span>
+                      <span class="light-layout">
+                        <i class="fe fe-moon header-icons"></i>
+                      </span>
+                    </a>
+                  </div>
+                  <!-- Theme-Layout -->
+
+                  <!-- Full screen -->
+                  <div class="dropdown">
+                    <a class="nav-link icon full-screen-link">
+                      <i
+                        class="fe fe-maximize fullscreen-button fullscreen header-icons"
+                      ></i>
+                      <i
+                        class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"
+                      ></i>
+                    </a>
+                  </div>
+                  <!-- Full screen -->
+                  <!-- Notification -->
+                  <div class="dropdown main-header-notification">
+                    <a class="nav-link icon" href="">
+                      <i class="fe fe-bell header-icons"></i>
+                      <span class="badge bg-danger nav-link-badge">4</span>
+                    </a>
+                    <div class="dropdown-menu">
+                      <div class="header-navheading">
+                        <p class="main-notification-text">
+                          You have 1 unread notification<span
+                            class="badge bg-pill bg-primary ms-3"
+                            >View all</span
+                          >
+                        </p>
+                      </div>
+                      <div class="main-notification-list">
+                        <div class="media new">
+                          <div class="main-img-user online">
+                            <img alt="avatar" src="/assets/img/users/5.jpg" />
+                          </div>
+                          <div class="media-body">
+                            <p>
+                              Congratulate <strong>Olivia James</strong> for New
+                              template start
+                            </p>
+                            <span>Oct 15 12:32pm</span>
+                          </div>
+                        </div>
+                        <div class="media">
+                          <div class="main-img-user">
+                            <img alt="avatar" src="/assets/img/users/2.jpg" />
+                          </div>
+                          <div class="media-body">
+                            <p>
+                              <strong>Joshua Gray</strong> New Message Received
+                            </p>
+                            <span>Oct 13 02:56am</span>
+                          </div>
+                        </div>
+                        <div class="media">
+                          <div class="main-img-user online">
+                            <img alt="avatar" src="/assets/img/users/3.jpg" />
+                          </div>
+                          <div class="media-body">
+                            <p>
+                              <strong>Elizabeth Lewis</strong> added new
+                              schedule realease
+                            </p>
+                            <span>Oct 12 10:40pm</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown-footer">
+                        <a href="javascript:void(0)">View All Notifications</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Notification -->
+                  <!-- Messages -->
+                  <div class="main-header-notification">
+                    <a class="nav-link icon" href="chat.html">
+                      <i class="fe fe-message-square header-icons"></i>
+                      <span class="badge bg-success nav-link-badge">6</span>
+                    </a>
+                  </div>
+                  <!-- Messages -->
+                  <!-- Profile -->
+                  <div class="dropdown main-profile-menu">
+                    <a class="d-flex" href="javascript:void(0)">
+                      <span class="main-img-user"
+                        ><img alt="avatar" src="/assets/img/user-img-.jfif"
+                      /></span>
+                    </a>
+                    <div class="dropdown-menu">
+                      <div class="header-navheading">
+                        <h6 class="main-notification-title">Sonia Taylor</h6>
+                        <p class="main-notification-text">Web Designer</p>
+                      </div>
+                      <a class="dropdown-item border-top" href="profile.html">
+                        <i class="fe fe-user"></i> My Profile
+                      </a>
+                      <a class="dropdown-item" href="profile.html">
+                        <i class="fe fe-edit"></i> Edit Profile
+                      </a>
+                      <a class="dropdown-item" href="profile.html">
+                        <i class="fe fe-settings"></i> Account Settings
+                      </a>
+                      <a class="dropdown-item" href="profile.html">
+                        <i class="fe fe-settings"></i> Support
+                      </a>
+                      <a class="dropdown-item" href="profile.html">
+                        <i class="fe fe-compass"></i> Activity
+                      </a>
+                      <a class="dropdown-item" href="/admin/user/logout">
+                        <i class="fe fe-power"></i> Sign Out
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Profile -->
+                  <!-- Sidebar -->
+                  <div class="dropdown header-settings">
+                    <a
+                      href="javascript:void(0)"
+                      class="nav-link icon"
+                      data-bs-toggle="sidebar-right"
+                      data-bs-target=".sidebar-right"
+                    >
+                      <i class="fe fe-align-right header-icons"></i>
+                    </a>
+                  </div>
+                  <!-- Sidebar -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Main Header-->
+      <div class="sticky_footer">
+        <ul>
+          <li>Login Time : 01:00:44</li>
+          <li>Ext No. : 3343</li>
+          <li>Wrapup Time : 00:06:55</li>
+          <li>Break Time :00:00:00</li>
+          <li>Talk Time : 00:00:00</li>
+          <li>Terminal : 103.177.174.148</li>
+        </ul>
+      </div>
+
+      <!-- Main Content-->
+      <div class="main-content side-content pt-0">
+        <div class="main-container container-fluid">
+          <div class="inner-body">
+            <!-- Page Header -->
+            <div class="page-header mb-0">
+              <div>
+                <h2 class="main-content-title tx-24 mg-b-5">Agent Dashboard</h2>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="javascript:void(0)">Home</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Agent Dashboard
+                  </li>
+                </ol>
+              </div>
+              <div class="col-sm-6">
+                <div class="justify-content-center">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="mg-b-30">
+                        <div class="input-group">
+                          <div class="input-group-text border-end-0">
+                            <i class="fe fe-calendar lh--9 op-6"></i>
+                          </div>
+                          <input
+                            class="form-control"
+                            placeholder="Date Range"
+                            type="text"
+                            id="datepicker-date"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mg-b-30">
+                        <div class="input-group">
+                          <div class="input-group-text border-end-0">
+                            <i class="fe fe-calendar lh--9 op-6"></i>
+                          </div>
+                          <input
+                            class="form-control"
+                            placeholder="Month Range"
+                            type="text"
+                            id="datepicker-month"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mg-b-30">
+                        <div class="input-group">
+                          <div class="input-group-text border-end-0">
+                            <i class="fe fe-calendar lh--9 op-6"></i>
+                          </div>
+                          <input
+                            class="form-control"
+                            placeholder="Year Range"
+                            type="text"
+                            id="datepicker-year"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+            <!--Row-->
+            <div class="row row-sm">
+              <div class="col-sm-12 col-lg-12 col-xl-12">
+                <!--Row-->
+
+                <div class="row row-sm mt-lg-4">
+                  <div class="col-sm-6">
+                    <div
+                      class="card custom-card card-box"
+                      style="background: #124042"
+                    >
+                      <div class="card-body p-3">
+                        <div class="row align-items-center">
+                          <div
+                            class="offset-xl-4 offset-sm-6 col-xl-8 col-sm-6 col-12"
+                          >
+                            <h4 class="d-flex mb-0">
+                              <span class="font-weight-bold text-white"
+                                ><%=users.firstName%></span
+                              >
+                            </h4>
+                            <p class="text-white mb-0">
+                              Staff / Agent : VR000<%= users.id %><br />
+                              Logged in as agent only<br />
+                              Date :<%=
+                              users.updatedAt.toUTCString().replace("GMT", "")%>
+                            </p>
+                          </div>
+
+                          <img
+                            src="/assets/img/man.png"
+                            alt="user-img"
+                            style="
+                              width: 170px;
+                              border-radius: 100%;
+                              left: 66px;
+                              bottom: -13px;
+                            "
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-sm-6">
+                    <div class="row"> 
+                      <!-- <div class="col-sm-6">
+                        <div class="form-group">
+                          
+                          <select class="form-control select2" id="activity_time" name="activity_time">
+                            <option label="Choose one">Select Campaign</option>
+                            <option value="Chrun_HRM_Camp">Chrun_HRM_Camp</option>
+                            <option value="Fresh_Mix_Camp">Fresh_Mix_Camp</option>
+                            <option value="LPU_Chrun">LPU_Chrun</option>
+                            <option value="Edu_All_Inbound">Edu_All_Inbound</option>
+                          </select>
+                        </div>
+                      
+                        <a
+                          href="/user/dashboard/"
+                          type="button"
+                          class="btn btn-primary btn-icon-text w-100"
+                        >
+                          Start</a
+                        >
+                      </div>  -->
+                      <div class="col-sm-6">
+                        <!-- <form action="/crm/caller/Api/agentActivityLog" method="POST"> -->
+                          <form action="/crm/caller/Api/agentActivityLog" method="POST">
+                        <div class="form-group">
+                          <select class="form-control select2" id="campaign_id" name="campaign_id">
+                            <!-- <option label="Choose one">Select Campaign</option> -->
+                            <option value="">Select Campaign</option>
+                            <option value="Chrun_HRM_Camp">Chrun_HRM_Camp</option>
+                            <option value="Fresh_Mix_Camp">Fresh_Mix_Camp</option>
+                            <option value="LPU_Chrun">LPU_Chrun</option>
+                            <option value="Edu_All_Inbound">Edu_All_Inbound</option>
+                          </select>
+                        </div>
+                        <div>
+                        <button type="submit" class="btn btn-primary btn-icon-text w-100">Start</button>
+                        </div>
+                      </form>
+                        <!-- <a
+                        href="/user/dashboard/"
+                        type="button"
+                        class="btn btn-primary btn-icon-text w-100"
+                      >
+                        Start</a
+                      > -->
+                      </div>
+        
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <select class="form-control select2">
+                            <option value="">Select Break</option>
+                            <option>Bio Break</option>
+
+                            <option>Edu Tea Break</option>
+
+                            <option>Lunch Break</option>
+                            <option>Offline Work</option>
+
+                            <option>Training Work</option>
+                          </select>
+                        </div>
+
+                        <a
+                          href="#"
+                          type="button"
+                          class="btn btn-primary btn-icon-text w-100"
+                        >
+                          Take break</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Row -->
+                <!--Row-->
+                <div class="row row-sm">
+                  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Campaign</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >Assigned
+                              </span>
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">5</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Calls
+                              </label>
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >Done</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">120</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Missed Calls</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >Done</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">16</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Call Back</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >Scheduled</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">18</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Conversions</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >Done</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">4</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Fallout</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >By Me</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">8</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Click To Call</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >Dialled by me</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">17</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Conversions</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >Done</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">4</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Conversions</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >Done</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">4</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Fallout</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >By Me</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">8</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Click To Call</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >Dialled by me</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">17</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                    <div class="card custom-card">
+                      <div class="card-body">
+                        <div class="card-item">
+                          <a href="followup-listing.html">
+                            <div class="card-item-icon card-icon text-center">
+                              <i
+                                class="fe fe-phone header-icons text-primary"
+                              ></i>
+                            </div>
+                            <div class="card-item-title mb-2">
+                              <label
+                                class="main-content-label tx-13 font-weight-bold mb-1"
+                                >Total Conversions</label
+                              >
+                              <span class="d-block tx-12 mb-0 text-muted"
+                                >Done</span
+                              >
+                            </div>
+                            <div class="card-item-body">
+                              <div class="card-item-stat">
+                                <h4 class="font-weight-bold">4</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--End row-->
+              </div>
+              <!-- col end -->
+            </div>
+            <!-- Row end -->
+          </div>
+        </div>
+      </div>
+      <!-- End Main Content-->
+      <!-- Main Footer-->
+      <div class="main-footer text-center">
+        <div class="container">
+          <div class="row row-sm">
+            <div class="col-md-12">
+              <span
+                >Copyright © 2023
+                <a href="javascript:void(0)">Verandahighered</a>.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Footer-->
+    </div>
+    <!-- End Page -->
+
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+    <!-- Jquery js-->
+    <script src="/assets/plugins/jquery/jquery.min.js"></script>
+      <!-- Your custom JavaScript -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+       $(document).ready(function () {
+         // Listen for the form submission
+         $("#AddCampaign").submit(function (event) {
+           // Prevent the default form submission
+           event.preventDefault();
+ 
+           // Get the form data
+           var formData = $(this).serialize();
+ 
+           // You can now send the formData to the server using AJAX
+           // For example:
+           $.ajax({
+             type: "POST", // Specify your HTTP method (POST, GET, etc.)
+             url: "/user/Add-compaign-name", // Replace with your server's endpoint
+             data: formData,
+             success: function (response) {
+               // Handle the response from the server here
+               console.log(response);
+                 // Display the alert message
+         $("#alertMessage").removeClass("alert-danger").addClass("alert-success").text("Lead created successfully!").show();
+ 
+               // console.log(response);
+               // Add a delay of 2 seconds (2000 milliseconds) before doing something else
+               // Delay the redirection for 1.5 seconds (1500 milliseconds)
+               setTimeout(function () {
+                 window.location.href = "/user/dashboard/users-leads";
+               }, 1500);
+             },
+ 
+             error: function (error) {
+               // Handle any errors that occur during the AJAX request
+               console.error(error);
+             },
+           });
+         });
+       });
+     </script>
+
+    <!-- Bootstrap js-->
+    <script src="/assets/plugins/bootstrap/js/popper.min.js"></script>
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Internal Jquery-Ui js-->
+    <script src="/assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+    <!-- Internal Jquery.maskedinput js-->
+    <script src="/assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+    <!-- Internal Specturm-colorpicker js-->
+    <script src="/assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+
+    <!-- Internal Ion-rangeslider js-->
+    <script src="/assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+    <!-- Select2 js-->
+    <script src="/assets/plugins/select2/js/select2.min.js"></script>
+    <script src="/assets/js/select2.js"></script>
+
+    <!-- Internal Form-elements js-->
+    <script src="/assets/js/form-elements.js"></script>
+
+    <!-- Perfect-scrollbar js -->
+    <script src="/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <!-- Sidemenu js -->
+    <script src="/assets/plugins/sidemenu/sidemenu.js" id="leftmenu"></script>
+
+    <!--Bootstrap-datepicker js-->
+    <script src="/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+    <!-- Internal jquery-simple-datetimepicker js -->
+    <script src="/assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+
+    <!-- COLOR PICKER JS -->
+    <script src="/assets/plugins/pickr-master/pickr.es5.min.js"></script>
+    <script src="/assets/js/picker.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="/assets/plugins/sidebar/sidebar.js"></script>
+
+    <!-- Color Theme js -->
+    <script src="/assets/js/themeColors.js"></script>
+
+    <!-- Sticky js -->
+    <script src="/assets/js/sticky.js"></script>
+
+    <!-- Custom js -->
+    <script src="/assets/js/custom.js"></script>
+  </body>
+</html>
+<style>
+.EmailInput_email_error__IJxXf, .EmailInput_email_notice__5lASK {
+    font-family: Source Sans Pro;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.EmailInput_email_error__IJxXf, .EmailInput_email_notice__5lASK {
+    font-family: Source Sans Pro;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+}
+.EmailInput_email_error__IJxXf {
+    color: #d9212c;
+}
+</style>
+<!-- 
+class="EmailInput_email_error__IJxXf" -->

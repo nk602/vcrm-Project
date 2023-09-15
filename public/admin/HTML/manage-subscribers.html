@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta name="description" content="Lawyered Beta ERP Design">
+	<meta name="author" content="Lawyered Beta ERP Design">
+	<meta name="keywords" content="Lawyered Beta ERP Design">
+		<!-- Favicon -->
+		<link rel="icon" href="../assets/img/brand/favicon.ico" type="image/x-icon"/>
+
+		<!-- Title -->
+		<title>Lawyered Beta ERP Design</title>
+
+		<!-- Bootstrap css-->
+		<link  id="style" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+		<!-- Icons css-->
+		<link href="../assets/plugins/web-fonts/icons.css" rel="stylesheet"/>
+		<link href="../assets/plugins/web-fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+		<link href="../assets/plugins/web-fonts/plugin.css" rel="stylesheet"/>
+
+		<!-- Style css-->
+		<link href="../assets/css/style.css" rel="stylesheet">
+
+		<!-- Select2 css -->
+		<link href="../assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+
+		<!-- Datepicker css -->
+		<link rel="stylesheet" href="../assets/plugins/model-datepicker/css/datepicker.css">
+
+		
+	</head>
+
+	<body class="ltr main-body leftmenu">
+
+		<!-- Loader -->
+		<div id="global-loader">
+			<img src="../assets/img/loader.svg" class="loader-img" alt="Loader">
+		</div>
+		<!-- End Loader -->
+
+		<!-- Page -->
+		<div class="page">
+
+		<!-- Main Header-->
+		<div class="main-header side-header sticky">
+			<div class="main-container container-fluid">
+				<div class="main-header-left">
+					<a class="main-header-menu-icon" href="javascript:void(0)" id="mainSidebarToggle"><span></span></a>
+					<div class="hor-logo">
+						<a class="main-logo" href="index.html">
+							<img src="../assets/img/brand/logo.png" class="header-brand-img desktop-logo" alt="logo">
+							<img src="../assets/img/brand/logo-light.png" class="header-brand-img desktop-logo-dark"
+								alt="logo">
+						</a>
+					</div>
+				</div>
+				<div class="main-header-center">
+					<div class="responsive-logo">
+						<a href="index.html"><img src="../assets/img/brand/logo.png" class="mobile-logo" alt="logo"></a>
+						<a href="index.html"><img src="../assets/img/brand/logo-light.png" class="mobile-logo-dark"
+								alt="logo"></a>
+					</div>
+					<div class="input-group">
+						<div class="input-group-btn search-panel">
+							<select class="form-control select2">
+								<option label="All categories">
+								</option>
+								<option value="IT Projects">
+									IT Projects
+								</option>
+								<option value="Business Case">
+									Business Case
+								</option>
+								<option value="Microsoft Project">
+									Microsoft Project
+								</option>
+								<option value="Risk Management">
+									Risk Management
+								</option>
+								<option value="Team Building">
+									Team Building
+								</option>
+							</select>
+						</div>
+						<input type="search" class="form-control rounded-0" placeholder="Search for anything...">
+						<button class="btn search-btn"><i class="fe fe-search"></i></button>
+					</div>
+				</div>
+				<div class="main-header-right">
+					<button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+					</button><!-- Navresponsive closed -->
+					<div
+						class="navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+							<div class="d-flex order-lg-2 ms-auto">
+								<!-- Search -->
+								<div class="dropdown header-search">
+									<a class="nav-link icon header-search">
+										<i class="fe fe-search header-icons"></i>
+									</a>
+									<div class="dropdown-menu">
+										<div class="main-form-search p-2">
+											<div class="input-group">
+												<div class="input-group-btn search-panel">
+													<select class="form-control select2">
+														<option label="All categories">
+														</option>
+														<option value="IT Projects">
+															IT Projects
+														</option>
+														<option value="Business Case">
+															Business Case
+														</option>
+														<option value="Microsoft Project">
+															Microsoft Project
+														</option>
+														<option value="Risk Management">
+															Risk Management
+														</option>
+														<option value="Team Building">
+															Team Building
+														</option>
+													</select>
+												</div>
+												<input type="search" class="form-control"
+													placeholder="Search for anything...">
+												<button class="btn search-btn"><svg xmlns="http://www.w3.org/2000/svg"
+														width="20" height="20" <i class="fe fe-eye"></i>Box="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="feather feather-search">
+														<circle cx="11" cy="11" r="8"></circle>
+														<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+													</svg></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Search -->
+								<!-- Theme-Layout -->
+								<div class="dropdown d-flex main-header-theme">
+									<a class="nav-link icon layout-setting">
+										<span class="dark-layout">
+											<i class="fe fe-sun header-icons"></i>
+										</span>
+										<span class="light-layout">
+											<i class="fe fe-moon header-icons"></i>
+										</span>
+									</a>
+								</div>
+								<!-- Theme-Layout -->
+							
+								<!-- Full screen -->
+								<div class="dropdown ">
+									<a class="nav-link icon full-screen-link">
+										<i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
+										<i class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"></i>
+									</a>
+								</div>
+								<!-- Full screen -->
+								<!-- Notification -->
+								<div class="dropdown main-header-notification">
+									<a class="nav-link icon" href="">
+										<i class="fe fe-bell header-icons"></i>
+										<span class="badge bg-danger nav-link-badge">4</span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<p class="main-notification-text">You have 1 unread notification<span
+													class="badge bg-pill bg-primary ms-3"><i class="fe fe-eye"></i> all</span></p>
+										</div>
+										<div class="main-notification-list">
+											<div class="media new">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/5.jpg"></div>
+												<div class="media-body">
+													<p>Congratulate <strong>Olivia James</strong> for New template
+														start</p>
+													<span>Oct 15 12:32pm</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user"><img alt="avatar"
+														src="../assets/img/users/2.jpg">
+												</div>
+												<div class="media-body">
+													<p><strong>Joshua Gray</strong> New Message Received</p>
+													<span>Oct 13
+														02:56am</span>
+												</div>
+											</div>
+											<div class="media">
+												<div class="main-img-user online"><img alt="avatar"
+														src="../assets/img/users/3.jpg"></div>
+												<div class="media-body">
+													<p><strong>Elizabeth Lewis</strong> <i class="fe fe-plus"></i>ed new schedule realease
+													</p><span>Oct
+														12 10:40pm</span>
+												</div>
+											</div>
+										</div>
+										<div class="dropdown-footer">
+											<a href="javascript:void(0)"><i class="fe fe-eye"></i> All Notifications</a>
+										</div>
+									</div>
+								</div>
+								<!-- Notification -->
+								<!-- Messages -->
+								<div class="main-header-notification">
+									<a class="nav-link icon" href="chat.html">
+										<i class="fe fe-message-square header-icons"></i>
+										<span class="badge bg-success nav-link-badge">6</span>
+									</a>
+								</div>
+								<!-- Messages -->
+								<!-- Profile -->
+								<div class="dropdown main-profile-menu">
+									<a class="d-flex" href="javascript:void(0)">
+										<span class="main-img-user"><img alt="avatar"
+												src="../assets/img/users/1.jpg"></span>
+									</a>
+									<div class="dropdown-menu">
+										<div class="header-navheading">
+											<h6 class="main-notification-title">Sonia Taylor</h6>
+											<p class="main-notification-text">Web Designer</p>
+										</div>
+										<a class="dropdown-item border-top" href="profile.html">
+											<i class="fe fe-user"></i> My Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-<i class="fe fe-edit"></i>"></i> <i class="fe fe-edit"></i> Profile
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Account Settings
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-settings"></i> Support
+										</a>
+										<a class="dropdown-item" href="profile.html">
+											<i class="fe fe-compass"></i> Activity
+										</a>
+										<a class="dropdown-item" href="signin.html">
+											<i class="fe fe-power"></i> Sign Out
+										</a>
+									</div>
+								</div>
+								<!-- Profile -->
+								<!-- Sidebar -->
+								<div class="dropdown  header-settings">
+									<a href="javascript:void(0)" class="nav-link icon" data-bs-toggle="sidebar-right"
+										data-bs-target=".sidebar-right">
+										<i class="fe fe-align-right header-icons"></i>
+									</a>
+								</div>
+								<!-- Sidebar -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Main Header-->
+
+		<!-- Sidemenu -->
+		<!-- Sidemenu -->
+		<div class="sticky">
+			<div class="main-menu main-sidebar main-sidebar-sticky side-menu">
+				<div class="main-sidebar-header main-container-1 active">
+					<div class="sidemenu-logo">
+						<a class="main-logo" href="index.html">
+							<img src="../assets/img/brand/logo-light.png" class="header-brand-img desktop-logo" alt="logo">
+							<img src="../assets/img/brand/icon-light.png" class="header-brand-img icon-logo" alt="logo">
+							<img src="../assets/img/brand/logo.png" class="header-brand-img desktop-logo theme-logo" alt="logo">
+							<img src="../assets/img/brand/icon.png" class="header-brand-img icon-logo theme-logo" alt="logo">
+						</a>
+					</div>
+					<div class="main-sidebar-body main-body-1">
+						<div class="slide-left disabled" id="slide-left"><i class="fe fe-chevron-left"></i></div>
+						<ul class="menu-nav nav">
+							<li class="nav-header"><span class="nav-label">Dashboard</span></li>
+							<li class="nav-item">
+								<a class="nav-link" href="business-dashboard.html">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-home sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Business Dashboard</span>
+								</a>
+							</li>
+						
+							
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">HRMS</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">HRMS</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Add Staff</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Staff List </a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Active Staff</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">In-Active Staff</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Attendance</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Department</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Designation</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Permissions</a></li>
+									</ul>
+							</li>
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Buyer</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Buyer</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Add Buyer</a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Buyer List </a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Active Buyer</a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">In-Active Buyer</a></li>
+									</ul>
+							</li>
+							
+							
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Seller</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Seller</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Add Seller</a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Seller List </a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Active Seller</a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">In-Active Seller</a></li>
+									</ul>
+							</li>
+							
+							
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">CRM</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">CRM</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="add-employee.html">Add Employee</a></li>
+										<li class="nav-sub-item"> <a class="nav-sub-link" href="list-employee.html">Listing Employee</a></li>
+											<li class="nav-sub-item"> <a class="nav-sub-link" href="add-partner.html">Add Partner</a></li>
+												<li class="nav-sub-item"> <a class="nav-sub-link" href="add-lawyer.html">Add Lawyer</a></li>
+												<li class="nav-sub-item"> <a class="nav-sub-link" href="add-vendor.html">Add Vendor </a></li>
+												<li class="nav-sub-item"> <a class="nav-sub-link" href="add-subscriber.html">Add Subscriber</a></li>
+												<li class="nav-sub-item"> <a class="nav-sub-link" href="add-incident.html">Add Incident</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Add Lead</a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">New Leads </a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Assigned Leads</a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Followup Leads</a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Quotations</a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Projections</a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Agreement</a></li>
+	<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Invoiced</a></li>
+									</ul>
+							</li>
+							
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Orders- Pickups</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Orders- Pickups</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Create Order</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">New Orders</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Pickup Scheduled</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Partner Aligned</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Pickup In Process</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Pickup Complete</a></li>
+									</ul>
+							</li>
+								<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Orders- Delivery</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Orders- Delivery</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Create Order</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">New Orders</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Delivery Scheduled</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Partner Aligned</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Delivery In Process</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Delivery Complete</a></li>
+									</ul>
+							</li>
+							
+						<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Warehouse</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Warehouse</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Add Warehouse</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Manage Warehouse</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Stock Transfer</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Stock Entry </a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Stock Out </a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Stock Ledger </a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Stock Zone</a></li>
+									</ul>
+							</li>
+							
+								
+						<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Accounts </span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Accounts</a></li>
+
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Create Invoice</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">All Invoices</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Paid Invoices</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Due Invoices</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Cancelled Invoices</a></li>
+<li class="nav-sub-item"> <a class="nav-sub-link" href="form-elements.html">Create PO </a></li>
+									</ul>
+							</li>
+
+
+
+
+	<li class="nav-header"><span class="nav-label">Landing</span></li>
+							
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i  class="ti-wallet sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Crypto
+										<span class="sidemenu-label2">Currencies</span>
+									</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Crypto Currencies</a></li>
+									<li class="nav-sub-item"> <a class="nav-sub-link" href="crypto-dashbaord.html">Dashboard</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="crypto-market.html">Marketcap</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="crypto-currency-exchange.html">Currency exchange</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="crypto-buy-sell.html">Buy & Sell</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="crypto-wallet.html">Wallet</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="crypto-transcations.html">Transcations</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-shopping-cart-full sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">ECommerce</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">E-Commerce</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="ecommerce-dashboard.html">Dashboard</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="ecommerce-products.html">Products</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="ecommerce-product-details.html">Product Details</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="ecommerce-cart.html">Cart</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="ecommerce-wishlist.html">Wishlist</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="ecommerce-checkout.html">Checkout</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="ecommerce-orders.html">Orders</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="ecommerce-add-product.html">Add Product</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="ecommerce-account.html">Account</a></li>
+								</ul>
+							</li>
+						
+							<li class="nav-item">
+								<a class="nav-link" href="landing.html">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-layout sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">LandingPage</span>
+								</a>
+							</li>
+							<li class="nav-header"><span class="nav-label">Applications</span></li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-write sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Apps</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Apps</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="widgets.html">Widgets</a></li>
+									<li class="nav-sub-item">
+										<a class="nav-sub-link sub-with-sub" href="javascript:void(0)">
+											<span class="sidemenu-label">Mail</span>
+											<i class="angle fe fe-chevron-right"></i>
+										</a>
+										<ul class="sub-nav-sub">
+											<li class="nav-sub-item"><a class="nav-sub-link" href="mail-inbox.html">Mail-Inbox</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="viewmail.html">View-Mail</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="mail-compose.html">Mail-Compose</a></li>
+										</ul>
+									</li>
+									<li class="nav-sub-item">
+										<a class="nav-sub-link sub-with-sub" href="javascript:void(0)">
+											<span class="sidemenu-label">Maps</span>
+											<i class="angle fe fe-chevron-right"></i>
+										</a>
+										<ul class="sub-nav-sub">
+											<li class="nav-sub-item"><a class="nav-sub-link" href="map-mapel.html">Mapel Maps</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="map-vector.html">Vector Maps</a></li>
+										</ul>
+									</li>
+									<li class="nav-sub-item">
+										<a class="nav-sub-link sub-with-sub" href="javascript:void(0)">
+											<span class="sidemenu-label">Tables</span>
+											<i class="angle fe fe-chevron-right"></i>
+										</a>
+										<ul class="sub-nav-sub">
+											<li class="nav-sub-item"><a class="nav-sub-link" href="table-basic.html">Basic Tables</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="table-data.html">Data Tables</a></li>
+										</ul>
+									</li>
+									<li class="nav-sub-item">
+										<a class="nav-sub-link sub-with-sub" href="javascript:void(0)">
+											<span class="sidemenu-label">Blog</span>
+											<i class="angle fe fe-chevron-right"></i>
+										</a>
+										<ul class="sub-nav-sub">
+											<li class="nav-sub-item"><a class="nav-sub-link" href="blog.html">Blog Page</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="blog-details.html">Blog Details</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="blog-post.html">Blog Post</a></li>
+										</ul>
+									</li>
+									<li class="nav-sub-item">
+										<a class="nav-sub-link sub-with-sub" href="javascript:void(0)">
+											<span class="sidemenu-label">File Manager</span>
+											<i class="angle fe fe-chevron-right"></i>
+										</a>
+										<ul class="sub-nav-sub">
+											<li class="nav-sub-item"><a class="nav-sub-link" href="file-manager.html">File Manager</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="file-manager-list.html">File Manager List</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="file-details.html">File Details</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="file-attached-tags.html">File Attachments</a></li>
+										</ul>
+									</li>
+									<li class="nav-sub-item">
+										<a class="nav-sub-link sub-with-sub" href="javascript:void(0)">
+											<span class="sidemenu-label">Icons</span>
+											<i class="angle fe fe-chevron-right"></i>
+										</a>
+										<ul class="sub-nav-sub">
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons.html">Font Awesome</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons2.html">Material Design Icons</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons3.html">Simple Line Icons</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons4.html">Feather Icons</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons5.html">Ionic Icons</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons6.html">Flag Icons</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons7.html">Pe7 Icons</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons8.html">Themify Icons</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons9.html">Typicons Icons</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons10.html">Weather Icons</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons11.html">Material Icons</a></li>
+											<li class="nav-sub-item"><a class="nav-sub-link" href="icons12.html">Bootstrap Icons</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-header"><span class="nav-label">Components</span></li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-package sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Elements</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Elements</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="accordion.html">Accordion</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="alerts.html">Alerts</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="avatar.html">Avatar</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="breadcrumbs.html">Breadcrumbs</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="buttons.html">Buttons</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="badge.html">Badge</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="dropdown.html">Dropdown</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="thumbnails.html">Thumbnails</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="list-group.html">List Group</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="navigation.html">Navigation</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="pagination.html">Pagination</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="popover.html">Popover</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="progress.html">Progress</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="spinners.html">Spinners</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="media-object.html">Media Object</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="typography.html">Typography</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="tooltip.html">Tooltip</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="toast.html">Toast</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="tags.html">Tags</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="tabs.html">Tabs</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-briefcase sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">AdvancedUI</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Advanced UI</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="carousel.html">Carousel</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="collapse.html">Collapse</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="chat.html">Chat</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="cards.html">Cards</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="calendar.html">Calendar</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="contacts.html">Contacts</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="modals.html">Modals</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="timeline.html">Timeline</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="darggablecard.html">Darggable-Cards</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="sweet-alert.html">Sweet Alert</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="rating.html">Ratings</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="search.html">Search</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="userlist.html">Userlist</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="notifications.html">Notification</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="tree-view.html">Tree-view</a></li>
+								</ul>
+							</li>
+							<li class="nav-header"><span class="nav-label">Other Pages</span></li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-palette sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label ">Pages</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="profile.html">Profile</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="aboutus.html">About Us</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="settings.html">Settings</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="invoice.html">Invoice</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="pricing.html">Pricing</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="gallery.html">Gallery</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="notifications-list.html">Notifications List</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="faq.html">Faqs</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="success-message.html">Success Message</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="danger-message.html">Danger Message</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="warning-message.html">Warning Message</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="empty.html">Empty Page</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="switcher.html">Switcher Page</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-shield sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Utilities</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Utilities</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="background.html">Background</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="border.html">Border</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="display.html">Display</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="flex.html">Flex</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="height.html">Height</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="margin.html">Margin</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="padding.html">Padding</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="position.html">Position</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="width.html">Width</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="extras.html">Extras</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-menu sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Submenu</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Submenu</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="javascript:void(0)">Submenu-01</a></li>
+									<li class="nav-sub-item">
+										<a class="nav-sub-link sub-with-sub" href="javascript:void(0)">
+											<span class="sidemenu-label">Submenu-02</span>
+											<i class="angle fe fe-chevron-right"></i>
+										</a>
+										<ul class="sub-nav-sub">
+											<li class="nav-sub-item"><a class="nav-sub-link" href="javascript:void(0)">Level-01</a></li>
+											<li class="nav-sub-item">
+												<a class="nav-sub-link sub-with-sub" href="javascript:void(0)">
+													<span class="sidemenu-label">Level-02</span>
+													<i class="angle fe fe-chevron-right"></i>
+												</a>
+												<ul class="sub-nav-sub">
+													<li class="nav-sub-item"><a class="nav-sub-link" href="javascript:void(0)">Level-11</a></li>
+													<li class="nav-sub-item"><a class="nav-sub-link" href="javascript:void(0)">Level-12</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-lock sidemenu-icon menu-icon"></i>
+									<span class="sidemenu-label">Authentication</span>
+									<i class="angle fe fe-chevron-right"></i>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Authentication</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="signin.html">Sign In</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="signup.html">Sign Up</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="forgot.html">Forgot Password</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="reset.html">Reset Password</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="lockscreen.html">Lockscreen</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="underconstruction.html">UnderConstruction</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="404.html">404 Error</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="500.html">500 Error</a></li>
+								</ul>
+							</li>
+							<li class="nav-header"><span class="nav-label">Forms &amp; Charts</span></li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-receipt sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Forms</span>
+									<span class="badge bg-info side-badge">7</span>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Forms</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="form-elements.html">Form Elements</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="form-advanced.html">Advanced Forms</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="form-layouts.html">Form Layouts</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="form-validation.html">Form Validation</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="form-wizards.html">Form Wizards</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="form-editor.html">WYSIWYG Editor</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="form-element-sizes.html">Form Element-sizes</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link with-sub" href="javascript:void(0)">
+									<span class="shape1"></span>
+									<span class="shape2"></span>
+									<i class="ti-bar-chart-alt sidemenu-icon menu-icon "></i>
+									<span class="sidemenu-label">Charts</span>
+									<span class="badge bg-danger side-badge">5</span>
+								</a>
+								<ul class="nav-sub">
+									<li class="side-menu-label1"><a href="javascript:void(0)">Charts</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="chart-morris.html">Morris Charts</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="chart-flot.html">Flot Charts</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="chart-chartjs.html">ChartJS</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="chart-spark-peity.html">Sparkline &amp; Peity</a></li>
+									<li class="nav-sub-item"><a class="nav-sub-link" href="chart-echart.html">Echart</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="slide-right" id="slide-right"><i class="fe fe-chevron-right"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidemenu -->
+		<!-- End Sidemenu -->
+
+			<!-- Main Content-->
+			<div class="main-content side-content pt-0">
+
+				<div class="main-container container-fluid">
+					<div class="inner-body">
+
+						<!-- Page Header -->
+						<div class="page-header">
+							<div>
+								<h2 class="main-content-title tx-24 mg-b-5">Subscribers List</h2>
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="#">Subscribers </a></li>
+									<li class="breadcrumb-item active" aria-current="page">Subscribers List </li>
+								</ol>
+							</div>
+							<div class="d-flex">
+								<div class="justify-content-center">
+									<button type="button" class="btn btn-white btn-icon-text my-2 me-2">
+									  <i class="fe fe-download me-2"></i> Import
+									</button>
+								
+									<button type="button" class="btn btn-primary my-2 btn-icon-text  me-2">
+									  <i class="fe fe-download-cloud me-2"></i> Download Report
+									</button>
+									<a href="add-employee.html" type="button" class="btn btn-primary my-2 btn-icon-text"> <i class="fe fe-plus me-2" ></i> Add Subscriber</a>
+								</div>
+							</div>
+						</div>
+						<!-- End Page Header -->
+
+					<div class="row">
+					    	<div class="col-lg-12">
+								<div class="card custom-card">
+									<div class="card-body py-3">
+									    <div class="row">
+					    <div class="col-sm-6">
+					        <input type="search" class="form-control form-control" placeholder="Search..." aria-controls="example1">
+					    </div>
+					     <div class="col-sm-2">
+					        	<select class="form-control select2">
+													<option label="Choose one">Gender</option>
+													<option value="Firefox">Male</option>
+													<option value="Chrome">Female</option>
+												</select>
+					    </div>
+					      <div class="col-sm-2">
+					        	<select class="form-control select2">
+													<option label="Choose one">Status</option>
+													<option value="Firefox">Active</option>
+												</select>
+					    </div>
+					    <div class="col-sm-2">
+					        	<select class="form-control select2">
+													<option label="Choose one">Department</option>
+													<option value="Firefox"></option>
+												</select>
+					    </div>
+					</div>	</div></div>
+	</div>	</div>
+						<!-- Row -->
+						<div class="row row-sm">
+							<div class="col-lg-12">
+								<div class="card custom-card">
+									<div class="card-body">
+									
+										<div class="table-responsive">
+											<table  class="table table-striped table-bordered text-nowrap mb-0" >
+												<thead>
+													<tr>
+													    <th><label class="ckbox"><input type="checkbox" value="5"><span></span></label></th>
+														<th>ID</th>
+														<th>Subscriber</th>
+														<th>Contact</th>
+														<th>Subscription</th>
+														<th>Expires in Days</th>
+														<th>Actions</th>
+													
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+													    <td><label class="ckbox"><input type="checkbox" value="5"><span></span></label></td>
+														<td>
+														Source : IVR<br>
+CSR-00001
+														</td>
+														<td>
+														<p class="mb-0">
+														    <img alt="avatar" class="rounded-circle me-3" src="../assets/img/users/5.jpg" style="width:60px"><br>
+														    UP16CM1912<br>
+Solanki Transport LLC<br>
+Address: Tower B4, Flat 3252, Ajnara Lay Gardern.<br>
+UP, NOida 201301
+														</p>
+														</td>
+														<td>
+														<p class="mb-0">
+														    Kamal Kishore Panday<br>
+M: 81383937289<br><br>
+Ajay  Panday<br>
+M: 81383937289
+														    
+														</p>
+														</td>
+														<td>
+														    <p class="mb-0">
+														        LOTS Premium<br>
+Total Truck : 1118<br>
+Rate Per Truck : 100<br>
+Total Amount : 11180/-  <br>
+Discount (%) : 0<br>
+Total Amount : 11180/-  
+														    </p>
+														</td>
+														<td>
+														    <p class="mb-0">
+														    Start Date : 01/05/2023<br>
+End Date : 01/05/2024<br>
+Grace Period : 10 Days<br>
+Expiry : 11/05/2024
+														    </p>
+														    
+														    </td>
+														<td style="min-width:150px">
+														    <select class="form-control select2 ">
+														        <option>Select</option>
+													<option>New Lead</option>
+													<option>QC Lead</option>
+													<option>Followup</option>
+													<option>Proposal</option>
+													<option>Invoiced</option>
+													<option>Sale</option>
+												</select>
+														  <br>
+ 
+														<a href="#" class="btn ripple btn-warning btn-xs w-100 mb-1 mt-1">View</a><br>
+															<a href="" class="btn ripple btn-success btn-xs w-100 mb-1" >Renew</a><br>
+															<a href="" class="btn ripple btn-info btn-xs w-100" >Cancel</a>
+														
+														</td>
+													
+													</tr>
+													
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Row -->
+
+					
+					</div>
+				</div>
+			</div>
+			<!-- End Main Content-->
+
+			<!-- Main Footer-->
+			<div class="main-footer text-center">
+				<div class="container">
+					<div class="row row-sm">
+						<div class="col-md-12">
+							<span>Copyright © 2022 <a href="#">Lawyered</a>. Designed by <a href="https://www.spruko.com/">Spruko</a> All rights reserved.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Footer-->
+
+			
+
+		</div>
+		<!-- End Page -->
+		
+		
+		<!-- Large Modal -->
+			<div class="modal" id="modaldemo-id">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">ID</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						    <div class="row">
+						        <div class="col-sm-8">
+						             <img src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif" style="width:100%;">
+						        </div>
+						        <div class="col-sm-4">
+						            	<h6>ID : Law001</h6>
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+						    </div>
+						    
+							
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<div class="modal" id="modaldemo-pan">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">PAN</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						     <div class="row">
+						        <div class="col-sm-8">
+						            <img src="https://newadmin.webkype.com/assets/img/pngs/default-img.gif" style="width:100%;">
+						        </div>
+						        <div class="col-sm-4">
+						            	<h6>Pan No. : CLDPK8793</h6>
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+						    </div>
+						     
+						    
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-cheque">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Cheque</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						     <div class="row">
+						        <div class="col-sm-8">
+						            <img src="https://newadmin.webkype.com/assets/img/pngs/cheque-img.jpg" style="width:100%;">
+						        </div>
+						        <div class="col-sm-4">
+						            	<h6>Cheque No. : 0123456789</h6>
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+						    </div>
+						   
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-address">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Address</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+						     <div class="row">
+						        <div class="col-sm-8">
+						<p>3-15/10/403 Newark, Street no 5, Next To Pizza Hut,  Bangalore,  Karnataka, 560003, India.</p>
+						<p class="mb-0">soniataylor344@example.com</p>
+							<p>+91 08023310451</p>
+								</div>
+								 <div class="col-sm-4">
+						            	
+						            	 <div class="form-group">
+			<select class="form-control select2">
+				<option>Status</option>
+				<option>Approved</option>
+			<option>Disapproved</option>
+				</select>
+					</div>
+					<div class="form-group">
+							<button class="btn ripple btn-primary w-100" type="button">Save changes</button>
+						  </div>
+						        </div>
+								
+								</div>
+								</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+				<!--End Large Modal -->
+				<div class="modal" id="modaldemo-employee-form">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content modal-content-demo">
+						<div class="modal-header">
+							<h6 class="modal-title">Employee Form</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+						</div>
+						<div class="modal-body">
+					<form>
+					   <div class="row row-sm">
+															<div class="col-sm-4 form-group">
+																<label class="form-label">Company</label>
+																<select class="form-control select select2">
+																    	<option>Select</option>
+																	
+																</select>
+															</div>
+															<div class="col-sm-4  form-group">
+																<label class="form-label">Department</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															<option>Sales</option>
+															<option>Marketing</option>
+															<option>Accounts</option>
+															<option>Procurements</option>
+															<option>Contracting</option>
+															<option>Transport</option>
+															<option>Legal</option>
+																</select>
+															</div>
+															<div class="col-sm-4  form-group">
+																<label class="form-label">Designation</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+																<option>Executive</option>
+                                                                <option>Manager</option>
+                                                                <option>Intern</option>
+																</select>
+															</div>
+															
+														<div class="col-lg-4 form-group">
+												    <label class="form-label">Date of Joining: <span class="tx-danger">*</span></label>
+													<div class="input-group">
+														<div class="input-group-text border-end-0">
+															<i class="fe fe-calendar lh--9 op-6"></i>
+														</div>
+														<input class="form-control fc-datepicker" placeholder="MM/DD/YYYY" type="text">
+													</div>
+											</div>
+											<div class="col-sm-4  form-group">
+																<label class="form-label">Reporting Boss-A</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															
+																</select>
+															</div>
+											
+												<div class="col-sm-4  form-group">
+																<label class="form-label">Reporting Boss-B</label>
+																<select class="form-control select select2">
+																	<option>Select</option>
+															
+																</select>
+															</div>
+																<div class="col-sm-12 form-group mb-0">
+																    <div class="row">
+																     <div class="col-sm-12">	<label class="form-label">Assign Permission</label></div>
+																     <div class="col-sm-12">
+																         	<div class="parsley-checkbox row" id="cbWrapper">
+												<div class="col-xl-3">
+													<label class="ckbox mg-b-5">
+													<input data-parsley-class-handler="#cbWrapper" data-parsley-errors-container="#cbErrorContainer" data-parsley-mincheck="2" name="browser[]" required="" type="checkbox" value="1"><span>Sales</span></label>
+												</div>
+												<div class="col-xl-3">
+													<label class="ckbox mg-b-5"><input name="browser[]" type="checkbox" value="2"><span>Marketing</span></label>
+												</div>
+												<div class="col-xl-3">
+													<label class="ckbox mg-b-5"><input name="browser[]" type="checkbox" value="3"><span>Accounts</span></label>
+												</div>
+												<div class="col-xl-3">
+													<label class="ckbox"><input name="browser[]" type="checkbox" value="4"><span>Procurements</span></label>
+												</div>
+												<div class="col-xl-3">
+													<label class="ckbox"><input name="browser[]" type="checkbox" value="4"><span>Contracting</span></label>
+												</div>
+													<div class="col-xl-3">
+													<label class="ckbox"><input name="browser[]" type="checkbox" value="4"><span>Transport</span></label>
+												</div>
+													<div class="col-xl-3">
+													<label class="ckbox"><input name="browser[]" type="checkbox" value="4"><span>Legal</span></label>
+												</div>
+											</div>
+																     </div>  
+																    </div>
+																    </div>
+															
+														</div>
+					</form>
+								</div>
+									<div class="modal-footer">
+							<button class="btn ripple btn-primary" type="button">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Large Modal -->
+
+			<!-- Back-to-top -->
+		<a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+		<!-- Jquery js-->
+		<script src="../assets/plugins/jquery/jquery.min.js"></script>
+
+		<!-- Bootstrap js-->
+		<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+		<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Perfect-scrollbar js -->
+		<script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+		<!-- Sidemenu js -->
+		<script src="../assets/plugins/sidemenu/sidemenu.js" id="leftmenu"></script>
+
+		<!-- Sidebar js -->
+		<script src="../assets/plugins/sidebar/sidebar.js"></script>
+
+		<!-- Select2 js-->
+		<script src="../assets/plugins/select2/js/select2.min.js"></script>
+		<script src="../assets/js/select2.js"></script>
+
+		<!-- Internal Datepicker js -->
+		<script src="../assets/plugins/model-datepicker/js/datepicker.js"></script>
+		<script src="../assets/plugins/model-datepicker/js/main.js"></script>
+
+		<!-- Color Theme js -->
+		<script src="../assets/js/themeColors.js"></script>
+
+		<!-- Sticky js -->
+		<script src="../assets/js/sticky.js"></script>
+
+		<!-- Modal js-->
+		<script src="../assets/js/modal.js"></script>
+
+		<!-- Custom js -->
+		<script src="../assets/js/custom.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,278 @@
+<%- include('./includes/meta-head') %>
+  <body class="ltr main-body leftmenu dash_admin light-theme">
+    <!-- Loader -->
+    <%- include('includes/header-loader') %>
+    <!-- End Loader -->
+   <!-- Page -->
+    <div class="page">
+          <!-- Main Header-->
+          <%- include('./includes/header') %>
+          <!-- End Main Header-->
+ <!-- Main Content-->
+ <div class="main-content side-content pt-0">
+    <div class="main-container container-fluid">
+      <div class="inner-body">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div>
+            <h2 class="main-content-title tx-24 mg-b-5">Master Backup Lists</h2>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home </a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Followup Lead
+              </li>
+            </ol>
+          </div>
+          <div class="d-flex">
+            <div class="justify-content-center">
+              <a
+                href="#"
+                type="button"
+                class="btn btn-primary my-2 btn-icon-text"
+                data-bs-target="#add-mastersbackup-form"
+                data-bs-toggle="modal"
+              >
+                <i class="fe fe-plus me-2"></i> Add Masters Backup</a
+              >
+              <a
+                href="/admin/dashboard/list-masters-values"
+                class="btn btn-primary my-2 btn-icon-text"
+              >
+                <i class="fe fe-plus me-2"></i>Masters Values</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- End Page Header -->
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div>
+              <div
+                class="card-body py-3" >
+                <div class="row"> 
+                    <p>
+                        
+                  <% if (messages.success) { %>
+                   
+                      <%= messages.success %>
+                    
+                  <% } %>
+                  
+                  <% if (messages.error) { %>
+                   
+                      <%= messages.error %>
+                    
+                  <% } %>
+                  
+
+                    </p>
+                  
+                </div>
+              </div>
+
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Row -->
+    <div class="row row-sm">
+      <div class="col-lg-12">
+        <div class="card custom-card">
+          <div class="card-body">
+            <div class="text-wrap">
+              <div
+                class="panel panel-primary tabs-style-3 p-0 tabs-style-3-0"
+              >
+                <div class="tab-menu-heading">
+                  <div class="tab-content mt-4">
+                    <div class="tab-pane active" id="tab13">
+                      <div class="table-responsive">
+                        <table
+                          class="table table-striped table-bordered text-nowrap mb-0"
+                        >
+                          <thead class="table-success">
+                            <tr>
+                              <!-- <th>
+                                <label class="ckbox"
+                                  ><input
+                                    type="checkbox"
+                                    value="5" /><span></span
+                                ></label>
+                              </th> -->
+                              <th>ID</th>
+                              <th>Name</th>
+                              <th>icon</th>
+                              <th>status</th>
+                              <th>action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <% mastersBackup.forEach(masterBackup => { %>
+                            <tr>
+                              <!-- <td>
+                                <label class="ckbox"
+                                  ><input
+                                    type="checkbox"
+                                    value="5" /><span></span
+                                ></label>
+                              </td> -->
+                              <td>V00000<%= masterBackup.id %></td>
+                              <td><%= masterBackup.name %></td>
+                              <td><img src="/<%= masterBackup.icon %>" width="100" height="100"  style="border-radius: 50%;" ></td>
+                              <!-- <td><%= masterBackup.status %></td> -->
+                              <td>
+                                <!-- <%= masterBackup.status ? 'Active' : 'Inactive' %>  -->
+                                <!-- <button id="myButtonCls" data-mastervalId="<%=masterBackup.id%>" data-mastervalstatus="<%= masterBackup.status %>" class="myButtonCls <%= masterBackup.status?'enabled':'disabled'%>"><%= masterBackup.status?'Active':'Inactive'%></button> -->
+                                <button id="myButtonCls" data-mastervalId="<%=masterBackup.id%>" data-mastervalstatus="<%= masterBackup.status %>" class="myButtonCls <%= masterBackup.status?'enabled':'disabled'%>"><%= masterBackup.status?'Active':'Inactive'%></button>
+                              </td>
+
+                               <td> 
+                               <!-- <br> <button id="myButtonCls" data-mastervalId="<%=masterBackup.id%>" data-mastervalstatus="<%= masterBackup.status %>" class="myButtonCls <%= masterBackup.status?'enabled':'disabled'%>"><%= masterBackup.status?'Active':'Inactive'%></button></br> -->
+                                <a
+                                  href="#"
+                                  class="btn ripple btn-warning btn-xs w-100 masterEditModel"
+                                  data-bs-target="#update-masters-form"
+                                  data-bs-toggle="modal"
+                                  data-id="<%= masterBackup.id %>"
+                                  >Edit</a
+                                > </br></br>
+                              
+                                <form
+                                action="/admin/dashboard/delete-master/<%= masterBackup.id %>?_method=DELETE"
+                                method="POST"
+                                onsubmit="return confirm('Are you sure want to delete <%= masterBackup.name %>?');"
+                              >
+                                <button
+                                  class="btn ripple btn-warning btn-xs w-100"
+                                  type="submit"
+                                >
+                                  Delete
+                                </button>
+                              </form>
+                              </td>                          
+                            </tr>
+                          
+                            <% }) %>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Row -->
+    </div>
+  </div>
+</div>
+<!-- End Main Content-->
+
+<!--Large Model-->
+<form id="AddMastersbackupForm">
+<div class="modal" id="add-mastersbackup-form">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+            <h6 class="modal-title">Add Masterbackup</h6>
+            <button
+              aria-label="Close"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              type="button"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+          <div class="col-sm-6 form-group">
+            <label class="form-label">Master backup Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="masters_backup_name"
+              id="name"
+              placeholder="Enter name" required 
+            />
+            <div class="invalid-feedback">
+              Please enter a valid name with at most 10 characters..
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <button class="btn ripple btn-primary w-100">Submit</button>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Large Modal-->
+        <!-- Main Footer-->
+      <%- include('includes/footer') %> 
+      <!--End Footer-->   
+      <script>
+        document
+          .querySelector("#AddMastersbackupForm")
+          .addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            try {
+			const form = event.target;
+            const formData = new FormData(form); // Create a FormData object with the form data
+              const response = await fetch("/admin/dashboard/add-mastersbackup", {
+                method: "POST",
+                body: formData,
+              });
+
+              const data = await response.json();
+
+              if (data.status === "error") {
+                throw new Error(data.message);
+              }
+
+              alert(data.message);
+              setTimeout(() => {
+                location.href = "/admin/dashboard/list-mastersbackup";
+              }, 1500);
+            } catch (error) {
+              console.log(error);
+              scrollTo(0, 0);
+              document.querySelector(".errors").textContent = error.message;
+            }
+          });
+      </script>
+            <!-- Jquery js-->
+      <script src="/assets/plugins/jquery/jquery.min.js"></script>
+
+      <!-- Bootstrap js-->
+      <script src="/assets/plugins/bootstrap/js/popper.min.js"></script>
+      <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+      <!-- Perfect-scrollbar js -->
+      <script src="/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+      <!-- Sidemenu js -->
+      <script
+        src="/assets/plugins/sidemenu/sidemenu.js"
+        id="leftmenu"
+      ></script>
+      <!-- Sidebar js -->
+      <script src="/assets/plugins/sidebar/sidebar.js"></script>
+      <!-- Select2 js-->
+      <script src="/assets/plugins/select2/js/select2.min.js"></script>
+      <script src="/assets/js/select2.js"></script>
+ <!-- Internal Datepicker js -->
+      <script src="/assets/plugins/model-datepicker/js/datepicker.js"></script>
+      <script src="/assets/plugins/model-datepicker/js/main.js"></script>
+  <!-- Color Theme js -->
+      <script src="/assets/js/themeColors.js"></script>
+      <!-- Sticky js -->
+      <script src="/assets/js/sticky.js"></script>
+      <!-- Modal js-->
+      <script src="/assets/js/modal.js"></script>
+      <!-- Custom js -->
+      <script src="/assets/js/custom.js"></script>

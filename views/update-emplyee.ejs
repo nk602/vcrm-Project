@@ -1,0 +1,1102 @@
+<%- include('./includes/meta-head') %>
+<body class="ltr main-body leftmenu dash_admin light-theme">
+   <!-- Loader -->
+<div id="global-loader">
+    <img src="/assets/img/loader.svg" class="loader-img" alt="Loader">
+</div>
+<!-- End Loader -->
+    <!-- Page -->
+    <div class="page">
+        <!-- Main Header-->
+        <%- include('./includes/header') %>
+        <!-- End Main Header-->
+        <!-- Main Content-->
+        <div class="main-content side-content pt-0">
+            <div class="main-container container-fluid">
+                <div class="inner-body">
+                    <!-- Page Header -->
+                    <div class="page-header">
+                        <div>
+                            <h2 class="main-content-title tx-24 mg-b-5">Update
+                                Staff</h2>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Internal Staff </a>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="d-flex">
+                            <div class="justify-content-center">
+                                <button
+                                    type="button"
+                                    class="btn btn-primary my-2 btn-icon-text">
+                                    <i class="fe fe-download-cloud me-2"></i>
+                                    Print
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Page Header -->
+
+                     <form id="myEmployeeUpdateForm"> 
+                        <!-- Row -->
+                        <div class="row row-sm">
+                            <div class="col-xl-4 col-lg-4 col-md-4">
+                                <div class="card custom-card">
+                                    <div class="card-body">
+                                        <div>
+                                            <h6 class="main-content-label mb-4">PROFILE
+                                                PHOTO</h6>
+                                        </div>
+
+                                        <div class>
+                                            <div class="row row-sm">
+                                                <div class="col-sm-12 col-md-12">
+                                                    <input
+                                                        type="file"
+                                                        class="dropify"
+                                                        data-default-file="/assets/img/media/1.jpg"
+                                                        data-height="200" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-8 col-lg-8 col-md-8">
+                                <div class="card custom-card">
+                                    <div class="card-body">
+                                        <p class="errors text-danger"></p>
+                                        <div>
+                                            <h6 class="main-content-label mb-3">BASIC
+                                                INFO</h6>
+                                        </div>
+                                        <!-- <form id="myEmployeeUpdateForm"> -->
+                                            <input type="hidden" name="id" id="id" value="<%= parseInt(employee.id) %>"/>
+                                         <div class>
+                                            <div class="row row-sm">
+                                                <div class="col-lg-6 form-group">
+                                                    <label class="form-label">Firstname:
+                                                        <span class="tx-danger">*</span></label>
+                                                    <input
+                                                        class="form-control"
+                                                        
+                                                        type="text"
+                                                        name="firstName"
+                                                        id="firstName"
+                                                        value="<%= employee.firstName %>"
+                                                        placeholder="Enter first name" />
+                                                    <span id="firstNameError"
+                                                        class="error"></span>
+                                                    <span id="firstNameError"></span>
+                                                </div>
+                                                <!-- <div class="col-lg-6 form-group">
+                        <label for="firstName"
+                          >Firstname:
+                          <span class="tx-danger">*</span></label
+                        >
+                        <input
+                          class="form-control"
+                          name="firstName"
+                          type="text"
+                          id="firstName"
+                          placeholder="Enter first name"
+                        />
+                        <span id="firstNameError" class="error"></span
+                        ><br />
+                      </div> -->
+                                                <div class="col-lg-6 form-group">
+                                                    <label class="form-label">Lastname:
+                                                        <span class="tx-danger">*</span></label>
+                                                    <input
+                                                        class="form-control"
+                                                        name="lastName"
+                                                        id="lastName"
+                                                        value="<%= employee.lastName %>"
+                                                        placeholder="Enter lastname"
+                                                        type="text" />
+
+                                                    <span id="lastNameError"
+                                                        style="color: red"></span>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <label class="form-label">Email
+                                                        ID: <span
+                                                            class="tx-danger">*</span></label>
+                                                    <input
+                                                        class="form-control"
+                                                        name="email"
+                                                        id="email"
+                                                        value="<%= employee.email %>"
+                                                        placeholder="Enter email address"
+                                                        type="text" />
+                                                    <!-- The '' attribute will ensure the field is not empty -->
+
+                                                    <span id="EmailError"
+                                                        style="color: red"></span>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <label class="form-label">Mobile
+                                                        No:
+                                                        <span class="tx-danger">*</span></label>
+                                                    <input
+                                                        class="form-control"
+                                                        name="mobileNumber"
+                                                        id="mobileNumber"
+                                                        value="<%= employee.mobileNumber %>"
+                                                        placeholder="Enter mobile"
+                                                        type="text" />
+                                                    <span
+                                                        id="mobileNumberError"
+                                                        style="color: red"></span>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label class="form-label">Gender:
+                                                        <span class="tx-danger">*</span></label>
+                                                    <select
+                                                        class="form-control select2"
+                                                        name="gender" id="gender" value="<%= employee.gender %>"
+                                                        >
+                                                        <option value="">Select</option>
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                    </select>
+                                                </div>
+                                                <!-- col-4 -->
+                                                <div class="col-lg-6">
+                                                    <label class="form-label">Date
+                                                        of Birth:
+                                                        <span class="tx-danger">*</span></label>
+                                                    <div class="input-group">
+                                                        <div
+                                                            class="input-group-text border-end-0">
+                                                            <i
+                                                                class="fe fe-calendar lh--9 op-6"></i>
+                                                        </div>
+                                                        <input
+                                                            class="form-control fc-datepicker"
+                                                            placeholder="MM/DD/YYYY"
+                                                            type="text"
+                                                            name="dob"
+                                                            id="dob" value="<%= employee.dob %>" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Row -->
+                        <div class="row row-sm">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card custom-card">
+                                    <div class="card-body">
+                                        <div>
+                                            <h6 class="main-content-label mb-1">Current
+                                                Address</h6>
+                                        </div>
+                                        <div class="row row-sm">
+                                            <div class="col-sm-6 mg-t-10">
+                                                <label class="form-label">Country</label>
+                                                <!-- <input
+                        class="form-control"
+                        type="text"
+                        name="currentAddressCountry"
+                        id="currentAddressCountry"
+                      /> -->
+                                                <select
+                                                    class="form-control select select2"
+                                                    name="currentAddressCountry"
+                                                    id="currentAddressCountry"value="<%= employee.currentAddressCountry %>">
+                                                    <option>Select</option>
+                                                    <option value="India">India</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6 mg-t-10">
+                                                <label class="form-label">State</label>
+                                                <!-- <input
+                        class="form-control"
+                        type="text"
+                        name="currentAddressState"
+                        id="currentAddressState"
+                      /> -->
+                                                <select
+                                                    class="form-control select select2"
+                                                    name="currentAddressState"
+                                                    id="currentAddressState"value="<%= employee.currentAddressState %>">
+                                                    <option>Select</option>
+                                                    <option
+                                                        value="Andhra Pradesh">
+                                                        Andhra Pradesh
+                                                    </option>
+                                                    <option
+                                                        value="Arunachal Pradesh">
+                                                        Arunachal Pradesh
+                                                    </option>
+                                                    <option value="Assam">Assam</option>
+                                                    <option value="Bihar">Bihar</option>
+                                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                                    <option value="Goa">Goa</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6 mg-t-10">
+                                                <label class="form-label">City</label>
+                                                <!-- <input
+                        class="form-control"
+                        type="text"
+                        name="currentAddressCity"
+                        id="currentAddressCity"
+                      /> -->
+                                                <select
+                                                    class="form-control select select2"
+                                                    name="currentAddressCity"
+                                                    id="currentAddressCity" value="<%= employee.currentAddressCity %>">
+                                                    <option>Select</option>
+                                                    <option value="Mumbai">Mumbai</option>
+                                                    <option value="Delhi">Delhi</option>
+                                                    <option value="Bangalore">Bangalore</option>
+                                                    <option value="Ahmedabad">Ahmedabad</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-6 mg-t-10">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Area</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="currentAddressArea"value="<%= employee.currentAddressArea %>" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 mg-t-10">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Address
+                                                        lane</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="currentAddressLane" value="<%= employee.currentAddressLane %>" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 mg-t-10">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Pin
+                                                        Code</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="currentAddressPinCode" value="<%= employee.currentAddressPinCode %>" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="row row-sm"> -->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card custom-card">
+                                    <div class="card-body">
+                                        <div>
+                                            <h6 class="main-content-label mb-1">
+                                                Permanent Address
+                                                <label class="ckbox"
+                                                    style="float: right">
+                                                    <input
+                                                        type="checkbox"
+                                                        id="sameAsCurrentAddress"
+                                                        onclick="autoFilAddress()" /><span
+                                                        class="tx-12">Same as
+                                                        Current Address</span>
+                                                </label>
+                                            </h6>
+                                        </div>
+                                        <div class="row row-sm">
+                                            <div class="col-sm-6 mg-t-10">
+                                                <label class="form-label">Country</label>
+                                             <select
+                                                    class="form-control select select2"
+                                                    name="permanentAddressCountry"
+                                                    id="permanentAddressCountry" value="<%= employee.permanentAddressCountry %>">
+                                                    <option>Select</option>
+                                                    <option value="India">India</option>
+                                                </select>
+                                            </div>
+                                          
+                                            <div class="col-sm-6 mg-t-10">
+                                                <label class="form-label">State</label>
+                                                 <select
+                                                    class="form-control select select2"
+                                                    name="permanentAddressState"
+                                                    id="permanentAddressState" value="<%= employee.permanentAddressState %>">
+                                                    <option>Select</option>
+                                                    <option
+                                                        value="Andhra Pradesh">
+                                                        Andhra Pradesh
+                                                    </option>
+                                                    <option
+                                                        value="Arunachal Pradesh">
+                                                        Arunachal Pradesh
+                                                    </option>
+                                                    <option value="Assam">Assam</option>
+                                                    <option value="Bihar">Bihar</option>
+                                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                                    <option value="Goa">Goa</option>
+                                                    <option value="Gujarat">Gujarat</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6 mg-t-10">
+                                                <label class="form-label">City</label>
+                        
+                                                <select
+                                                    class="form-control select select2"
+                                                    name="permanentAddressCity"
+                                                    id="permanentAddressCity" value="<%= employee.permanentAddressCity %>">
+                                                    <option>Select</option>
+                                                    <option value="Mumbai">Mumbai</option>
+                                                    <option value="Delhi">Delhi</option>
+                                                    <option value="Bangalore">Bangalore</option>
+                                                    <option value="Ahmedabad">Ahmedabad</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-6 mg-t-10">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Area</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="permanentAddressArea"
+                                                        id="permanentAddressArea" value="<%= employee.permanentAddressArea %>" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 mg-t-10">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Address
+                                                        lane</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="permanentAddressLane" value="<%= employee.permanentAddressLane %>"  />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 mg-t-10">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Pin
+                                                        Code</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="permanentAddressPinCode"  value="<%= employee.permanentAddressPinCode %>"  />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- End Row -->
+
+                        <!-- Row -->
+                        <div class="row row-sm">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card custom-card">
+                                    <div class="card-body">
+                                        <div>
+                                            <h6 class="main-content-label mb-3">ONBOARDING</h6>
+                                        </div>
+                                        <div class="row row-sm">
+                                            <div class="col-sm-4 form-group">
+                                                <label class="form-label">Company</label>
+                                                <select
+                                                    class="form-control select select2"
+                                                    name="companyName">
+                                                    <option value="">Select</option>
+                                                    <option value="Webkype">Webkype</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-4 form-group">
+                                                <label class="form-label">Department</label>
+                                                <select
+                                                    class="form-control select select2"
+                                                    name="department" value="<%= employee.department %>">
+                                                    <option value="">Select</option>
+                                                    <option value="Sales" <%= employee.department === 'Sales' ? 'selected' : '' %>>Sales</option>
+                                                    <option value="Marketing" <%= employee.department === 'Marketing' ? 'selected' : '' %>>Marketing</option>
+                                                    <option value="Accounts" <%= employee.department === 'Accounts' ? 'selected' : '' %>>Accounts</option>
+                                                    <option value="Procurements" <%= employee.department === 'Procurements' ? 'selected' : '' %> >Procurements</option>
+                                                    <option value="Contracting"  <%= employee.department === 'Contracting' ? 'selected' : '' %>>Contracting</option>
+                                                    <option value="Transport" <%= employee.department === 'Transport' ? 'selected' : '' %>>Transport</option>
+                                                    <option value="Legal">Legal</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- <div class="col-sm-4 form-group">
+                                                <label class="form-label">Department</label>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="departmentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="departmentDropdown">
+                                                        <a class="dropdown-item" href="#" data-value="">Select</a>
+                                                        <a class="dropdown-item" href="#" data-value="Sales">Sales</a>
+                                                        <a class="dropdown-item" href="#" data-value="Marketing">Marketing</a>
+                                                        <a class="dropdown-item" href="#" data-value="Accounts">Accounts</a>
+                                                        <a class="dropdown-item" href="#" data-value="Procurements">Procurements</a>
+                                                        <a class="dropdown-item" href="#" data-value="Contracting">Contracting</a>
+                                                        <a class="dropdown-item" href="#" data-value="Transport">Transport</a>
+                                                        <a class="dropdown-item" href="#" data-value="Legal">Legal</a>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            
+                                            <div class="col-sm-4 form-group">
+                                                <label class="form-label">Designation</label>
+                                                <select
+                                                    class="form-control select select2"
+                                                    name="designation">
+                                                    <option>Select</option>
+                                                    <option value="Executive">Executive</option>
+                                                    <option value="Manager">Manager</option>
+                                                    <option value="Intern">Intern</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-lg-4 form-group">
+                                                <label class="form-label">Date
+                                                    of Joining:
+                                                    <span class="tx-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div
+                                                        class="input-group-text border-end-0">
+                                                        <i
+                                                            class="fe fe-calendar lh--9 op-6"></i>
+                                                    </div>
+                                                    <!-- <input
+                                                        class="form-control fc-datepicker"
+                                                        placeholder="DD MMM YYYY"
+                                                        type="text"
+                                                        name="dateOfJoin" value="<%= employee.dateOfJoin %>" /> -->
+                                                        <input
+                                                        class="form-control fc-datepicker"
+                                                        id="datepicker"
+                                                        placeholder="DD MMM YYYY"
+                                                        type="text"
+                                                        name="dateOfJoin" value="<%= employee.dateOfJoin %>" />
+                                                       
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 form-group">
+                                                <label class="form-label">Team
+                                                    Leader</label>
+                                                <select
+                                                    class="form-control select select2">
+                                                    <option>Select</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- <div class="col-sm-4  form-group">
+                                            <label class="form-label">Reporting Boss-B</label>
+                                            <select class="form-control select select2">
+                                                <option>Select</option>
+
+                                            </select>
+                                        </div> -->
+                                            <div
+                                                class="col-sm-12 form-group mb-0">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <label
+                                                            class="form-label">Assign
+                                                            Permission</label>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <div
+                                                            class="parsley-checkbox row"
+                                                            id="cbWrapper">
+                                                            <div
+                                                                class="col-xl-3">
+                                                                <label
+                                                                    class="ckbox mg-b-5">
+                                                                    <input
+                                                                        data-parsley-class-handler="#cbWrapper"
+                                                                        data-parsley-errors-container="#cbErrorContainer"
+                                                                        data-parsley-mincheck="2"
+                                                                        name="browser[]"
+                                                                        type="checkbox"
+                                                                        value="1" /><span>Sales</span></label>
+                                                            </div>
+                                                            <div
+                                                                class="col-xl-3">
+                                                                <label
+                                                                    class="ckbox mg-b-5"><input
+                                                                        name="browser[]"
+                                                                        type="checkbox"
+                                                                        value="2" /><span>Marketing</span></label>
+                                                            </div>
+                                                            <div
+                                                                class="col-xl-3">
+                                                                <label
+                                                                    class="ckbox mg-b-5"><input
+                                                                        name="browser[]"
+                                                                        type="checkbox"
+                                                                        value="3" /><span>Accounts</span></label>
+                                                            </div>
+                                                            <div
+                                                                class="col-xl-3">
+                                                                <label
+                                                                    class="ckbox"><input
+                                                                        name="browser[]"
+                                                                        type="checkbox"
+                                                                        value="4" /><span>Procurements</span></label>
+                                                            </div>
+                                                            <div
+                                                                class="col-xl-3">
+                                                                <label
+                                                                    class="ckbox"><input
+                                                                        name="browser[]"
+                                                                        type="checkbox"
+                                                                        value="4" /><span>Contracting</span></label>
+                                                            </div>
+                                                            <div
+                                                                class="col-xl-3">
+                                                                <label
+                                                                    class="ckbox"><input
+                                                                        name="browser[]"
+                                                                        type="checkbox"
+                                                                        value="4" /><span>Transport</span></label>
+                                                            </div>
+                                                            <div
+                                                                class="col-xl-3">
+                                                                <label
+                                                                    class="ckbox"><input
+                                                                        name="browser[]"
+                                                                        type="checkbox"
+                                                                        value="4" /><span>Legal</span></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Row -->
+                        <div class="row row-sm">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card custom-card">
+                                    <div class="card-body">
+                                        <div>
+                                            <h6 class="main-content-label mb-3">KYC</h6>
+                                        </div>
+                                        <div class="row row-sm">
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">Aadhaar
+                                                        Upload</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="file"
+                                                        name="adharImage" id="adharImage" value="<%= employee.adharImage %>" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">Aadhaar
+                                                        No</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="adharNumber" value="<%= employee.adharNumber %>"  />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">PAN
+                                                        Upload</label>
+                                                    <input class="form-control"
+                                                        type="file" name="panImage" id="panImage" value="<%= employee.panImage %>"  />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">PAN
+                                                        No</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="PanNumber" 
+                                                        id="PanNumber"
+                                                        value="<%= employee.PanNumber %>"
+                                                        />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Driving
+                                                        Licence</label>
+                                                    <input class="form-control"
+                                                        type="file" name="drivingLicenseImage" id="drivingLicenseImage"  value="<%= employee.drivingLicenseImage %>"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Cheque</label>
+                                                    <input class="form-control"
+                                                        type="file" name="chequeImage" id="chequeImage" value="<%= employee.chequeImage %>" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                        <!-- Row -->
+                        <div class="row row-sm">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card custom-card">
+                                    <div class="card-body">
+                                        <div>
+                                            <h6 class="main-content-label mb-3">Account
+                                                Details</h6>
+                                        </div>
+                                        <div class="row row-sm">
+                                            <div class="col-sm-3">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Account
+                                                        No.</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="accountNumber" id="accountNumber" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Account
+                                                        Name</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="accountName" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">Bank
+                                                        Name</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="bankName" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <div class="form-group mb-0">
+                                                    <label class="form-label">IFSC</label>
+                                                    <input
+                                                        class="form-control"
+                                                        type="text"
+                                                        name="ifsc" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <div class="row row-sm">
+                            <div class="col-12 mb-3">
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Main Content-->
+        <!-- Main Footer-->
+        <%- include('includes/footer') %>
+        <!--End Footer-->
+        <!-- Sidebar -->
+        <div class="sidebar sidebar-right sidebar-animate">
+            <div class="sidebar-icon">
+                <a
+                    href="#"
+                    class="text-end float-end text-dark fs-20"
+                    data-bs-toggle="sidebar-right"
+                    data-bs-target=".sidebar-right"><i class="fe fe-x"></i></a>
+            </div>
+            <div class="sidebar-body">
+                <h5>Todo</h5>
+                <div class="d-flex p-3">
+                    <label class="ckbox"><input checked type="checkbox" /><span>Hangout
+                            With friends</span></label>
+                    <span class="ms-auto">
+                        <i
+                            class="fe fe-edit-2 text-primary me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Edit"></i>
+                        <i
+                            class="fe fe-trash-2 text-danger me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Delete"></i>
+                    </span>
+                </div>
+                <div class="d-flex p-3 border-top">
+                    <label class="ckbox"><input type="checkbox" /><span>Prepare
+                            for presentation</span></label>
+                    <span class="ms-auto">
+                        <i
+                            class="fe fe-edit-2 text-primary me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Edit"></i>
+                        <i
+                            class="fe fe-trash-2 text-danger me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Delete"></i>
+                    </span>
+                </div>
+                <div class="d-flex p-3 border-top">
+                    <label class="ckbox"><input type="checkbox" /><span>Prepare
+                            for presentation</span></label>
+                    <span class="ms-auto">
+                        <i
+                            class="fe fe-edit-2 text-primary me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Edit"></i>
+                        <i
+                            class="fe fe-trash-2 text-danger me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Delete"></i>
+                    </span>
+                </div>
+                <div class="d-flex p-3 border-top">
+                    <label class="ckbox"><input checked type="checkbox" /><span>System
+                            Updated</span></label>
+                    <span class="ms-auto">
+                        <i
+                            class="fe fe-edit-2 text-primary me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Edit"></i>
+                        <i
+                            class="fe fe-trash-2 text-danger me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Delete"></i>
+                    </span>
+                </div>
+                <div class="d-flex p-3 border-top">
+                    <label class="ckbox"><input type="checkbox" /><span>Do
+                            something more</span></label>
+                    <span class="ms-auto">
+                        <i
+                            class="fe fe-edit-2 text-primary me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Edit"></i>
+                        <i
+                            class="fe fe-trash-2 text-danger me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Delete"></i>
+                    </span>
+                </div>
+                <div class="d-flex p-3 border-top">
+                    <label class="ckbox"><input type="checkbox" /><span>System
+                            Updated</span></label>
+                    <span class="ms-auto">
+                        <i
+                            class="fe fe-edit-2 text-primary me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Edit"></i>
+                        <i
+                            class="fe fe-trash-2 text-danger me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Delete"></i>
+                    </span>
+                </div>
+                <div class="d-flex p-3 border-top">
+                    <label class="ckbox"><input type="checkbox" /><span>Find an
+                            Idea</span></label>
+                    <span class="ms-auto">
+                        <i
+                            class="fe fe-edit-2 text-primary me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Edit"></i>
+                        <i
+                            class="fe fe-trash-2 text-danger me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Delete"></i>
+                    </span>
+                </div>
+                <div class="d-flex p-3 border-top mb-0">
+                    <label class="ckbox"><input type="checkbox" /><span>Project
+                            review</span></label>
+                    <span class="ms-auto">
+                        <i
+                            class="fe fe-edit-2 text-primary me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Edit"></i>
+                        <i
+                            class="fe fe-trash-2 text-danger me-2"
+                            data-bs-toggle="tooltip"
+                            title
+                            data-bs-placement="top"
+                            data-bs-original-title="Delete"></i>
+                    </span>
+                </div>
+                <h5>Overview</h5>
+                <div class="p-4">
+                    <div class="main-traffic-detail-item">
+                        <div><span>Founder &amp; CEO</span> <span>24</span></div>
+                        <div class="progress">
+                            <div
+                                aria-valuemax="100"
+                                aria-valuemin="0"
+                                aria-valuenow="20"
+                                class="progress-bar progress-bar-xs wd-20p"
+                                role="progressbar"></div>
+                        </div>
+                        <!-- progress -->
+                    </div>
+                    <div class="main-traffic-detail-item">
+                        <div><span>UX Designer</span> <span>1</span></div>
+                        <div class="progress">
+                            <div
+                                aria-valuemax="100"
+                                aria-valuemin="0"
+                                aria-valuenow="15"
+                                class="progress-bar progress-bar-xs bg-secondary wd-15p"
+                                role="progressbar"></div>
+                        </div>
+                        <!-- progress -->
+                    </div>
+                    <div class="main-traffic-detail-item">
+                        <div><span>Recruitment</span> <span>87</span></div>
+                        <div class="progress">
+                            <div
+                                aria-valuemax="100"
+                                aria-valuemin="0"
+                                aria-valuenow="45"
+                                class="progress-bar progress-bar-xs bg-success wd-45p"
+                                role="progressbar"></div>
+                        </div>
+                        <!-- progress -->
+                    </div>
+                    <div class="main-traffic-detail-item">
+                        <div><span>Software Engineer</span> <span>32</span></div>
+                        <div class="progress">
+                            <div
+                                aria-valuemax="100"
+                                aria-valuemin="0"
+                                aria-valuenow="25"
+                                class="progress-bar progress-bar-xs bg-info wd-25p"
+                                role="progressbar"></div>
+                        </div>
+                        <!-- progress -->
+                    </div>
+                    <div class="main-traffic-detail-item">
+                        <div><span>Project Manager</span> <span>32</span></div>
+                        <div class="progress">
+                            <div
+                                aria-valuemax="100"
+                                aria-valuemin="0"
+                                aria-valuenow="25"
+                                class="progress-bar progress-bar-xs bg-danger wd-25p"
+                                role="progressbar"></div>
+                        </div>
+                        <!-- progress -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Sidebar -->
+        <!-- End Page -->
+        <script>
+            document
+              .querySelector("#myEmployeeUpdateForm")
+              .addEventListener("submit", async function (event) {
+                event.preventDefault(); // Prevent the default form submission
+                try {
+                  const form = event.target;
+                  const formData = new FormData(form); //
+
+                  const response = await fetch(`/admin/dashboard/update-employee/${formData.get("id")}`, {
+                    method: "POST", // You can also use "PUT" depending on your API design
+                    body:formData
+                })
+            
+                  const data = await response.json();
+                  if (data.status === "error") {
+                    throw new Error(data.message);
+                  }
+          
+                  alert(data.message);
+                  setTimeout(() => {
+                    location.href = "/admin/dashboard/employees";
+                  }, 1500);
+                } catch (error) {
+                  console.log(error);
+                  scrollTo(0, 0);
+                  document.querySelector(".errors").textContent = error.message;
+                }
+              });
+          </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- <script>
+    $(document).ready(function() {
+        $(".dropdown-item").click(function() {
+            var selectedValue = $(this).data("value");
+            $("#departmentDropdown").html(selectedValue + ' <span class="caret"></span>');
+        });
+    });
+</script> -->
+
+<script>
+    $(document).ready(function() {
+      // Set the default date as "4th July 2022"
+      var defaultDate = new Date("2022-07-04");
+  
+      // Format the default date as "4th July 2022"
+      var formattedDate = defaultDate.getDate() + " " +
+                         defaultDate.toLocaleString('default', { month: 'short' }) + " " +
+                         defaultDate.getFullYear();
+  
+      // Set the default value in the input field
+      $("#datepicker").val(formattedDate);
+  
+      // Initialize the datepicker
+      $("#datepicker").datepicker({
+        dateFormat: "dd M yy", // Use this format for display
+        onSelect: function(dateText) {
+          // You can add any additional handling here when the date is selected
+        }
+      });
+    });
+  </script>
+        <!-- Jquery js-->
+        <script src="/assets/plugins/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap js-->
+        <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Jquery-Ui js-->
+        <script src="/assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+        <!-- Internal Daternagepicker js-->
+        <script src="/assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+        <script
+            src="/assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+        <!-- Internal Fileuploads js-->
+        <script src="/assets/plugins/fileuploads/js/fileupload.js"></script>
+        <script src="/assets/plugins/fileuploads/js/file-upload.js"></script>
+
+        <!-- InternalFancy uploader js-->
+        <script src="/assets/plugins/fancyuploder/jquery.ui.widget.js"></script>
+        <script src="/assets/plugins/fancyuploder/jquery.fileupload.js"></script>
+        <script src="/assets/plugins/fancyuploder/jquery.iframe-transport.js"></script>
+        <script src="/assets/plugins/fancyuploder/jquery.fancy-fileupload.js"></script>
+        <script src="/assets/plugins/fancyuploder/fancy-uploader.js"></script>
+
+        <!-- Internal Form-elements js-->
+        <script src="/assets/js/advanced-form-elements.js"></script>
+
+        <!-- Internal TelephoneInput js-->
+        <script src="/assets/plugins/telephoneinput/telephoneinput.js"></script>
+        <script src="/assets/plugins/telephoneinput/inttelephoneinput.js"></script>
+
+        <!-- Perfect-scrollbar js -->
+        <script src="/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+        <!-- Sidemenu js -->
+        <script src="/assets/plugins/sidemenu/sidemenu.js" id="leftmenu"></script>
+        <!--Bootstrap-datepicker js-->
+        <script
+            src="/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+        <!-- Internal jquery-simple-datetimepicker js -->
+        <script
+            src="/assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+
+        <!-- COLOR PICKER JS -->
+        <script src="/assets/plugins/pickr-master/pickr.es5.min.js"></script>
+        <script src="/assets/js/picker.js"></script>
+        <!-- Sidebar js -->
+        <script src="/assets/plugins/sidebar/sidebar.js"></script>
+
+        <!-- Select2 js-->
+        <script src="/assets/plugins/select2/js/select2.min.js"></script>
+        <script src="/assets/js/select2.js"></script>
+
+        <!-- Color Theme js -->
+        <script src="/assets/js/themeColors.js"></script>
+
+        <!-- Sticky js -->
+        <script src="/assets/js/sticky.js"></script>
+
+        <!-- Custom js -->
+        <script src="/assets/js/custom.js"></script>
+
+        <!-- Bootstrap js-->
+        <script src="/assets/plugins/bootstrap/js/popper.min.js"></script>
+        <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Internal Jquery-Ui js-->
+        <script src="/assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+        <!-- Internal Jquery.maskedinput js-->
+        <script src="/assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+        <!-- Internal Specturm-colorpicker js-->
+        <script src="/assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+
+        <!-- Internal Ion-rangeslider js-->
+        <script src="/assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+        <!-- Internal Form-elements js-->
+        <script src="/assets/js/form-elements.js"></script>
+    </body>
+</html>
